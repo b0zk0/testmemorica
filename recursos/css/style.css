@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "Oswald";
+    src: url(https://fonts.googleapis.com/css?family=Oswald:700&display=swap) format("truetype");
+    font-style: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url(https://fonts.googleapis.com/css?family=Roboto&display=swap) format("truetype");
+    font-style: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+/*-------------------------------Estilos generales-------------------------------*/
+
+html {
+    font-size: 16px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: gainsboro;
+    padding-top: 256px; /*Tamaño preliminar*/
+}
+
+nav {
+    text-align: center;
+}
+
+/*-------------------------------Header y navegación-------------------------------*/
+
+.nav-principal {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    background-color: black;
+    height: 35px;  /*Tamaño preliminar*/
+    font-size: 25px;  /*Tamaño preliminar*/
+    position: fixed;
+    width: 100%;
+}
+
+div.memoria-buscador {
+    background-image: url(centro.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gray;
+    height: 200px;
+    width: 100%;
+    position: fixed;
+    top: 56px;  /*Tamaño preliminar*/
+    z-index: 1;
+}
+
+.memoria-buscador input {
+    text-align: center;
+}
+
+div.memoria-timeline {
+    background-color: darkgrey;
+    height: 500px; /*Tamaño preliminar*/
+}
+
+div.memoria-pestañas {
+    position: sticky;
+    top: 156px;  /*Tamaño preliminar*/
+    background-color: gainsboro;
+    z-index: 1;
+}
+
+ul.memoria-redes li {
+    font-size: 25pt; /*Tamaño preliminar*/
+    display: inline;
+}
+
+/*-------------------------------Cuerpo de página-------------------------------*/
+
+.fila {
+    background-color: darkkhaki;
+    justify-content: space-around;
+}
+
+/*-------------------------------Footer-------------------------------*/
+
+footer {
+    color: white;
+    background-color: black;
+    width: 100%;
+}
