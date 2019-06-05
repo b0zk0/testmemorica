@@ -12,18 +12,18 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     </head>
 
-    <body>
+    <body class="secundario">
         <!--Header con barra y buscador-->
         <header>
             <!--Barra de navegación-->
             <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
 
                 <a class="navbar-brand d-lg-none" href="index.html">MEMÓRICA</a>
-                  
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                
+
                 <!-- menu que se colapsa   -->
                 <div class="collapse navbar-collapse justify-content-between" id="menu">
                     <ul class="navbar-nav"></ul>
@@ -40,10 +40,16 @@
             </nav>
 
             <!--Buscador-->
-            <div class="memoria-buscador d-flex justify-content-center">
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control rounded-pill" type="search" placeholder="Buscadooor" aria-label="Search">
-                </form>
+            <div class="container-fluid memoria-buscador altura-fija d-flex">
+                <div class="row fila-centrada">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6 align-self-center">
+                        <form class="form">
+                            <input class="form-control rounded-pill" type="search" placeholder="Buscadooor" aria-label="Search">
+                        </form>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
             </div>
         </header>
 
@@ -63,7 +69,7 @@
 
         <main class="container">
             <nav id="siteBreadcrumb" aria-label="breadcrumb">
-                <ol class="breadcrumb">
+                <ol class="breadcrumb mt-3">
                     <li class="breadcrumb-item"><a href="/">Regresa al inicio</a></li>
                 </ol>
             </nav>
@@ -113,7 +119,7 @@
                         <div class="card">
                             <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
                             <div class="card-body">
-                                <a href="acervo.html"><h5 class="card-title">archibo jeneral de la nasion</h5></a>
+                                <a href="acervo.html"><h5 class="card-title">harchibo jeneral de la nasion</h5></a>
                             </div>
                         </div>
                     </div>

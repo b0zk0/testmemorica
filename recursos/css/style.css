@@ -20,9 +20,13 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
-body {
+body.principal {
     background-color: gainsboro;
     padding-top: 256px; /*Tamaño preliminar*/
+}
+
+body.secundario {
+    padding-top: 156px; /*Tamaño preliminar*/
 }
 
 nav {
@@ -47,15 +51,25 @@ div.memoria-buscador {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: gray;
-    height: 200px;
-    width: 100%;
     position: fixed;
     top: 56px;  /*Tamaño preliminar*/
     z-index: 1;
 }
 
+div.altura-variable {
+    height: 200px; /*Tamaño peculiar*/
+}
+
+div.altura-fija {
+    height: 100px; /*Tamaño preliminar*/
+}
+
 .memoria-buscador input {
     text-align: center;
+}
+
+.fila-centrada {
+    width: 100%;
 }
 
 div.memoria-timeline {
@@ -74,6 +88,7 @@ ul.memoria-redes li {
     font-size: 25pt; /*Tamaño preliminar*/
     display: inline;
 }
+
 
 /*-------------------------------Cuerpo de página-------------------------------*/
 
