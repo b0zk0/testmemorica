@@ -55,7 +55,7 @@
 
         <!--Pestañas-->
         <div class="memoria-pestañas">
-            <div class="container py-2">
+            <div class="container py-2 d-none d-lg-block">
                 <nav class="justify-content-center nav nav-pills nav-justified">
                     <a class="nav-item nav-link" href="#">Haz memoria</a>
                     <a class="nav-item nav-link active" href="acervos.html">Acervos</a>
@@ -64,6 +64,24 @@
                     <a class="nav-item nav-link" href="#">Miscelánea</a>
                     <a class="nav-item nav-link" href="#">Brevez</a>
                 </nav>
+            </div>
+
+            <div class="container py-2 d-sm-block d-lg-none">
+                <div class="justify-content-center navbar navbar-expand-lg navbar-light bg-light">
+                    <a data-toggle="collapse" href="#memoria-pestañas-dropdown">Secciones</a>
+                </div>
+                <div class="collapse mb-3" id="memoria-pestañas-dropdown">
+                    <div class="card card-body">
+                        <nav class="flex-column justify-content-center nav nav-pills nav-justified">
+                            <a class="nav-item nav-link" href="#">Haz memoria</a>
+                            <a class="nav-item nav-link" href="acervos.html">Acervos</a>
+                            <a class="nav-item nav-link" href="#">Temas</a>
+                            <a class="nav-item nav-link" href="#">Exposiciones</a>
+                            <a class="nav-item nav-link" href="#">Miscelánea</a>
+                            <a class="nav-item nav-link" href="#">Brevez</a>
+                        </nav>
+                    </div>
+                </div>
             </div>
         </div>
 
