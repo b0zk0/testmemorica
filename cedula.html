@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ATATATATATAMEMORICA</title>
+        <link rel="stylesheet" href="recursos/css/reset.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="recursos/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="secundario">
+        <!--Header con barra y buscador-->
+        <header>
+            <!--Barra de navegación-->
+            <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+
+                <a class="navbar-brand d-lg-none" href="index.html">MEMÓRICA</a>
+                  
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- menu que se colapsa   -->
+                <div class="collapse navbar-collapse justify-content-between" id="menu">
+                    <ul class="navbar-nav"></ul>
+                    <a class="navbar-brand d-none d-lg-block" href="index.html">MEMÓRICA</a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">iniciar sesion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fab fa-megaport fa-x3"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!--Buscador-->
+            <div class="container-fluid memoria-buscador altura-fija d-flex justify-content-center">
+                <div class="row fila-centrada">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6 align-self-center">
+                        <form class="form">
+                            <input class="form-control rounded-pill" type="search" placeholder="Buscadooor" aria-label="Search">
+                        </form>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </div>
+        </header>
+
+        <!--Pestañas-->
+        <div class="memoria-pestañas">
+            <div class="container py-2 d-none d-lg-block">
+                <nav class="justify-content-center nav nav-pills nav-justified">
+                    <a class="nav-item nav-link" href="#">Haz memoria</a>
+                    <a class="nav-item nav-link" href="acervos.html">Acervos</a>
+                    <a class="nav-item nav-link" href="#">Temas</a>
+                    <a class="nav-item nav-link" href="#">Exposiciones</a>
+                    <a class="nav-item nav-link" href="#">Miscelánea</a>
+                    <a class="nav-item nav-link" href="#">Brevez</a>
+                </nav>
+            </div>
+
+            <div class="container py-2 d-sm-block d-lg-none">
+                <div class="justify-content-center navbar navbar-expand-lg navbar-light bg-light">
+                    <a data-toggle="collapse" href="#memoria-pestañas-dropdown">Secciones</a>
+                </div>
+                <div class="collapse mb-3" id="memoria-pestañas-dropdown">
+                    <div class="card card-body">
+                        <nav class="flex-column justify-content-center nav nav-pills nav-justified">
+                            <a class="nav-item nav-link" href="#">Haz memoria</a>
+                            <a class="nav-item nav-link" href="acervos.html">Acervos</a>
+                            <a class="nav-item nav-link" href="#">Temas</a>
+                            <a class="nav-item nav-link" href="#">Exposiciones</a>
+                            <a class="nav-item nav-link" href="#">Miscelánea</a>
+                            <a class="nav-item nav-link" href="#">Brevez</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="container">
+            <nav id="siteBreadcrumb" aria-label="breadcrumb">
+                <ol class="breadcrumb mt-3">
+                    <li class="breadcrumb-item"><a href="/">Regresa al inicio</a></li>
+                    <li class="breadcrumb-item"><a href="acervos.html">Acervos</a></li>
+                    <li class="breadcrumb-item"><a href="acervo.html">Acervo</a></li>
+                    <li class="breadcrumb-item"><a href="fondo.html">Fondo</a></li>
+                    <li class="breadcrumb-item"><a href="expediente.html">Expediente</a></li>
+                </ol>
+            </nav>
+
+            <!--Visualizador-->
+            <div class="memoria-visualizador mb-4">
+                <div class="uv" data-locale="en-GB:English (GB),cy-GB:Cymraeg" data-config="https://adore.ugent.be/IIIF/UV/config" data-uri="https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91" data-collectionindex="0" data-manifestindex="0" data-sequenceindex="0" data-canvasindex="0" data-zoom="-10480,-838,27173,16751" data-rotation="0" style="width:100%; height:500px; background-color: #000"></div>
+                <script type="text/javascript" id="embedUV" src="https://lib.ugent.be/uv/lib/embed.js"></script><script type="text/javascript">/* wordpress fix */</script>
+            </div>
+
+            <!-- Cédula de objeto -->
+
+            <div class="accordion mb-4">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Bien de interés común
+                            </button>
+                        </h2>
+                    </div>
+                
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                        <div class="card-body">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Título</th>
+                                        <td>Voluptatem nam et cumque repudiandae possimus eos at. Reprehenderit dolor exercitationem ex.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Título alternativo</th>
+                                        <td>Reprehenderit dolor exercitationem ex.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Autor</th>
+                                        <td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Propiedades</th>
+                                        <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Origen</th>
+                                        <td>Atatatatatatatatatatatata</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ubicación</th>
+                                        <td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Procedencia</th>
+                                        <td>Corporis quae et rerum exercitationem sint illo.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Derechos sobre el bien cultural</th>
+                                        <td>Ea temporibus vero delectus eius quia beatae.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Descripción</th>
+                                        <td> Illo iure reiciendis est.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Derechos de uso</th>
+                                        <td>Quo molestiae ex aut velit eos rem quam.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Permisos</th>
+                                        <td>Velit veritatis expedita et.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">¿Cómo citar este documento?</th>
+                                        <td>Voluptatibus sit ratione aliquam.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Cambios y sugerencias</th>
+                                        <td>Qui neque voluptatem aut aliquid corporis aut nam architecto.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Recurso digital
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
+                        <div class="card-body">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Título</th>
+                                        <td>Voluptatem nam et cumque repudiandae possimus eos at. Reprehenderit dolor exercitationem ex.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Título alternativo</th>
+                                        <td>Reprehenderit dolor exercitationem ex.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Autor</th>
+                                        <td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Propiedades</th>
+                                        <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Origen</th>
+                                        <td>Atatatatatatatatatatatata</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ubicación</th>
+                                        <td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Procedencia</th>
+                                        <td>Corporis quae et rerum exercitationem sint illo.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Declaración de uso</th>
+                                        <td>Ea temporibus vero delectus eius quia beatae.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Metadatos enriquecidos
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                        <div class="card-body">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Ejemplo</th>
+                                        <td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ejemplo</th>
+                                        <td>Voluptatem nam et cumque repudiandae possimus eos at. Reprehenderit dolor exercitationem ex.</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ejemplo</th>
+                                        <td>atún sellado de mi casa, y un limón</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ejemplo</th>
+                                        <td>Reprehenderit dolor exercitationem ex.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!--atún sellado de mi casa, y un limón-->
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <ul>
+                            <li><a href="#">Coordinación</a></li>
+                            <li><a href="#">Instituciones vinculadas</a></li>
+                            <li><a href="#">Marco jurídico</a></li>
+                            <li><a href="#">Aviso de privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <ul>
+                            <li><a href="#">Mapa de sitio</a></li>
+                            <li><a href="#">Documentación técnica</a></li>
+                            <li><a href="#">Contacto</a></li>
+                            <li><a href="#">Cómo usar el sitio</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-1 col-sm-12 justify-content-end"></div>
+                    <div class="col-md-3 col-sm-12 d-flex justify-content-start flex-column">
+                        <ul class="memoria-redes">
+                            <li><a href="#"> <i class="fab fa-facebook-f"></i> </a></li>
+                            <li><a href="#"> <i class="fab fa-instagram"></i> </a></li>
+                            <li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScripts -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="recursos/js/main.js"></script>
+    </body>
+</html>

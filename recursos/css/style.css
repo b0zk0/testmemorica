@@ -8,7 +8,7 @@
 @font-face {
     font-family: "Roboto";
     src: url(https://fonts.googleapis.com/css?family=Roboto&display=swap) format("truetype");
-    font-style: normal;
+  font-style: normal;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
