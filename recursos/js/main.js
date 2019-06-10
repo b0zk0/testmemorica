@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    //buscador de tañamo variable
     $(window).on('scroll', function () {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > 100) {
@@ -9,6 +10,7 @@ $(document).ready(function() {
         }
     });
 
+    /*breadcrumb automático
     if ($('#siteBreadcrumb ol.breadcrumb')) {
         var here = location.href.replace(/(\?.*)$/, '').split('/').slice(3);
 
@@ -28,5 +30,5 @@ $(document).ready(function() {
             "link": link
             });
         }
-    }
+    }*/
 });
