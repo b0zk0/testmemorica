@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    //buscador de tañamo variable
+    // buscador de tañamo variable
     $(window).on('scroll', function () {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > 100) {
@@ -7,6 +7,20 @@ $(document).ready(function() {
         }
         else {
             $('.altura-variable').stop().animate({height: "200px"},15);   
+        }
+    });
+
+    // búsqueda coqueta
+    $('#searchButton').click(function () {
+        var search = $('#usersSearch').val();
+        $.post('../searchusers.php', { search: search }, function (response) {
+            $('#userSearchResultsTable').html(response);
+        });
+    })
+    
+    $('#usersSearch').keypress(function (e) {
+        if (e.which == 13) {//Enter key pressed
+            $('#searchButton').click();//Trigger search button click event
         }
     });
 
@@ -24,7 +38,8 @@ $(document).ready(function() {
             var pageName = part.toLowerCase();
             pageName = part.charAt(0).toUpperCase() + part.slice(1);
             var link = '/' + here.slice(0, j + 1).join('/');
-            $('#siteBreadcrumb ol.breadcrumb').append('<li class="breadcrumb-item active">' + pageName.replace(/\.(htm[l]?|asp[x]?|php|jsp)$/, '') + '</li>');
+            $('#siteBreadcrumb ol.breadcrumb').append('<li class="breadcrumb-item active">'
+            + pageName.replace(/\.(htm[l]?|asp[x]?|php|jsp)$/, '') + '</li>');
             parts.push({
             "text": pageName,
             "link": link
