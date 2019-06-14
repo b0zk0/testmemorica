@@ -138,6 +138,7 @@ html {
     line-height: 50px !important;
   }
 }
+
 @media (min-width: 990px) {
   .nav-side-menu .menu-list .menu-content {
     display: block;
