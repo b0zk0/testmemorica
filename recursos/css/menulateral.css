@@ -3,7 +3,7 @@ main > .container {
   padding: 60px 15px 0;
 }
 
-li.breadcrumb-item { /*Estilo repetido*/
+li.breadcrumb-item {
   margin: 0px;
   font-size: 14px;
   font-weight: 200;
