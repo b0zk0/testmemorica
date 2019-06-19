@@ -49,16 +49,18 @@
                 </div>
             </nav>
 
-            <!-- Buscador -->
-            <div class="container-fluid memoria-buscador altura-fija d-flex justify-content-center">
+            <!--Buscador-->
+            <div class="container-fluid memoria-buscador altura-variable d-flex justify-content-center">
                 <div class="row fila-centrada">
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-6 align-self-center">
-                        <form class="form">
-                            <input class="form-control rounded-pill" type="search" placeholder="Buscadooor" aria-label="Search">
+                    <div class="col-0 col-sm-3"></div>
+                    <div class="col-12 col-sm-6 align-self-center">
+                        <form class="form" action="resultados.html">
+                            <input id="usersSearch" class="form-control rounded-pill ui-autocomplete-input" type="text"
+                                placeholder="¿Qué quieres encontrar hoy?" aria-label="Search">
+                            <!-- <input id='searchButton' type='button' value='busquele'> -->
                         </form>
                     </div>
-                    <div class="col-sm-3"></div>
+                    <div class="col-0 col-sm-3"></div>
                 </div>
             </div>
         </header>
@@ -69,7 +71,7 @@
                 <nav class="justify-content-center nav nav-pills nav-justified">
                     <a class="nav-item nav-link" href="#">Haz memoria</a>
                     <a class="nav-item nav-link active" href="acervos.html">Acervos</a>
-                    <a class="nav-item nav-link" href="#">Temas</a>
+                    <a class="nav-item nav-link" href="temas.html">Temas</a>
                     <a class="nav-item nav-link" href="#">Exposiciones</a>
                     <a class="nav-item nav-link" href="#">Miscelánea</a>
                     <a class="nav-item nav-link" href="#">Breves</a>
@@ -85,7 +87,7 @@
                         <nav class="flex-column justify-content-center nav nav-pills nav-justified">
                             <a class="nav-item nav-link" href="#">Haz memoria</a>
                             <a class="nav-item nav-link" href="acervos.html">Acervos</a>
-                            <a class="nav-item nav-link" href="#">Temas</a>
+                            <a class="nav-item nav-link" href="temas.html">Temas</a>
                             <a class="nav-item nav-link" href="#">Exposiciones</a>
                             <a class="nav-item nav-link" href="#">Miscelánea</a>
                             <a class="nav-item nav-link" href="#">Breves</a>
@@ -100,7 +102,7 @@
             <!-- Breadcrumb -->
             <nav id="siteBreadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb mt-3">
-                    <li class="breadcrumb-item"><a href="/">Regresa al inicio</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Regresa al inicio</a></li>
                     <li class="breadcrumb-item"><a href="acervos.html">Acervos</a></li>
                     <li class="breadcrumb-item"><a href="acervo.html">Acervo</a></li>
                     <li class="breadcrumb-item active">Fondo</li>

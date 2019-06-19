@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>MEMORICA</title>
         <link rel="stylesheet" href="recursos/css/reset.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="recursos/css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
@@ -21,7 +23,7 @@
                 <a class="navbar-brand d-lg-none" href="index.html">Memórica</a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
-                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -49,16 +51,18 @@
                 </div>
             </nav>
 
-            <!-- Buscador -->
-            <div class="container-fluid memoria-buscador altura-fija d-flex justify-content-center">
+            <!--Buscador-->
+            <div class="container-fluid memoria-buscador altura-variable d-flex justify-content-center">
                 <div class="row fila-centrada">
-                    <div class="col-sm-3"></div>
-                    <div class="col-6 align-self-center">
-                        <form class="form">
-                            <input class="form-control rounded-pill" type="search" placeholder="Buscadooor" aria-label="Search">
+                    <div class="col-0 col-sm-3"></div>
+                    <div class="col-12 col-sm-6 align-self-center">
+                        <form class="form" action="resultados.html">
+                            <input id="usersSearch" class="form-control rounded-pill ui-autocomplete-input" type="text"
+                                placeholder="¿Qué quieres encontrar hoy?" aria-label="Search">
+                            <!-- <input id='searchButton' type='button' value='busquele'> -->
                         </form>
                     </div>
-                    <div class="col-sm-3"></div>
+                    <div class="col-0 col-sm-3"></div>
                 </div>
             </div>
         </header>
@@ -69,7 +73,7 @@
                 <nav class="justify-content-center nav nav-pills nav-justified">
                     <a class="nav-item nav-link" href="#">Haz memoria</a>
                     <a class="nav-item nav-link active" href="acervos.html">Acervos</a>
-                    <a class="nav-item nav-link" href="#">Temas</a>
+                    <a class="nav-item nav-link" href="temas.html">Temas</a>
                     <a class="nav-item nav-link" href="#">Exposiciones</a>
                     <a class="nav-item nav-link" href="#">Miscelánea</a>
                     <a class="nav-item nav-link" href="#">Breves</a>
@@ -85,7 +89,7 @@
                         <nav class="flex-column justify-content-center nav nav-pills nav-justified">
                             <a class="nav-item nav-link" href="#">Haz memoria</a>
                             <a class="nav-item nav-link" href="acervos.html">Acervos</a>
-                            <a class="nav-item nav-link" href="#">Temas</a>
+                            <a class="nav-item nav-link" href="temas.html">Temas</a>
                             <a class="nav-item nav-link" href="#">Exposiciones</a>
                             <a class="nav-item nav-link" href="#">Miscelánea</a>
                             <a class="nav-item nav-link" href="#">Breves</a>
@@ -100,7 +104,7 @@
             <!-- Breadcrumb -->
             <nav id="siteBreadcrumb" aria-label="breadcrumb">
                 <ol class="breadcrumb mt-3">
-                    <li class="breadcrumb-item"><a href="/">Regresa al inicio</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Regresa al inicio</a></li>
                     <li class="breadcrumb-item active">Acervos</li>
                 </ol>
             </nav>
