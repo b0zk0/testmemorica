@@ -22,7 +22,9 @@
 		<header>
 			<!-- Barra de navegación -->
 			<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+		
 				<a class="navbar-brand d-lg-none" href="index.html">Memórica</a>
+		
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
 					aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -36,7 +38,7 @@
 					</div>
 		
 					<div class="col-4 d-flex justify-content-center">
-						<a class="navbar-brand d-none d-lg-block" href="index.html">Memórica</a>
+						<a class="navbar-brand d-none d-lg-block " href="index.html">Memórica</a>
 					</div>
 		
 					<div class="col-4 d-flex justify-content-end">
@@ -111,89 +113,142 @@
 			<div class="nav-side-menu d-lg-none">
 				<div class="brand">Filtros</div>
 				<i class="fas fa-sliders-h fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
-				<div class="menu-list">
-					<ul id="menu-content" class="menu-content collapse out">
-						<li data-toggle="collapse" data-target="#autor" class="collapsed">
-							<a href="#"><i class="fas fa-user-edit fa-lg"></i> Autor <span class="fas fa-angle-down"></span></a>
-						</li>
-						<ul class="sub-menu collapse" id="autor">
-							<label><input type="search" class="form-control form-control-sm" placeholder="Autor"
-									aria-controls="dataTable">
-							</label>
-						</ul>
-						<li data-toggle="collapse" data-target="#tipo-de-objeto-digital" class="collapsed">
-							<a href="#"><i class="fas fa-object-ungroup fa-lg"></i> Tipo de objeto digital <span
-								class="fas fa-angle-down"></span></a>
-						</li>
-						<ul class="sub-menu collapse" id="tipo-de-objeto-digital">
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Imagen </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Texto </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Video </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Audio </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> 3D </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Recurso Interactivo </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Exposiciones </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Colecciones </li>
-						</ul>
-						<li data-toggle="collapse" data-target="#tipo-de-objeto" class="collapsed">
-							<a href="#"><i class="fas fa-cubes fa-lg"></i> Tipo de objeto <span class="fas fa-angle-down"></span></a>
-						</li>
-						<ul class="sub-menu collapse" id="tipo-de-objeto">
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Libro </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Revista </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Artículo </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Tesis </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Tesina </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Fotografía </li>
-							<li data-toggle="collapse" data-target="#pintura" class="collapsed"><input type="checkbox"
-									aria-label="Checkbox for following text input"> Pintura <span class="fas fa-angle-down"></span>
-							</li>
-							<ul class="sub-menu collapse" id="pintura">
-								<li><input type="checkbox" aria-label="Checkbox for following text input"> Técnica 1
-								</li>
-								<li><input type="checkbox" aria-label="Checkbox for following text input"> Técnica 2
-								</li>
-								<li><input type="checkbox" aria-label="Checkbox for following text input"> Técnica 3
-								</li>
-							</ul>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Mobiliario </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Instrumento
-								Musical </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Bandera </li>
-						</ul>
+				 <form id="myForm">
+                        <div class="menu-list">
+                            <ul id="menu-content" class="menu-content collapse out">
+                                <li data-toggle="collapse" data-target="#autor" class="collapsed">
+                                    <a href="#"><i class="fas fa-user-edit fa-lg"></i> Autor <span
+                                        class="fas fa-angle-down"></span></a>
+                                </li>
+                                <ul class="sub-menu collapse" id="autor">
+                                    <label><input type="search" class="form-control form-control-sm" placeholder="Autor"
+                                            aria-controls="dataTable"></label>
+                                </ul>
+                                <li data-toggle="collapse" data-target="#tipo-de-objeto-digital" class="collapsed">
+                                    <a href="#"><i class="fas fa-object-ungroup fa-lg"></i> Tipo de objeto digital <span
+                                        class="fas fa-angle-down"></span></a>
+                                </li>
+                                <ul class="sub-menu collapse" id="tipo-de-objeto-digital">
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Imagen
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Texto
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Video
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Audio
+                                    </li>
+                                    <!-- <li><input type="checkbox" aria-label="Checkbox for following text input"> 3D </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Recurso
+                                        Interactivo </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Exposiciones
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Colecciones </li> -->
+                                </ul>
+                                <li data-toggle="collapse" data-target="#tipo-de-objeto" class="collapsed">
+                                    <a href="#"><i class="fas fa-cubes fa-lg"></i> Tipo de objeto <span
+                                        class="fas fa-angle-down"></span></a>
+                                </li>
+                                <ul class="sub-menu collapse" id="tipo-de-objeto">
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+                                    <!-- <li><input type="checkbox" aria-label="Checkbox for following text input"> Libro
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Revista
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Artículo
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Tesis
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Tesina
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Fotografía </li>
+                                    <li data-toggle="collapse" data-target="#pintura" class="collapsed"><input
+                                            type="checkbox" aria-label="Checkbox for following text input"> Pintura
+                                        <span class="fas fa-angle-down"></span>
+                                    </li>
+                                    <ul class="sub-menu collapse" id="pintura">
+                                        <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                            Técnica 1
+                                        </li>
+                                        <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                            Técnica 2
+                                        </li>
+                                        <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                            Técnica 3
+                                        </li>
+                                    </ul>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Mobiliario </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Instrumento
+                                        Musical </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Bandera
+                                    </li> -->
+                                </ul>
 
 
-						<li data-toggle="collapse" data-target="#fecha" class="collapsed">
-							<a href="#"><i class="fas fa-calendar-alt fa-lg"></i>Fecha / Periodo / Época <span
-								class="fas fa-angle-down"></span></a>
-						</li>
-						<ul class="sub-menu collapse" id="fecha">
-							<li>Fecha <input class="form-control" type="date" value="2011-08-19" id="example-date-input"> </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Siglo
-								<select class="custom-select" id="inputGroupSelect01">
-									<option selected>XIV</option>
-									<option value="1">XV</option>
-									<option value="2">XVI</option>
-									<option value="3">XVII</option>
-								</select></li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Neoclásico </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Virreinato </li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Prehistórico </li>
-						</ul>
-						<li data-toggle="collapse" data-target="#institucion" class="collapsed">
-							<a href="#"><i class="fas fa-university fa-lg"></i>Institución de procedencia <span
-								class="fas fa-angle-down"></span></a>
-						</li>
-						<ul class="sub-menu collapse" id="institucion">
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Institución 1
-							</li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Institución 2
-							</li>
-							<li><input type="checkbox" aria-label="Checkbox for following text input"> Institución 3
-							</li>
-						</ul>
-					</ul>
-				</div>
+                                <li data-toggle="collapse" data-target="#fecha" class="collapsed">
+                                    <a href="#"><i class="fas fa-calendar-alt fa-lg"></i>Fecha / Periodo / Época <span
+                                        class="fas fa-angle-down"></span></a>
+                                </li>
+                                <ul class="sub-menu collapse" id="fecha">
+                                    <li>Fecha <input class="form-control" type="date" value="2011-08-19"
+                                            id="example-date-input"></li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input"> Siglo
+                                        <select class="custom-select" id="inputGroupSelect01">
+                                            <option selected>XIV</option>
+                                            <option value="1">XV</option>
+                                            <option value="2">XVI</option>
+                                            <option value="3">XVII</option>
+                                        </select></li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Neoclásico </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Virreinato </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Prehistórico
+                                    </li>
+                                </ul>
+                                <li data-toggle="collapse" data-target="#institucion" class="collapsed">
+                                    <a href="#"><i class="fas fa-university fa-lg"></i>Institución de procedencia <span
+                                        class="fas fa-angle-down"></span></a>
+                                </li>
+                                <ul class="sub-menu collapse" id="institucion">
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Institución 1
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Institución 2
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Institución 3
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Institución 4
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Institución 5
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Institución 6
+                                    </li>
+                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                        Institución 7
+                                    </li>
+                                </ul>
+                                <li data-toggle="collapse" class="collapsed">
+                                    <input type="reset" value="Borrar información" onclick="formReset()" value="Reset">
+                                </li>
+                                
+                            </ul>
+                        </div>
+                </form>
 			</div>
 
 			<!--Contenedor-->
@@ -206,119 +261,142 @@
 							<div class="brand">Filtros</div>
 							<i class="fas fa-sliders-h fa-2x toggle-btn" data-toggle="collapse"
 								data-target="#menu-content"></i>
-							<div class="menu-list">
-								<ul id="menu-content" class="menu-content collapse out">
-									<li data-toggle="collapse" data-target="#autor" class="collapsed">
-										<a href="#"><i class="fas fa-user-edit fa-lg"></i> Autor <span
-											class="fas fa-angle-down"></span></a>
-									</li>
-									<ul class="sub-menu collapse" id="autor">
-										<label><input type="search" class="form-control form-control-sm" placeholder="Autor"
-												aria-controls="dataTable"></label>
-									</ul>
-									<li data-toggle="collapse" data-target="#tipo-de-objeto-digital" class="collapsed">
-										<a href="#"><i class="fas fa-object-ungroup fa-lg"></i> Tipo de objeto digital <span
-											class="fas fa-angle-down"></span></a>
-									</li>
-									<ul class="sub-menu collapse" id="tipo-de-objeto-digital">
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Imagen
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Texto
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Video
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Audio
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> 3D </li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Recurso
-											Interactivo </li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Exposiciones
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Colecciones </li>
-									</ul>
-									<li data-toggle="collapse" data-target="#tipo-de-objeto" class="collapsed">
-										<a href="#"><i class="fas fa-cubes fa-lg"></i> Tipo de objeto <span
-											class="fas fa-angle-down"></span></a>
-									</li>
-									<ul class="sub-menu collapse" id="tipo-de-objeto">
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Libro
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Revista
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Artículo
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Tesis
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Tesina
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Fotografía </li>
-										<li data-toggle="collapse" data-target="#pintura" class="collapsed"><input
-												type="checkbox" aria-label="Checkbox for following text input"> Pintura
-											<span class="fas fa-angle-down"></span>
-										</li>
-										<ul class="sub-menu collapse" id="pintura">
-											<li><input type="checkbox" aria-label="Checkbox for following text input">
-												Técnica 1
+								<form id="myForm">
+									<div class="menu-list">
+										<ul id="menu-content" class="menu-content collapse out">
+											<li data-toggle="collapse" data-target="#autor" class="collapsed">
+												<a href="#"><i class="fas fa-user-edit fa-lg"></i> Autor <span
+													class="fas fa-angle-down"></span></a>
 											</li>
-											<li><input type="checkbox" aria-label="Checkbox for following text input">
-												Técnica 2
+											<ul class="sub-menu collapse" id="autor">
+												<label><input type="search" class="form-control form-control-sm" placeholder="Autor"
+														aria-controls="dataTable"></label>
+											</ul>
+											<li data-toggle="collapse" data-target="#tipo-de-objeto-digital" class="collapsed">
+												<a href="#"><i class="fas fa-object-ungroup fa-lg"></i> Tipo de objeto digital <span
+													class="fas fa-angle-down"></span></a>
 											</li>
-											<li><input type="checkbox" aria-label="Checkbox for following text input">
-												Técnica 3
+											<ul class="sub-menu collapse" id="tipo-de-objeto-digital">
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Imagen
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Texto
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Video
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Audio
+												</li>
+												<!-- <li><input type="checkbox" aria-label="Checkbox for following text input"> 3D </li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Recurso
+													Interactivo </li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Exposiciones
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Colecciones </li> -->
+											</ul>
+											<li data-toggle="collapse" data-target="#tipo-de-objeto" class="collapsed">
+												<a href="#"><i class="fas fa-cubes fa-lg"></i> Tipo de objeto <span
+													class="fas fa-angle-down"></span></a>
 											</li>
+											<ul class="sub-menu collapse" id="tipo-de-objeto">
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+												<!-- <li><input type="checkbox" aria-label="Checkbox for following text input"> Libro
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Revista
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Artículo
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Tesis
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Tesina
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Fotografía </li>
+												<li data-toggle="collapse" data-target="#pintura" class="collapsed"><input
+														type="checkbox" aria-label="Checkbox for following text input"> Pintura
+													<span class="fas fa-angle-down"></span>
+												</li>
+												<ul class="sub-menu collapse" id="pintura">
+													<li><input type="checkbox" aria-label="Checkbox for following text input">
+														Técnica 1
+													</li>
+													<li><input type="checkbox" aria-label="Checkbox for following text input">
+														Técnica 2
+													</li>
+													<li><input type="checkbox" aria-label="Checkbox for following text input">
+														Técnica 3
+													</li>
+												</ul>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Mobiliario </li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Instrumento
+													Musical </li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Bandera
+												</li> -->
+											</ul>
+			
+			
+											<li data-toggle="collapse" data-target="#fecha" class="collapsed">
+												<a href="#"><i class="fas fa-calendar-alt fa-lg"></i>Fecha / Periodo / Época <span
+													class="fas fa-angle-down"></span></a>
+											</li>
+											<ul class="sub-menu collapse" id="fecha">
+												<li>Fecha <input class="form-control" type="date" value="2011-08-19"
+														id="example-date-input"></li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input"> Siglo
+													<select class="custom-select" id="inputGroupSelect01">
+														<option selected>XIV</option>
+														<option value="1">XV</option>
+														<option value="2">XVI</option>
+														<option value="3">XVII</option>
+													</select></li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Neoclásico </li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Virreinato </li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Prehistórico
+												</li>
+											</ul>
+											<li data-toggle="collapse" data-target="#institucion" class="collapsed">
+												<a href="#"><i class="fas fa-university fa-lg"></i>Institución de procedencia <span
+													class="fas fa-angle-down"></span></a>
+											</li>
+											<ul class="sub-menu collapse" id="institucion">
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Institución 1
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Institución 2
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Institución 3
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Institución 4
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Institución 5
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Institución 6
+												</li>
+												<li><input type="checkbox" aria-label="Checkbox for following text input">
+													Institución 7
+												</li>
+											</ul>
+											<li data-toggle="collapse" class="collapsed">
+												<input type="reset" value="Borrar información" onclick="formReset()" value="Reset">
+											</li>
+											
 										</ul>
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Mobiliario </li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Instrumento
-											Musical </li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Bandera
-										</li>
-									</ul>
-
-
-									<li data-toggle="collapse" data-target="#fecha" class="collapsed">
-										<a href="#"><i class="fas fa-calendar-alt fa-lg"></i>Fecha / Periodo / Época <span
-											class="fas fa-angle-down"></span></a>
-									</li>
-									<ul class="sub-menu collapse" id="fecha">
-										<li>Fecha <input class="form-control" type="date" value="2011-08-19"
-												id="example-date-input"></li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input"> Siglo
-											<select class="custom-select" id="inputGroupSelect01">
-												<option selected>XIV</option>
-												<option value="1">XV</option>
-												<option value="2">XVI</option>
-												<option value="3">XVII</option>
-											</select></li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Neoclásico </li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Virreinato </li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Prehistórico
-										</li>
-									</ul>
-									<li data-toggle="collapse" data-target="#institucion" class="collapsed">
-										<a href="#"><i class="fas fa-university fa-lg"></i>Institución de procedencia <span
-											class="fas fa-angle-down"></span></a>
-									</li>
-									<ul class="sub-menu collapse" id="institucion">
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Institución 1
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Institución 2
-										</li>
-										<li><input type="checkbox" aria-label="Checkbox for following text input">
-											Institución 3
-										</li>
-									</ul>
-								</ul>
-							</div>
+									</div>
+							</form>
 						</div>
 					</div>
 
