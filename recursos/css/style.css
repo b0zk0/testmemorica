@@ -32,6 +32,12 @@ nav {
     text-align: center;
 }
 
+.memoria-dropdown-scroll {
+    height: auto;
+    max-height: 300px;
+    overflow-x: hidden;
+}
+
 /*-------------------------------Header y navegación-------------------------------*/
 
 .nav-principal {
