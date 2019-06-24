@@ -1,0 +1,11 @@
+{
+    "ford": "Mustang,Fiesta,Focus,Figo,GT",
+    "chevrolet": "Camaro,Cavalier,Impala",
+    "chrysler": "300,Crossfire,Dart,Phantom",
+    "volvo": "C30,C70,S90,XC90",
+    "saab": "9-3,9-8",
+    "mercedes": "CLK,A-Class,B-Class,M-Class",
+    "audi": "A1,A3,A8,R8,TT",
+    "nissan": "GTR,370z,Leaf,Tsuru",
+    "honda": "Fit,City"
+}
