@@ -20,10 +20,7 @@
             function formReset()
             {
             document.getElementById("myForm").reset();
-            document.getElementById("fecha").reset();
-            document.getElementById("tipo-de-objeto").reset();
-            document.getElementById("tipo-de-objeto-digital").reset();
-            document.getElementById("autor").reset();
+            
             }
         </script>
 
@@ -253,13 +250,25 @@
                                         Institución 7
                                     </li>
                                 </ul>
+                                <li data-toggle="collapse" data-target="#derechos" class="collapsed">
+                                    <a href="#"><i class="fas fa-university fa-lg"></i>Derechos de Uso<span
+                                        class="fas fa-angle-down"></span></a>
+                                </li>
+                                <ul class="sub-menu collapse" id="derechos">
+                                    <li><select class="custom-select" id="inputGroupSelect01">
+                                        <option selected>Cualquiera</option>
+                                        <option value="1">Uso libre</option>
+                                        <option value="2">Uso Restringido</option> 
+                                    </select>
+                                    </li>
+                                </ul>
                                 <li data-toggle="collapse" class="collapsed">
                                     <input type="reset" value="Borrar información" onclick="formReset()" value="Reset">
                                 </li>
                                 
                             </ul>
                         </div>
-                    </form>
+                </form>
                 
             </div>
 
@@ -402,6 +411,19 @@
                                                 Institución 7
                                             </li>
                                         </ul>
+                                        <li data-toggle="collapse" data-target="#derechos" class="collapsed">
+                                            <a href="#"><i class="fas fa-university fa-lg"></i>Derechos de Uso<span
+                                                class="fas fa-angle-down"></span></a>
+                                        </li>
+                                        <ul class="sub-menu collapse" id="derechos">
+                                            <li><select class="custom-select" id="inputGroupSelect01">
+                                                <option selected>Cualquiera</option>
+                                                <option value="1">Uso libre</option>
+                                                <option value="2">Uso Restringido</option> 
+                                            </select>
+                                            </li>
+                                        </ul>
+                                        
                                         <li data-toggle="collapse" class="collapsed">
                                             <input type="reset" value="Borrar información" onclick="formReset()" value="Reset">
                                         </li>
