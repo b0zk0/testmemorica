@@ -23,9 +23,5 @@ $(document).ready(function() {
             $('#searchButton').click();//Trigger search button click event
         }
     });
-
-    // selector de fondos para acervos
-
-    
 });
 
