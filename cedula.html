@@ -10,8 +10,9 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
             integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="recursos/css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="universalviewer/src/uv.css">
+        <script src="universalviewer/src/lib/offline.js"></script>
+        <script src="universalviewer/src/helpers.js"></script>
     </head>
 
     <body class="secundario">
@@ -117,23 +118,16 @@
 
             <!-- Visualizador -->
             <div class="memoria-visualizador mb-4">
+                <div id="uv" class="uv"></div>
+            </div>
+            
+            <!-- universal viewer local de prueba 
                 <div class="uv" data-locale="en-GB:English (GB),cy-GB:Cymraeg"
                     data-config="https://adore.ugent.be/IIIF/UV/config"
                     data-uri="https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91" data-collectionindex="0"
                     data-manifestindex="0" data-sequenceindex="0" data-canvasindex="0" data-zoom="-10480,-838,27173,16751" data-rotation="0"
                     style="width:100%; height:500px; background-color: #000"></div>
                 <script type="text/javascript" id="embedUV" src="universalviewer-2.0.2/dist/uv-2.0.2/lib/embed.js"></script>
-            </div>
-            
-
-            <!-- universal viewer local de prueba 
-                <div class="uv" data-locale="en-GB:English (GB),cy-GB:Cymraeg"
-                    data-config="recursos/json/config.json"
-                    data-uri="https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91" data-collectionindex="0"
-                    data-manifestindex="0" data-sequenceindex="0" data-canvasindex="0" data-zoom="-10480,-838,27173,16751" data-rotation="0"
-                    style="width:100%; height:500px; background-color: #000"></div>
-                <script type="text/javascript" id="embedUV" src="https://lib.ugent.be/uv/lib/embed.js"></script>
-                <script type="text/javascript">/* wordpress fix */</script>
             -->
 
             <!-- Cédula de objeto -->
@@ -149,15 +143,14 @@
 
             <div class="accordion mb-4">
                 <div class="card">
-                    <div class="card-header" id="headingOne" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="card-header" id="headingFour" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                         <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                                 Bien de interés común
                             </button>
                         </h2>
                     </div>
-                
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+                    <div id="collapseFour" class="collapse show" aria-labelledby="headingFour">
                         <div class="card-body">
                             <table class="table">
                                 <tbody>
@@ -288,14 +281,14 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="card-header" id="headingFive" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                         <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                 Recurso digital
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
+                    <div id="collapseFive" class="collapse show" aria-labelledby="headingFive">
                         <div class="card-body">
                             <table class="table">
                                 <tbody>
@@ -474,5 +467,19 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="recursos/js/main.js"></script>
+        <script>
+            var myUV;
+            window.addEventListener('uvLoaded', function (e) {
+                myUV = createUV('#uv', {
+                    iiifResourceUri: 'http://wellcomelibrary.org/iiif/b18035723/manifest',
+                    configUri: 'config.json'
+                }, new UV.URLDataProvider());
+                myUV.on("created", function (obj) {
+                    console.log('parsed metadata', myUV.extension.helper.manifest.getMetadata());
+                    console.log('raw jsonld', myUV.extension.helper.manifest.__jsonld);
+                });
+            }, false);
+        </script>
+        <script src="uv/uv.js"></script>
     </body>
 </html>
