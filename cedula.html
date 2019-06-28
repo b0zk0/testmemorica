@@ -10,9 +10,6 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
             integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
         <link rel="stylesheet" href="recursos/css/style.css">
-        <link rel="stylesheet" type="text/css" href="universalviewer/src/uv.css">
-        <script src="universalviewer/src/lib/offline.js"></script>
-        <script src="universalviewer/src/helpers.js"></script>
     </head>
 
     <body class="secundario">
@@ -118,10 +115,16 @@
 
             <!-- Visualizador -->
             <div class="memoria-visualizador mb-4">
-                <div id="uv" class="uv"></div>
+                <div class="uv" data-locale="en-GB:English (GB),cy-GB:Cymraeg" data-config="https://adore.ugent.be/IIIF/UV/config"
+                    data-uri="https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91"
+                    data-collectionindex="0" data-manifestindex="0" data-sequenceindex="0" data-canvasindex="0"
+                    data-zoom="-10480,-838,27173,16751" data-rotation="0" style="width:100%; height:500px; background-color: #000">
+                </div>
+                <script type="text/javascript" id="embedUV" src="universalviewer-2.0.2/dist/uv-2.0.2/lib/embed.js"></script>
             </div>
             
-            <!-- universal viewer local de prueba 
+            <!-- 
+                universal viewer local de prueba 
                 <div class="uv" data-locale="en-GB:English (GB),cy-GB:Cymraeg"
                     data-config="https://adore.ugent.be/IIIF/UV/config"
                     data-uri="https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91" data-collectionindex="0"
@@ -131,7 +134,7 @@
             -->
 
             <!-- Cédula de objeto -->
-            <div class="d-flex justify-content-between">
+            <div class="d-flex justify-content-between mb-3">
                 <h2 class="d-none d-lg-block">Ficha técnica</h2>
                 <h3 class="d-sm-block d-lg-none">Ficha técnica</h3>
                 <div class="d-flex justify-content-between">
@@ -141,18 +144,240 @@
                 </div>
             </div>
 
+            <!-- Cédulas de fondos, subfondos, etc. -->
+            <div class="mb-4">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                            aria-selected="true">Fondo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                            aria-selected="false">Subfondo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+                            aria-selected="false">Serie o Volumen</a>
+                    </li>
+                </ul>
+
+                <div class="tab-content border-right border-bottom border-left collapse show" id="myTabContent">
+                    <div class="tab-pane show active p-3" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Número identificador</th>
+                                    <!--Obligatorio-->
+                                    <td>Voluptatem nam et cumque repudiandae possimus eos at. Reprehenderit dolor exercitationem
+                                        ex.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Título</th>
+                                    <!--Obligatorio-->
+                                    <td>Reprehenderit dolor exercitationem ex.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Título alternativo</th>
+                                    <td>Voluptatibus sit ratione aliquam.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Autor/Creador</th>
+                                    <!--Obligatorio-->
+                                    <td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Grupo etnolingüistico</th>
+                                    <!--Obligatorio-->
+                                    <td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tipo de BHC</th>
+                                    <!--Obligatorio-->
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Fondo/Colección</th>
+                                    <!--Obligatorio-->
+                                    <td>Atatatatatatatatatatatata</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Serie/volumen</th>
+                                    <!--Obligatorio-->
+                                    <td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Lugar</th>
+                                    <td>Corporis quae et rerum exercitationem sint illo.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Fecha de creación</th>
+                                    <!--Obligatorio-->
+                                    <td>Ea temporibus vero delectus eius quia beatae.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Fecha relevante</th>
+                                    <td> Illo iure reiciendis est.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Periodo histórico/artístico</th>
+                                    <td>Quo molestiae ex aut velit eos rem quam.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Fecha de edición</th>
+                                    <td>Velit veritatis expedita et.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Versión de</th>
+                                    <td>Voluptatibus sit ratione aliquam.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tabla de contenidos</th>
+                                    <td>Qui neque voluptatem aut aliquid corporis aut nam architecto.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane p-3" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Creador del recurso digital</th>
+                                    <td>Voluptatem nam et cumque repudiandae possimus eos at. Reprehenderit dolor exercitationem
+                                        ex.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Descripción</th>
+                                    <td>Reprehenderit dolor exercitationem ex.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Fuente original</th>
+                                    <td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Forma parte de</th>
+                                    <!--Obligatorio-->
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tipo de objeto digital</th>
+                                    <!--Obligatorio-->
+                                    <td>Atatatatatatatatatatatata</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Formato</th>
+                                    <!--Obligatorio-->
+                                    <td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Formato relacionado</th>
+                                    <td>Corporis quae et rerum exercitationem sint illo.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dimensiones/Extensión</th>
+                                    <td>Ea temporibus vero delectus eius quia beatae.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Siguiente archivo en la secuencia</th>
+                                    <td>Voluptatem nam et cumque repudiandae possimus eos at. Reprehenderit dolor exercitationem
+                                        ex.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Fecha de creación</th>
+                                    <td>Reprehenderit dolor exercitationem ex.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Declaración de uso</th>
+                                    <!--Obligatorio-->
+                                    <td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Referencia (IIIF Manifest)</th>
+                                    <!--Obligatorio-->
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">IIIF URL</th>
+                                    <!--Obligatorio-->
+                                    <td>Atatatatatatatatatatatata</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">URI</th>
+                                    <!--Obligatorio-->
+                                    <td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="tab-pane p-3" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Descripción</th>
+                                    <td>Reprehenderit dolor exercitationem ex.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Fuente original</th>
+                                    <td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Forma parte de</th>
+                                    <!--Obligatorio-->
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Tipo de objeto digital</th>
+                                    <!--Obligatorio-->
+                                    <td>Atatatatatatatatatatatata</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Formato</th>
+                                    <!--Obligatorio-->
+                                    <td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Formato relacionado</th>
+                                    <td>Corporis quae et rerum exercitationem sint illo.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Dimensiones/Extensión</th>
+                                    <td>Ea temporibus vero delectus eius quia beatae.</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">IIIF URL</th>
+                                    <!--Obligatorio-->
+                                    <td>Atatatatatatatatatatatata</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">URI</th>
+                                    <!--Obligatorio-->
+                                    <td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <a class="btn btn-dark btn-block" data-toggle="collapse" href="#myTabContent" role="button" aria-expanded="false"
+                        aria-controls="myTabContent">
+                        Abrir/Cerrar
+                    </a>
+                </div>
+            </div>
+
             <div class="accordion mb-4">
                 <div class="card">
-                    <div class="card-header" id="headingFour" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    <div class="card-header" id="headingOne" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                         <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 Bien de interés común
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseFour" class="collapse show" aria-labelledby="headingFour">
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
                         <div class="card-body">
-                            <table class="table">
+                            <table class="table table-borderless">
                                 <tbody>
                                     <tr>
                                         <th scope="row">Número identificador</th> <!--Obligatorio-->
@@ -281,16 +506,16 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-header" id="headingFive" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <div class="card-header" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                         <h2 class="mb-0">
-                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                 Recurso digital
                             </button>
                         </h2>
                     </div>
-                    <div id="collapseFive" class="collapse show" aria-labelledby="headingFive">
+                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
                         <div class="card-body">
-                            <table class="table">
+                            <table class="table table-borderless">
                                 <tbody>
                                     <tr>
                                         <th scope="row">Creador del recurso digital</th>
@@ -467,19 +692,5 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="recursos/js/main.js"></script>
-        <script>
-            var myUV;
-            window.addEventListener('uvLoaded', function (e) {
-                myUV = createUV('#uv', {
-                    iiifResourceUri: 'http://wellcomelibrary.org/iiif/b18035723/manifest',
-                    configUri: 'config.json'
-                }, new UV.URLDataProvider());
-                myUV.on("created", function (obj) {
-                    console.log('parsed metadata', myUV.extension.helper.manifest.getMetadata());
-                    console.log('raw jsonld', myUV.extension.helper.manifest.__jsonld);
-                });
-            }, false);
-        </script>
-        <script src="uv/uv.js"></script>
     </body>
 </html>
