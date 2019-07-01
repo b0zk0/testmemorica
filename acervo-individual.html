@@ -228,9 +228,14 @@
 					<div class="col-md-3 col-sm-12">
 						<select id="fondos" class="form-control">
 							<option selected value="base">Selecciona un fondo</option>
-							<option value="usa">Estados Unidos</option>
-							<option value="europe">Europa</option>
-							<option value="japan">Japón</option>
+							<option value="H-MX09017AGNCL01FO001AYSE001APUI001">H-MX09017AGNCL01FO001AYSE001APUI001</option>
+							<option value="H-MX09017AGNCL01FO001AYSE001APUI002">H-MX09017AGNCL01FO001AYSE001APUI002</option>
+							<option value="H-MX09017AGNCL01FO001AYSE001APUI003">H-MX09017AGNCL01FO001AYSE001APUI003</option>
+							<option value="H-MX09017AGNCL01FO001AYSE001APUI004">H-MX09017AGNCL01FO001AYSE001APUI004</option>
+							<option value="H-MX09017AGNCL01FO001AYSE001APUI005">H-MX09017AGNCL01FO001AYSE001APUI005</option>
+							<option value="H-MX09017AGNCL01FO001AYSE001APUI006">H-MX09017AGNCL01FO001AYSE001APUI006</option>
+							<option value="H-MX09017AGNCL01FO001AYSE001APUI007">H-MX09017AGNCL01FO001AYSE001APUI007</option>
+							<option value="H-MX09017AGNCL01FO001AYSE001APUI008">H-MX09017AGNCL01FO001AYSE001APUI008</option>
 						</select>
 					</div>
 					<div class="col-md-3 col-sm-12">
@@ -561,18 +566,33 @@
 			$(function () {
 				$("#fondos").change(function () {
 					var $dropdown = $(this);
-					$.getJSON("recursos/json/fondos.json", function (data) {
+					$.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
 						var key = $dropdown.val();
 						var vals = [];
 						switch (key) {
-							case 'usa':
-								vals = data.usa.split(",");
+							case 'H-MX09017AGNCL01FO001AYSE001APUI001':
+								vals = data.jsonObj['H-MX09017AGNCL01FO001AYSE001APUI001'].sop_data.split(",");
 								break;
-							case 'europe':
-								vals = data.europe.split(",");
+							case 'H-MX09017AGNCL01FO001AYSE001APUI002':
+								vals = data.jsonObj['H-MX09017AGNCL01FO001AYSE001APUI002'].sop_data.split(",");
 								break;
-							case 'japan':
-								vals = data.japan.split(",");
+							case 'H-MX09017AGNCL01FO001AYSE001APUI003':
+								vals = data.jsonObj['H-MX09017AGNCL01FO001AYSE001APUI003'].sop_data.split(",");
+								break;
+							case 'H-MX09017AGNCL01FO001AYSE001APUI004':
+								vals = data.jsonObj['H-MX09017AGNCL01FO001AYSE001APUI004'].sop_data.split(",");
+								break;
+							case 'H-MX09017AGNCL01FO001AYSE001APUI005':
+								vals = data.jsonObj['H-MX09017AGNCL01FO001AYSE001APUI005'].sop_data.split(",");
+								break;
+							case 'H-MX09017AGNCL01FO001AYSE001APUI006':
+								vals = data.jsonObj['H-MX09017AGNCL01FO001AYSE001APUI006'].sop_data.split(",");
+								break;
+							case 'H-MX09017AGNCL01FO001AYSE001APUI007':
+								vals = data.jsonObj['H-MX09017AGNCL01FO001AYSE001APUI007'].sop_data.split(",");
+								break;
+							case 'H-MX09017AGNCL01FO001AYSE001APUI008':
+								vals = data.jsonObj['H-MX09017AGNCL01FO001AYSE001APUI008'].sop_data.split(",");
 								break;
 							case 'base':
 								vals = ['Favor de seleccionar un fondo'];
@@ -580,7 +600,7 @@
 						var $subfondos = $("#subfondos");
 						$subfondos.empty();
 						$.each(vals, function (index, value) {
-							$subfondos.append("<option value=\"" + value.toLowerCase() + "\">" + value + "</option>");
+							$subfondos.append("<option value=\"" + value + "\">" + value + "</option>");
 						});
 					});
 				});
