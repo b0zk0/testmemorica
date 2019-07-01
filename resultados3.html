@@ -14,6 +14,10 @@
         <link href="recursos/css/menulateral.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="recursos/css/style.css">
         <link href="css/font-awesome.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="recursos/css/jquery.range.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <script type="text/javascript">
             function formReset()
@@ -22,6 +26,8 @@
             
             }
         </script>
+
+
     </head>
 
     <body class="secundario">
@@ -92,7 +98,15 @@
                         </div>
                         <div class="col-lg-5 col-md-8 col-sm-12 col-7   text-white d-flex  justify-content-between px-3 py-2">
                             <p><a href="#">1</a>-<a href="#">8</a> de <a href="#">75</a> resultados</p>
-                            <p>Mostrar <a href="#">20</a> por pagina</p>    
+                            <p>Mostrar</p> 
+                               
+                            <select class="form-control" id="exampleFormControlSelect1" style="width: 70px;">
+                                <option>20</option>
+                                <option>50</option>
+                                <option>100</option>
+                                
+                            </select>
+                                <p>por pagina</p>    
                         </div>
                         <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-lg-end justify-content-center">
                             <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -114,6 +128,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!--Range-->
+
+            <div class="bg-light pt-4" style="height: 50px;">
+                <div class="container demo-output align-self-center">   
+                    <input class="range-slider" type="hidden" value="0000,2019"/>
+                </div>
+               
             </div>
 
             <!--MENU Facetador-->
@@ -144,14 +167,7 @@
                                 </li>
                                 <li><input type="checkbox" aria-label="Checkbox for following text input"> Audio
                                 </li>
-                                <!-- <li><input type="checkbox" aria-label="Checkbox for following text input"> 3D </li>
-                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Recurso
-                                    Interactivo </li>
-                                <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                    Exposiciones
-                                </li>
-                                <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                    Colecciones </li> -->
+                                
                             </ul>
                             <li data-toggle="collapse" data-target="#tipo-de-objeto" class="collapsed">
                                 <a href="#"><i class="fas fa-cubes fa-lg"></i> Tipo de objeto <span
@@ -163,6 +179,7 @@
                                 <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
                                 <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
                                 <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
+                                
                                 <!-- <li><input type="checkbox" aria-label="Checkbox for following text input"> Libro
                                 </li>
                                 <li><input type="checkbox" aria-label="Checkbox for following text input"> Revista
@@ -317,46 +334,14 @@
                                                 <a href="#"><i class="fas fa-cubes fa-lg"></i> Tipo de objeto <span
                                                     class="fas fa-angle-down"></span></a>
                                             </li>
+                                            <ul class="sub-menu collapse results" id="tipo-de-objeto">
+                                                
+                                            </ul>
                                             <ul class="sub-menu collapse" id="tipo-de-objeto">
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
-                                                <!-- <li><input type="checkbox" aria-label="Checkbox for following text input"> Libro
-                                                </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Revista
-                                                </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Artículo
-                                                </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Tesis
-                                                </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Tesina
-                                                </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                                    Fotografía </li>
-                                                <li data-toggle="collapse" data-target="#pintura" class="collapsed"><input
-                                                        type="checkbox" aria-label="Checkbox for following text input"> Pintura
-                                                    <span class="fas fa-angle-down"></span>
-                                                </li>
-                                                <ul class="sub-menu collapse" id="pintura">
-                                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                                        Técnica 1
-                                                    </li>
-                                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                                        Técnica 2
-                                                    </li>
-                                                    <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                                        Técnica 3
-                                                    </li>
-                                                </ul>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                                    Mobiliario </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                                    Instrumento
-                                                    Musical </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Bandera
-                                                </li> -->
+                                                <li><button class="btn btn-light" id="loadmorebtn">
+                                                    <img src="ajax-loader.gif" class="ani_image" style="float:left">
+                                                    &nbsp; Cargar más
+                                                </button></li>
                                             </ul>
             
             
@@ -365,22 +350,35 @@
                                                     class="fas fa-angle-down"></span></a>
                                             </li>
                                             <ul class="sub-menu collapse" id="fecha">
-                                                <li>Fecha <input class="form-control" type="date" value="2011-08-19"
-                                                        id="example-date-input"></li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Siglo
+                                                <li>
+                                                        
+                                                            <span class="filterTitle">Rango años</span>
+                                                            <div class="dateADate">
+                                                            <span class="sr-only"><label for="Año inicio">Año inicio</label></span>
+                                                            <input type="number" data-ng-value="" name="anneeDebut" id="anneeDebut" data-ng-required="false" data-ng-model="$ctrl.anneeStart" data-ng-change="$ctrl.setPeriodeAnnees()" autocomplete="off" placeholder="0000" class="year-input ng-pristine ng-empty ng-valid ng-valid-required ng-touched" style="width: 50px;">
+                                                            a
+                                                            <span class="sr-only"><label for="Año final">Año final</label></span>
+                                                            <input type="number" name="anneeFin" id="anneeFin" autocomplete="off" placeholder="2019" class="year-input ng-pristine ng-untouched ng-empty ng-valid ng-valid-required pointer-label high" style="width: 50px;">
+                                                            
+                                                            </div>
+                                                        
+                                                </li>        
+                                                <li>Siglo
                                                     <select class="custom-select" id="inputGroupSelect01">
-                                                        <option selected>XIV</option>
-                                                        <option value="1">XV</option>
-                                                        <option value="2">XVI</option>
-                                                        <option value="3">XVII</option>
+                                                        <option selected>Cualquiera</option>
+                                                        <option value="1">XIV</option>
+                                                        <option value="2">XV</option>
+                                                        <option value="3">XVI</option>
+                                                        <option value="4">XVII</option>
                                                     </select></li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                                    Neoclásico </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                                    Virreinato </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
-                                                    Prehistórico
-                                                </li>
+                                                <li>Periodo
+                                                        <select class="custom-select" id="inputGroupSelect01">
+                                                            <option selected>Cualquiera</option>
+                                                            <option value="1">Neoclásico</option>
+                                                            <option value="2">Virreinato</option>
+                                                            <option value="3">Prehistórico</option>
+                                                </select></li>    
+                                               
                                             </ul>
                                             <li data-toggle="collapse" data-target="#institucion" class="collapsed">
                                                 <a href="#"><i class="fas fa-university fa-lg"></i>Institución de procedencia <span
@@ -765,8 +763,48 @@
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script src="recursos/js/jquery.range.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+               
+                $('.range-slider').jRange({
+                    from: 0000,
+                    to: 2019,
+                    step: 1,
+                    scale: [0,1000,2019],
+                    format: '%s',
+                    width: 900,
+                    showLabels: true,
+                    isRange : true
+                });
+            });
+        </script>
+
+        
+        <!-- Script MAS RESULTADOS -->
+        <script>
+            var mipagina = 1;
+            micontenido(mipagina);
+            $('#loadmorebtn').click(function(e){
+                mipagina++;
+                micontenido(mipagina);
+            })
+            function micontenido(mipagina){
+                $('.ani_image').show()
+                $.post('data.php', {page: mipagina}, function(data){
+                    if(data.trim().length == 0){
+                        $('#loadmorebtn').text("No hay mas resultados").prop("disabled", true)
+                    }
+                    $('.results').append(data)
+                    $("html, body").animate({scrollTop: $("#loadmorebtn").offset().top}, 800)
+                    $('.ani_image').hide()
+                })
+            }
+        </script>
     </body>
 </html>
