@@ -131,20 +131,19 @@
 			<form>
 				<div class="row mb-3">
 					<div class="col-md-3 col-sm-12">
-						<select id="fondos" class="form-control">
+						<select id="nivel1" class="form-control">
 							<option selected value="base">Selecciona un fondo</option>
 							<option value="AP">Abasto y Panaderías</option>
 							<option value="AL">Alcabalas</option>
-							<option value="europe">europa</option>
 						</select>
 					</div>
 					<div class="col-md-3 col-sm-12">
-						<select id="subfondos" class="form-control">
+						<select id="nivel2" class="form-control">
 							<option>Favor de seleccionar un fondo</option>
 						</select>
 					</div>
 					<div class="col-md-3 col-sm-12">
-						<select id="series" class="form-control">
+						<select id="nivel3" class="form-control">
 							<option>Favor de seleccionar un subfondo</option>
 						</select>
 					</div>
@@ -461,7 +460,40 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="recursos/js/main.js"></script>
 
-		<!-- JSON? -->
+		<script>
+			var vals = [];
+			$("#nivel1").change(function () {
+				var $dropdown = $(this);
+				var key = $dropdown.val();
+				var $nivel2 = $("#nivel2");
+				switch (key) {
+					case 'AP':
+						$.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
+							vals = data.H_MX09017AGNCL01FO001AYSE001AP.hijos;
+							console.log(vals);
+						});
+						break
+					case 'AL':
+						$.getJSON("recursos/json/MX09017AGNCL01FO008RHSE002ALSS03ALI22262.json", function (data) {
+							vals = data.H_MX09017AGNCL01FO008RHSE002AL.sop_data;
+							console.log(vals);
+						});
+						break
+					case 'base':
+						vals = ['Favor de seleccionar un fondo'];
+						console.log(vals);
+						break
+				}
+				
+				
+				$nivel2.empty();
+				$.each(vals, function (index, value) {
+					$nivel2.append("<option>" + value + "</option>");
+				});
+			});
+		</script>
+
+		<!-- JSON script?
 		<script>
 			$("#fondos").change(function () {
 				var $dropdown = $(this);
@@ -488,16 +520,17 @@
 						vals = ['Favor de seleccionar un fondo'];
 						break
 				}
+				
 				var $subfondos = $("#subfondos");
 				$subfondos.empty();
 				$.each(vals, function (index, value) {
 					$subfondos.append("<option>" + value + "</option>");
 				});			
 			});
-		</script>
+		</script> -->
 
-		<!-- AJAX? -->
-		<!-- <script>
+		<!-- AJAX?
+		<script>
 			var xhr = new XMLHttpRequest();
 			xhr.onload = function() {
 				if(xhr.status === 200) {
