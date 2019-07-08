@@ -179,4 +179,3 @@ $(document).ready(function() {
     }
     // function prepare_new_table(path_to_obj)
 });
-//http://10.255.8.49/freenas/agn/
