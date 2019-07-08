@@ -15,8 +15,9 @@
         <link rel="stylesheet" href="recursos/css/style.css">
         <link href="css/font-awesome.min.css" rel="stylesheet">
 
-        <link rel="stylesheet" href="recursos/css/jquery.range.css">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        
+
+        
 
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <script type="text/javascript">
@@ -26,6 +27,11 @@
             
             }
         </script>
+
+        
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+       
 
 
     </head>
@@ -132,15 +138,17 @@
 
             <!--Range-->
 
-            <div class="bg-light pt-4" style="height: 50px;">
-                <div class="container demo-output align-self-center">   
-                    <input class="range-slider" type="hidden" value="0000,2019"/>
+            <div class="py-2 px-3 container" >
+                <div class="row d-flex justify-content-between">
+                    <input type="text" id="añoinicio" readonly style="border:0; font-weight:bold; width: 40px;" min="0000" max="20219">
+                    <input type="text" id="añofin" readonly style="border:0; font-weight:bold; width: 40px;" min="0000" max="2019">
                 </div>
-               
+                <div class="" id="slider-range"></div>
+                
             </div>
 
             <!--MENU Facetador-->
-            <div class="nav-side-menu d-lg-none">
+            <!-- <div class="nav-side-menu d-lg-none">
                 <div class="brand">Filtros</div>
                 <i class="fas fa-sliders-h fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
                 <form id="myForm">
@@ -173,14 +181,14 @@
                                 <a href="#"><i class="fas fa-cubes fa-lg"></i> Tipo de objeto <span
                                     class="fas fa-angle-down"></span></a>
                             </li>
+                            <ul class="sub-menu collapse results" id="tipo-de-objeto">
+                                
+                            </ul>
                             <ul class="sub-menu collapse" id="tipo-de-objeto">
-                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
-                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
-                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
-                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
-                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Lorem Ipsum </li>
-                                
-                                
+                                <li><button class="btn btn-light" id="loadmorebtn">
+                                    <img src="ajax-loader.gif" class="ani_image" style="float:left">
+                                    &nbsp; Cargar más
+                                </button></li>
                             </ul>
 
 
@@ -252,14 +260,15 @@
                         </ul>
                     </div>
             </form>
-            </div>
+            </div> -->
 
             <!--Contenedor-->
 
             <div class="container p-0">
 
                 <div class="row">
-                    <div class="col-sm-0 col-md-0 col-lg-3 px-0 d-none d-lg-block">
+                     <!--MENU Facetador-->
+                    <div class="col-sm-0 col-md-0 col-lg-3 px-0">
                         <div class="nav-side-menu">
                             <div class="brand">Filtros</div>
                             <i class="fas fa-sliders-h fa-2x toggle-btn" data-toggle="collapse"
@@ -314,11 +323,12 @@
                                                         
                                                             <span class="filterTitle">Rango años</span>
                                                             <div class="dateADate">
+                                                                
                                                             <span class="sr-only"><label for="Año inicio">Año inicio</label></span>
-                                                            <input type="number" data-ng-value="" name="anneeDebut" id="anneeDebut" data-ng-required="false" data-ng-model="$ctrl.anneeStart" data-ng-change="$ctrl.setPeriodeAnnees()" autocomplete="off" placeholder="0000" class="year-input ng-pristine ng-empty ng-valid ng-valid-required ng-touched" style="width: 50px;">
+                                                            <input type="number" data-ng-value="" name="anneeDebut" id="añoinicio" data-ng-required="false" data-ng-model="$ctrl.anneeStart" data-ng-change="$ctrl.setPeriodeAnnees()" autocomplete="off" placeholder="0000"  style="width: 50px;" min="0000" max="2019">
                                                             a
                                                             <span class="sr-only"><label for="Año final">Año final</label></span>
-                                                            <input type="number" name="anneeFin" id="anneeFin" autocomplete="off" placeholder="2019" class="year-input ng-pristine ng-untouched ng-empty ng-valid ng-valid-required pointer-label high" style="width: 50px;">
+                                                            <input type="number" data-ng-value="" name="anneeDebut" id="añofin" data-ng-required="false" data-ng-model="$ctrl.anneeStart" data-ng-change="$ctrl.setPeriodeAnnees()" autocomplete="off" placeholder="2019"  style="width: 50px;" min="0000" max="2019">
                                                             
                                                             </div>
                                                         
@@ -374,8 +384,12 @@
                                             <ul class="sub-menu collapse" id="derechos">
                                                 <li><select class="custom-select" id="inputGroupSelect01">
                                                     <option selected>Cualquiera</option>
-                                                    <option value="1">Uso libre</option>
-                                                    <option value="2">Uso Restringido</option> 
+                                                    <option value="1">Derechos Reservados</option>
+                                                    <option value="2">Uso Educativo</option>
+                                                    <option value="3">Dominio Público</option>
+                                                    <option value="4">Uso no restringido o permitido</option>
+                                                    <option value="5">Obras de Titular no identificado o identificable</option>
+                                                    <option value="3">Obras Anónimas</option>   
                                                 </select>
                                                 </li>
                                             </ul>
@@ -779,23 +793,25 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!-- <script src="recursos/js/range_Timeline.js" crossorigin="anonymous"></script> -->
 
-        <script src="recursos/js/jquery.range.js"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function(){
-               
-                $('.range-slider').jRange({
-                    from: 0000,
-                    to: 2019,
-                    step: 1,
-                    scale: [0,1000,2019],
-                    format: '%s',
-                    width: 900,
-                    showLabels: true,
-                    isRange : true
-                });
+        <!-- Script TIMELINE -->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $( function() {
+            $( "#slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: 2019,
+                values: [ 0, 2019 ],
+                slide: function( event, ui ) {
+                $( "#añoinicio" ).val( ui.values[ 0 ]);
+                $( "#añofin" ).val(+ ui.values[ 1 ]);
+                }
             });
+            $( "#añoinicio" ).val($( "#slider-range" ).slider( "values", 0 ));
+            $( "#añofin" ).val($( "#slider-range" ).slider( "values", 1 ));
+            } );
         </script>
 
         
@@ -806,6 +822,7 @@
             $('#loadmorebtn').click(function(e){
                 mipagina++;
                 micontenido(mipagina);
+                return false;
             })
             function micontenido(mipagina){
                 $('.ani_image').show()
@@ -814,10 +831,13 @@
                         $('#loadmorebtn').text("No hay mas resultados").prop("disabled", true)
                     }
                     $('.results').append(data)
-                    $("html, body").animate({scrollTop: $("#loadmorebtn").offset().top}, 800)
+                    $("html, body").animate({scrollTop: $("#loadmorebtn").offset().top/1.7}, 800)
                     $('.ani_image').hide()
                 })
+                return false;
             }
         </script>
+
+
     </body>
 </html>
