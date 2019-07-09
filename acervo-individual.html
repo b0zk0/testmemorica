@@ -129,25 +129,25 @@
 
 			<!-- -------------------------Dropdowns de árbol------------------------- -->
 			<form>
-				<div class="row mb-3">
-					<div class="col-md-3 col-sm-12">
+				<div class="row">
+					<div class="col-md-3 col-sm-12 mb-3">
 						<select id="nivel1" class="form-control">
 							<option selected value="base">Selecciona un fondo</option>
 							<option value="MX09017AGNCL01FO001AYSE001AP8">Abasto y Panaderías</option>
 							<option value="MX09017AGNCL01FO008RHSE002ALSS03ALI22262">Alcabalas</option>
 						</select>
 					</div>
-					<div class="col-md-3 col-sm-12">
+					<div class="col-md-3 col-sm-12 mb-3">
 						<select id="nivel2" class="form-control">
 							<option>Favor de seleccionar un fondo</option>
 						</select>
 					</div>
-					<div class="col-md-3 col-sm-12">
+					<div class="col-md-3 col-sm-12 mb-3">
 						<select id="nivel3" class="form-control">
 							<option>Favor de seleccionar un subfondo</option>
 						</select>
 					</div>
-					<div id="submit" class="col-md-3 col-sm-12 d-flex justify-content-center">
+					<div id="submit" class="col-md-3 col-sm-12 d-flex justify-content-center mb-3">
 						<button type="submit" class="btn btn-primary">Ver objetos</button>
 					</div>
 				</div>
@@ -159,9 +159,9 @@
 					<div class="card-header" id="headingOne" type="button" data-toggle="collapse" data-target="#collapseOne"
 						aria-expanded="true" aria-controls="collapseOne">
 						<h2 class="mb-0">
-							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+							<button class="btn btn-link cedula1titulo" type="button" data-toggle="collapse" data-target="#collapseOne"
 								aria-expanded="true" aria-controls="collapseOne">
-								Cédula del fondo
+								
 							</button>
 						</h2>
 					</div>
@@ -505,14 +505,40 @@
             crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="recursos/js/main.js"></script>
-
+		
 		<script>
+			//variables sí
 			var vals = [];
+			var $nivel1 = $("#nivel1");
 			var $nivel2 = $("#nivel2");
+			var $nivel3 = $("#nivel3");
+			var $nivel4 = $("#nivel4");
+			var $nivel5 = $("#nivel5");
+			var $nivel6 = $("#nivel6");
 
+			//primera función generadora de cédula
+			function generateTable(info) {
+				$(".COD_REF").text(info.COD_REF);
+				$(".TITULO").text(info.TITULO); // este es?
+				$(".NOMBRE_PRODUCTOR").text(info.NOMBRE_PRODUCTOR);
+				$(".NIVEL_DESC").text(info.NIVEL_DESC);
+				$(".padre").text(info.padre);
+				$(".FECHA_EXT_INI").text(info.FECHA_EXT_INI);
+				$(".HIST_INSTUTUC").text(info.HIST_INSTUTUC);
+				$(".LOCALIZ_ORIG").text(info.LOCALIZ_ORIG);
+				$(".VOL_UNID").text(info.VOL_UNID);
+				$(".FECHA_EXT_FIN").text(info.FECHA_EXT_FIN);
+				$(".NOTAS").text(info.NOTAS);
+				$(".REGLAS_NORMAS").text(info.REGLAS_NORMAS);
+				$(".NOTA_ARCHIVERO").text(info.NOTA_ARCHIVERO);
+			};
+
+			//cambio en primer dropdown
 			$("#nivel1").change(function () {
 				var $dropdown = $(this);
 				var key = $dropdown.val();
+
+				var $nextDropdown = $("#nivel" + 1);
 
 				function generateDropdown(vals) {
 					$.each(vals, function (index, value) {
@@ -520,23 +546,6 @@
 					});
 				};
 
-				function generateTable(info) {
-					$(".COD_REF").text(info.COD_REF);
-					$(".TITULO").text(info.TITULO);
-					$(".NOMBRE_PRODUCTOR").text(info.NOMBRE_PRODUCTOR);
-					$(".NIVEL_DESC").text(info.NIVEL_DESC);
-					$(".padre").text(info.padre);
-					$(".FECHA_EXT_INI").text(info.FECHA_EXT_INI);
-					$(".HIST_INSTUTUC").text(info.HIST_INSTUTUC);
-					$(".TITULO").text(info.TITULO); // este es?
-					$(".LOCALIZ_ORIG").text(info.LOCALIZ_ORIG);
-					$(".VOL_UNID").text(info.VOL_UNID);
-					$(".FECHA_EXT_FIN").text(info.FECHA_EXT_FIN);
-					$(".NOTAS").text(info.NOTAS);
-					$(".REGLAS_NORMAS").text(info.REGLAS_NORMAS);
-					$(".NOTA_ARCHIVERO").text(info.NOTA_ARCHIVERO);
-				};
-				
 				switch (key) {
 					case 'MX09017AGNCL01FO001AYSE001AP8':
 						$.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
@@ -549,9 +558,11 @@
 							$("#cedula1").addClass("d-block");
 							$("#collapseOne").addClass("show");
 
+
 							info = data.H_MX09017AGNCL01FO001AYSE001AP;
+							$(".cedula1titulo").text(info.TITULO);
 							generateTable(info);
-							
+
 							console.log(vals);
 						});
 						break
@@ -567,6 +578,7 @@
 							$("#collapseOne").addClass("show");
 
 							info = data.H_MX09017AGNCL01FO008RHSE002AL;
+							$(".cedula1titulo").text(info.TITULO);
 							generateTable(info);
 
 							console.log(vals);
@@ -582,6 +594,28 @@
 						break
 				}
 			});
+
+			for (var i = 0; i < path.length; i++) {
+				if (y < offset[i].bottom) {
+					$.getJSON("recursos/json/MX09017AGNCL01FO008RHSE002ALSS03ALI22262.json", function (data) {
+						$nivel2.empty();
+
+						vals = data.H_MX09017AGNCL01FO008RHSE002AL.hijos;
+						generateDropdown(vals)
+
+						$("#cedula1").removeClass("d-none");
+						$("#cedula1").addClass("d-block");
+						$("#collapseOne").addClass("show");
+
+						info = data.H_MX09017AGNCL01FO008RHSE002AL;
+						$(".cedula1titulo").text(info.TITULO);
+						generateTable(info);
+
+						console.log(vals);
+					});
+					break
+				}
+			}
 		</script>
 
 		<!-- AJAX?
@@ -597,5 +631,6 @@
 			xhr.open('GET', 'recursos/json/MX09017AGNCL01FO001AYSE001AP8', true);
 			xhr.send(null);
 		</script> -->
+
     </body>
 </html>
