@@ -505,18 +505,13 @@
             crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="recursos/js/main.js"></script>
+		<!-- <script src="recursos/js/test.js"></script> -->
 		
 		<script>
-			//variables sí
-			var vals = [];
-			var $nivel1 = $("#nivel1");
-			var $nivel2 = $("#nivel2");
-			var $nivel3 = $("#nivel3");
-			var $nivel4 = $("#nivel4");
-			var $nivel5 = $("#nivel5");
-			var $nivel6 = $("#nivel6");
+			niveles = [];
+			nivelActual = "this";
+			nivelSiguiente = "No sé qué chingados va'quí";
 
-			//primera función generadora de cédula
 			function generateTable(info) {
 				$(".COD_REF").text(info.COD_REF);
 				$(".TITULO").text(info.TITULO); // este es?
@@ -527,95 +522,31 @@
 				$(".HIST_INSTUTUC").text(info.HIST_INSTUTUC);
 				$(".LOCALIZ_ORIG").text(info.LOCALIZ_ORIG);
 				$(".VOL_UNID").text(info.VOL_UNID);
-				$(".FECHA_EXT_FIN").text(info.FECHA_EXT_FIN);
+				$(".FECHA_EXT_FIN").text(info.FECHA_EXT_FIN); //no, es este
 				$(".NOTAS").text(info.NOTAS);
 				$(".REGLAS_NORMAS").text(info.REGLAS_NORMAS);
 				$(".NOTA_ARCHIVERO").text(info.NOTA_ARCHIVERO);
 			};
+			
+			for (var i = 0; i < hijos.length; i++) {
+				$.getJSON("recursos/json/" + this.value + ".json", function (data) {
+					$nivelSiguiente.empty();
 
-			//cambio en primer dropdown
-			$("#nivel1").change(function () {
-				var $dropdown = $(this);
-				var key = $dropdown.val();
+					vals = data.H_MX09017AGNCL01FO008RHSE002AL.hijos;
+					generateDropdown(vals)
 
-				var $nextDropdown = $("#nivel" + 1);
+					$("#cedula1").removeClass("d-none");
+					$("#cedula1").addClass("d-block");
+					$("#collapseOne").addClass("show");
 
-				function generateDropdown(vals) {
-					$.each(vals, function (index, value) {
-						$nivel2.append("<option value=\"" + value.yo + "\">" + value.TITULO + "</option>");
-					});
-				};
+					info = data.H_MX09017AGNCL01FO008RHSE002AL;
+					$(".cedula1titulo").text(info.TITULO);
+					generateTable(info);
 
-				switch (key) {
-					case 'MX09017AGNCL01FO001AYSE001AP8':
-						$.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
-							$nivel2.empty();
-
-							vals = data.H_MX09017AGNCL01FO001AYSE001AP.hijos;
-							generateDropdown(vals)
-
-							$("#cedula1").removeClass("d-none");
-							$("#cedula1").addClass("d-block");
-							$("#collapseOne").addClass("show");
-
-
-							info = data.H_MX09017AGNCL01FO001AYSE001AP;
-							$(".cedula1titulo").text(info.TITULO);
-							generateTable(info);
-
-							console.log(vals);
-						});
-						break
-					case 'MX09017AGNCL01FO008RHSE002ALSS03ALI22262':
-						$.getJSON("recursos/json/MX09017AGNCL01FO008RHSE002ALSS03ALI22262.json", function (data) {
-							$nivel2.empty();
-
-							vals = data.H_MX09017AGNCL01FO008RHSE002AL.hijos;
-							generateDropdown(vals)
-
-							$("#cedula1").removeClass("d-none");
-							$("#cedula1").addClass("d-block");
-							$("#collapseOne").addClass("show");
-
-							info = data.H_MX09017AGNCL01FO008RHSE002AL;
-							$(".cedula1titulo").text(info.TITULO);
-							generateTable(info);
-
-							console.log(vals);
-						});
-						break
-					case 'base':
-						$nivel2.empty();
-						vals = ['Favor de seleccionar un fondo'];
-						$nivel2.append("<option>" + vals + "</option>");
-						$("#cedula1").removeClass("d-block");
-						$("#cedula1").addClass("d-none");
-						console.log(vals);
-						break
-				}
-			});
-
-			for (var i = 0; i < path.length; i++) {
-				if (y < offset[i].bottom) {
-					$.getJSON("recursos/json/MX09017AGNCL01FO008RHSE002ALSS03ALI22262.json", function (data) {
-						$nivel2.empty();
-
-						vals = data.H_MX09017AGNCL01FO008RHSE002AL.hijos;
-						generateDropdown(vals)
-
-						$("#cedula1").removeClass("d-none");
-						$("#cedula1").addClass("d-block");
-						$("#collapseOne").addClass("show");
-
-						info = data.H_MX09017AGNCL01FO008RHSE002AL;
-						$(".cedula1titulo").text(info.TITULO);
-						generateTable(info);
-
-						console.log(vals);
-					});
-					break
-				}
-			}
+					console.log(vals);
+				});
+				break
+			};
 		</script>
 
 		<!-- AJAX?

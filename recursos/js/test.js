@@ -24,7 +24,7 @@ function generateTable(info) {
     $(".NOTA_ARCHIVERO").text(info.NOTA_ARCHIVERO);
 };
 
-//segunda función generadora de cédula
+//segunda función generadora de dropdown
 function generateDropdown(vals) {
     $.each(vals, function (index, value) {
         $nivel2.append("<option value=\"" + value.yo + "\">" + value.TITULO + "</option>");
