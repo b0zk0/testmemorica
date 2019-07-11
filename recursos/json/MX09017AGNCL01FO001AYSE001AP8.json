@@ -29,7 +29,7 @@
         "REGLAS_NORMAS": "ISAD (G) versi\u00f3n 2000\n",
         "NOTA_ARCHIVERO": "Nombre de quien elabor\u00f3 esta descripci\u00f3n, gu\u00eda simple: \nNombre de quien elabor\u00f3 esta descripci\u00f3n, gu\u00eda general: Lucila Calvo Hern\u00e1ndez y Ang\u00e9lica Rodr\u00edguez Lara.",
         "hijos": {
-            "H-MX09017AGNCL01FO001AYSE001APUI001": {
+            "H_MX09017AGNCL01FO001AYSE001APUI001": {
                 "yo": "H-MX09017AGNCL01FO001AYSE001APUI001",
                 "padre": "H-MX09017AGNCL01FO001AYSE001AP",
                 "COD_REF": "MX09017AGN\/CL01\/FO001AY\/SE001AP\/1",
@@ -1627,7 +1627,7 @@
                     }
                 }
             },
-            "H-MX09017AGNCL01FO001AYSE001APUI002": {
+            "H_MX09017AGNCL01FO001AYSE001APUI002": {
                 "yo": "H-MX09017AGNCL01FO001AYSE001APUI002",
                 "padre": "H-MX09017AGNCL01FO001AYSE001AP",
                 "COD_REF": "MX09017AGN\/CL01\/FO001AY\/SE001AP\/2",
@@ -2709,7 +2709,7 @@
                     }
                 }
             },
-            "H-MX09017AGNCL01FO001AYSE001APUI003": {
+            "H_MX09017AGNCL01FO001AYSE001APUI003": {
                 "yo": "H-MX09017AGNCL01FO001AYSE001APUI003",
                 "padre": "H-MX09017AGNCL01FO001AYSE001AP",
                 "COD_REF": "MX09017AGN\/CL01\/FO001AY\/SE001AP\/3",
@@ -4280,7 +4280,7 @@
                     }
                 }
             },
-            "H-MX09017AGNCL01FO001AYSE001APUI004": {
+            "H_MX09017AGNCL01FO001AYSE001APUI004": {
                 "yo": "H-MX09017AGNCL01FO001AYSE001APUI004",
                 "padre": "H-MX09017AGNCL01FO001AYSE001AP",
                 "COD_REF": "MX09017AGN\/CL01\/FO001AY\/SE001AP\/4",
@@ -5376,7 +5376,7 @@
                     }
                 }
             },
-            "H-MX09017AGNCL01FO001AYSE001APUI005": {
+            "H_MX09017AGNCL01FO001AYSE001APUI005": {
                 "yo": "H-MX09017AGNCL01FO001AYSE001APUI005",
                 "padre": "H-MX09017AGNCL01FO001AYSE001AP",
                 "COD_REF": "MX09017AGN\/CL01\/FO001AY\/SE001AP\/5",
@@ -6704,7 +6704,7 @@
                     }
                 }
             },
-            "H-MX09017AGNCL01FO001AYSE001APUI006": {
+            "H_MX09017AGNCL01FO001AYSE001APUI006": {
                 "yo": "H-MX09017AGNCL01FO001AYSE001APUI006",
                 "padre": "H-MX09017AGNCL01FO001AYSE001AP",
                 "COD_REF": "MX09017AGN\/CL01\/FO001AY\/SE001AP\/6",
@@ -8063,7 +8063,7 @@
                     }
                 }
             },
-            "H-MX09017AGNCL01FO001AYSE001APUI007": {
+            "H_MX09017AGNCL01FO001AYSE001APUI007": {
                 "yo": "H-MX09017AGNCL01FO001AYSE001APUI007",
                 "padre": "H-MX09017AGNCL01FO001AYSE001AP",
                 "COD_REF": "MX09017AGN\/CL01\/FO001AY\/SE001AP\/7",
@@ -9520,7 +9520,7 @@
                     }
                 }
             },
-            "H-MX09017AGNCL01FO001AYSE001APUI008": {
+            "H_MX09017AGNCL01FO001AYSE001APUI008": {
                 "yo": "H-MX09017AGNCL01FO001AYSE001APUI008",
                 "padre": "H-MX09017AGNCL01FO001AYSE001AP",
                 "COD_REF": "MX09017AGN\/CL01\/FO001AY\/SE001AP\/8",

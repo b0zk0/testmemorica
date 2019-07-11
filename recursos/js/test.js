@@ -95,11 +95,60 @@ $("#nivel1").change(function () {
 
 //cambio en segundo dropdaun
 $("#nivel2").change(function () {
-    for (var i = 0; i < offset.length; i++) {
-        if (y < offset[i].bottom) {
-            $("#catSelect option:selected").removeAttr("selected");
-            $("#catSelect option[value=#" + offset[i].id + "]").attr("selected", "selected");
-            break;
-        }
+    var $dropdown = $(this);
+    var key = $dropdown.val();
+
+    function generateDropdown(vals) {
+        $.each(vals, function (index, value) {
+            $nivel3.append("<option value=\"" + value.yo + "\">" + value.TITULO + "</option>");
+        });
+    };
+
+    switch (key) {
+        case 'H-MX09017AGNCL01FO001AYSE001APUI001':
+            $.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
+                $nivel3.empty();
+
+                vals = data.H_MX09017AGNCL01FO001AYSE001APUI001.hijos;
+                generateDropdown(vals)
+
+                $("#cedula2").removeClass("d-none");
+                $("#cedula2").addClass("d-block");
+                $("#collapseTwo").addClass("show");
+
+
+                info = data.H_MX09017AGNCL01FO001AYSE001APUI001;
+                $(".cedula2titulo").text(info.TITULO);
+                generateTable(info);
+
+                console.log(vals);
+            });
+            break
+        case 'H-MX09017AGNCL01FO001AYSE001APUI002':
+            $.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
+                $nivel3.empty();
+
+                vals = data.H_MX09017AGNCL01FO001AYSE001APUI002.hijos;
+                generateDropdown(vals)
+
+                $("#cedula2").removeClass("d-none");
+                $("#cedula2").addClass("d-block");
+                $("#collapseTwo").addClass("show");
+
+                info = data.H_MX09017AGNCL01FO001AYSE001APUI002;
+                $(".cedula2titulo").text(info.TITULO);
+                generateTable(info);
+
+                console.log(vals);
+            });
+            break
+        case 'base':
+            $nivel3.empty();
+            vals = ['Favor de seleccionar un subfondo'];
+            $nivel3.append("<option>" + vals + "</option>");
+            $("#cedula2").removeClass("d-block");
+            $("#cedula2").addClass("d-none");
+            console.log(vals);
+            break
     }
 });
