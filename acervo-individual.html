@@ -127,7 +127,7 @@
                 </div>
             </div>
 
-			<!-- -------------------------Dropdowns de árbol------------------------- -->
+			<!-- ------------------------- Dropdowns de árbol ------------------------- -->
 			<form>
 				<div class="row">
 					<div class="col-md-3 col-sm-12 mb-3">
@@ -139,12 +139,12 @@
 					</div>
 					<div class="col-md-3 col-sm-12 mb-3">
 						<select id="nivel2" class="form-control">
-							<option>Favor de seleccionar un fondo</option>
+							<option selected value="base">Favor de seleccionar un fondo</option>
 						</select>
 					</div>
 					<div class="col-md-3 col-sm-12 mb-3">
 						<select id="nivel3" class="form-control">
-							<option>Favor de seleccionar un subfondo</option>
+							<option selected value="base">Favor de seleccionar un subfondo</option>
 						</select>
 					</div>
 					<div id="submit" class="col-md-3 col-sm-12 d-flex justify-content-center mb-3">
@@ -158,11 +158,8 @@
 				<div id="cedula1" class="card d-none">
 					<div class="card-header" id="headingOne" type="button" data-toggle="collapse" data-target="#collapseOne"
 						aria-expanded="true" aria-controls="collapseOne">
-						<h2 class="mb-0">
-							<button class="btn btn-link cedula1titulo" type="button" data-toggle="collapse" data-target="#collapseOne"
-								aria-expanded="true" aria-controls="collapseOne">
-								
-							</button>
+						<h2 class="mb-0 btn btn-link cedula1titulo">
+							
 						</h2>
 					</div>
 					<div id="collapseOne" class="collapse" aria-labelledby="headingOne">
@@ -306,11 +303,8 @@
 				<div id="cedula2" class="card d-none">
 					<div class="card-header" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo"
 						aria-expanded="false" aria-controls="collapseTwo">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed cedula2titulo" type="button" data-toggle="collapse" data-target="#collapseTwo"
-								aria-expanded="false" aria-controls="collapseTwo">
-								Cédula del subfondo
-							</button>
+						<h2 class="mb-0 btn btn-link cedula2titulo">
+							
 						</h2>
 					</div>
 					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
@@ -318,62 +312,132 @@
 							<table class="table">
 								<tbody>
 									<tr>
-										<th scope="row">Creador del recurso digital</th>
-										<td>Voluptatem nam et cumque repudiandae possimus eos at. Reprehenderit dolor exercitationem
-											ex.</td>
+										<th scope="row">Número identificador</th>
+										<td class="COD_REF2"></td>
 									</tr>
 									<tr>
-										<th scope="row">Descripción</th>
-										<td>Reprehenderit dolor exercitationem ex.</td>
+										<th scope="row">Título</th>
+										<td class="TITULO2"></td>
 									</tr>
 									<tr>
-										<th scope="row">Fuente original</th>
-										<td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+										<th scope="row">Autor/Creador</th>
+										<td class="NOMBRE_PRODUCTOR2"></td>
 									</tr>
 									<tr>
-										<th scope="row">Forma parte de</th>
-										<td>42</td>
+										<th scope="row">Tipo de BHC</th>
+										<td class="NIVEL_DESC2"></td>
 									</tr>
 									<tr>
-										<th scope="row">Tipo de objeto digital</th>
-										<td>Atatatatatatatatatatatata</td>
+										<th scope="row">ID Fondo/Colección</th>
+										<td class="padre2"></td>
 									</tr>
 									<tr>
-										<th scope="row">Formato</th>
-										<td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
-									</tr>
-									<tr>
-										<th scope="row">Formato relacionado</th>
-										<td>Corporis quae et rerum exercitationem sint illo.</td>
-									</tr>
-									<tr>
-										<th scope="row">Dimensiones/Extensión</th>
-										<td>Ea temporibus vero delectus eius quia beatae.</td>
-									</tr>
-									<tr>
-										<th scope="row">Siguiente archivo en la secuencia</th>
-										<td>Voluptatem nam et cumque repudiandae possimus eos at. Reprehenderit dolor exercitationem
-											ex.</td>
+										<th scope="row">ID Serie/volumen</th>
+										<td class=""></td>
 									</tr>
 									<tr>
 										<th scope="row">Fecha de creación</th>
-										<td>Reprehenderit dolor exercitationem ex.</td>
+										<td class="FECHA_EXT_INI2"></td>
+									</tr>
+									<tr>
+										<th scope="row">Descripción</th>
+										<td class="HIST_INSTUTUC2"></td>
+									</tr>
+									<tr>
+										<th scope="row">Institución que resguarda el BHC</th>
+										<td class="LOCALIZ_ORIG2"></td>
+									</tr>
+									<tr>
+										<th scope="row">Institución de procedencia</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Dimensiones/Duración</th>
+										<td class="VOL_UNID2"></td>
+									</tr>
+									<tr>
+										<th scope="row">Idioma</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Relacionado con</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Titular</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">URI del BHC</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Creador del recurso digital</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Tipo de objeto digital</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Formato</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Dimensiones/Extensión</th>
+										<td class=""></td>
 									</tr>
 									<tr>
 										<th scope="row">Declaración de uso</th>
-										<td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+										<td class=""></td>
 									</tr>
 									<tr>
-										<th scope="row">Referencia (IIIF Manifest)</th>
-										<td>42</td>
+										<th scope="row">Referencia (IIIF Manifiesto)</th>
+										<td class=""></td>
 									</tr>
 									<tr>
 										<th scope="row">IIIF URL</th>
-										<td>Atatatatatatatatatatatata</td>
+										<td class=""></td>
 									</tr>
 									<tr>
 										<th scope="row">URI</th>
-										<td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Identificador del objeto original</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Proveedor de datos</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Relacionado con</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Fecha de inicio</th>
+										<td class="FECHA_EXT_INI2"></td>
+									</tr>
+									<tr>
+										<th scope="row">Fecha de finalización</th>
+										<td class="FECHA_EXT_FIN2"></td>
+									</tr>
+									<tr>
+										<th scope="row">Nota</th>
+										<td class="NOTAS2"></td>
+									</tr>
+									<tr>
+										<th scope="row">Etiqueta de la declaracion de uso</th>
+										<td class="REGLAS_NORMAS2"></td>
+									</tr>
+									<tr>
+										<th scope="row">Definición de la declaración de uso</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Nota</th>
+										<td class="NOTA_ARCHIVERO2"></td>
 									</tr>
 								</tbody>
 							</table>
@@ -384,11 +448,8 @@
 				<div id="cedula3" class="card d-none">
 					<div class="card-header" id="headingThree" type="button" data-toggle="collapse" data-target="#collapseThree"
 						aria-expanded="false" aria-controls="collapseThree">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed cedula3titulo" type="button" data-toggle="collapse" data-target="#collapseThree"
-								aria-expanded="false" aria-controls="collapseThree">
-								Cédula de la serie o el volumen
-							</button>
+						<h2 class="mb-0 btn btn-link cedula3titulo">
+							
 						</h2>
 					</div>
 					<div id="collapseThree" class="collapse" aria-labelledby="headingThree">
@@ -396,62 +457,132 @@
 							<table class="table">
 								<tbody>
 									<tr>
-										<th scope="row">Creador del recurso digital</th>
-										<td>Voluptatem nam et cumque repudiandae possimus eos at. Reprehenderit dolor exercitationem
-											ex.</td>
+										<th scope="row">Número identificador</th>
+										<td class="COD_REF3"></td>
 									</tr>
 									<tr>
-										<th scope="row">Descripción</th>
-										<td>Reprehenderit dolor exercitationem ex.</td>
+										<th scope="row">Título</th>
+										<td class="TITULO3"></td>
 									</tr>
 									<tr>
-										<th scope="row">Fuente original</th>
-										<td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+										<th scope="row">Autor/Creador</th>
+										<td class="NOMBRE_PRODUCTOR3"></td>
 									</tr>
 									<tr>
-										<th scope="row">Forma parte de</th>
-										<td>42</td>
+										<th scope="row">Tipo de BHC</th>
+										<td class="NIVEL_DESC3"></td>
 									</tr>
 									<tr>
-										<th scope="row">Tipo de objeto digital</th>
-										<td>Atatatatatatatatatatatata</td>
+										<th scope="row">ID Fondo/Colección</th>
+										<td class="padre3"></td>
 									</tr>
 									<tr>
-										<th scope="row">Formato</th>
-										<td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
-									</tr>
-									<tr>
-										<th scope="row">Formato relacionado</th>
-										<td>Corporis quae et rerum exercitationem sint illo.</td>
-									</tr>
-									<tr>
-										<th scope="row">Dimensiones/Extensión</th>
-										<td>Ea temporibus vero delectus eius quia beatae.</td>
-									</tr>
-									<tr>
-										<th scope="row">Siguiente archivo en la secuencia</th>
-										<td>Voluptatem nam et cumque repudiandae possimus eos at. Reprehenderit dolor exercitationem
-											ex.</td>
+										<th scope="row">ID Serie/volumen</th>
+										<td class=""></td>
 									</tr>
 									<tr>
 										<th scope="row">Fecha de creación</th>
-										<td>Reprehenderit dolor exercitationem ex.</td>
+										<td class="FECHA_EXT_INI3"></td>
+									</tr>
+									<tr>
+										<th scope="row">Descripción</th>
+										<td class="HIST_INSTUTUC3"></td>
+									</tr>
+									<tr>
+										<th scope="row">Institución que resguarda el BHC</th>
+										<td class="LOCALIZ_ORIG3"></td>
+									</tr>
+									<tr>
+										<th scope="row">Institución de procedencia</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Dimensiones/Duración</th>
+										<td class="VOL_UNID3"></td>
+									</tr>
+									<tr>
+										<th scope="row">Idioma</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Relacionado con</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Titular</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">URI del BHC</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Creador del recurso digital</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Tipo de objeto digital</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Formato</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Dimensiones/Extensión</th>
+										<td class=""></td>
 									</tr>
 									<tr>
 										<th scope="row">Declaración de uso</th>
-										<td>Voluptatem nam et cumque repudiandae possimus eos at.</td>
+										<td class=""></td>
 									</tr>
 									<tr>
-										<th scope="row">Referencia (IIIF Manifest)</th>
-										<td>42</td>
+										<th scope="row">Referencia (IIIF Manifiesto)</th>
+										<td class=""></td>
 									</tr>
 									<tr>
 										<th scope="row">IIIF URL</th>
-										<td>Atatatatatatatatatatatata</td>
+										<td class=""></td>
 									</tr>
 									<tr>
 										<th scope="row">URI</th>
-										<td>Assumenda quo nemo enim laboriosam a veniam et qui.</td>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Identificador del objeto original</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Proveedor de datos</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Relacionado con</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Fecha de inicio</th>
+										<td class="FECHA_EXT_INI3"></td>
+									</tr>
+									<tr>
+										<th scope="row">Fecha de finalización</th>
+										<td class="FECHA_EXT_FIN3"></td>
+									</tr>
+									<tr>
+										<th scope="row">Nota</th>
+										<td class="NOTAS2"></td>
+									</tr>
+									<tr>
+										<th scope="row">Etiqueta de la declaracion de uso</th>
+										<td class="REGLAS_NORMAS3"></td>
+									</tr>
+									<tr>
+										<th scope="row">Definición de la declaración de uso</th>
+										<td class=""></td>
+									</tr>
+									<tr>
+										<th scope="row">Nota</th>
+										<td class="NOTA_ARCHIVERO3"></td>
 									</tr>
 								</tbody>
 							</table>
