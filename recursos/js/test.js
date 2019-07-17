@@ -58,14 +58,14 @@ function generateTable3(info) {
 
 // $.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
 //     primerDropdown += '<option value="">Selecciona un fondo</option>';
-//     $.each(data, function (key, val) {
-//         primerDropdown += '<option value="' + value.yo + '">' + value.TITULO + '</option>';
+//     $.each(vals, function (index, value) {
+//         $nivel1.append("<option value=\"" + value.yo + "\">" + value.TITULO + "</option>");
 //     });
 //     $('#nivel1').html(primerDropdown);
 // });
 
 function generateDropdown(vals) {
-    $nivel2.append("<option selected value=\"base\">Favor de seleccionar un fondo</option>");
+    $nivel2.append("<option selected disabled value=\"\">Selecciona un subfondo</option>");
     $.each(vals, function (index, value) {
         $nivel2.append("<option value=\"" + value.yo + "\">" + value.TITULO + "</option>");
     });
@@ -79,8 +79,9 @@ $("#nivel1").change(function () {
     if (key != "") {
         $.getJSON('recursos/json/MX09017AGNCL01FO001AYSE001AP8.json', function (data) {
             $nivel2.empty();
-            segundoDropdown += '<option value="">Selecciona un subfondo</option>';
-            $.each(data, function (key) {
+
+            segundoDropdown += '<option selected disabled value="">Selecciona un subfondo</option>';
+            $.each(data, function (index, key) {
                 if ($dropdown == key.yo) {
                     segundoDropdown += '<option value="' + key.yo + '">' + key.TITULO + '</option>';
                 }
