@@ -4,10 +4,6 @@ var $nivel1 = $("#nivel1");
 var $nivel2 = $("#nivel2");
 var $nivel3 = $("#nivel3");
 
-var primerDropdown = '';
-var segundoDropdown = '';
-var tercerDropdown = '';
-
 function generateTable(info) {
     $(".COD_REF").text(info.COD_REF);
     $(".TITULO").text(info.TITULO); // es este?
@@ -76,30 +72,70 @@ $("#nivel1").change(function () {
     var $dropdown = $(this);
     var key = $dropdown.val();
 
-    if (key != "") {
-        $.getJSON('recursos/json/MX09017AGNCL01FO001AYSE001AP8.json', function (data) {
-            $nivel2.empty();
-
-            segundoDropdown += '<option selected disabled value="">Selecciona un subfondo</option>';
-            $.each(data, function (index, key) {
-                if ($dropdown == key.yo) {
-                    segundoDropdown += '<option value="' + key.yo + '">' + key.TITULO + '</option>';
-                }
-            });
-            $('#nivel2').html(segundoDropdown);
-
-            $("#collapseOne").addClass("show");
-            $("#cedula1").removeClass("d-none");
-            $("#cedula1").addClass("d-block");
-
-            info = data.H_MX09017AGNCL01FO001AYSE001AP;
-            $(".cedula1titulo").text(info.TITULO);
-            generateTable(info);
+    function generateDropdown(vals) {
+        $nivel2.append("<option selected disabled value=\"\">Selecciona un subfondo</option>");
+        $.each(vals, function (index, value) {
+            $nivel2.append("<option value=\"" + value.yo + "\">" + value.TITULO + "</option>");
         });
-    } else {
-        $('#nivel2').html('<option value="">Favor de seleccionar un fondo</option>');
-        $('#nivel3').html('<option value="">Favor de seleccionar un subfondo</option>');
+    };
+
+    switch (key) {
+        case 'H_MX09017AGNCL01FO001AYSE001AP':
+            $.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
+                $nivel2.empty();
+
+                vals = data.H_MX09017AGNCL01FO001AYSE001AP.hijos;
+                generateDropdown(vals)
+
+                $("#cedula1").removeClass("d-none");
+                $("#cedula1").addClass("d-block");
+                $("#collapseOne").addClass("show");
+                $("#cedula2").removeClass("d-show");
+                $("#cedula3").removeClass("d-show");
+
+                info = data.H_MX09017AGNCL01FO001AYSE001AP;
+                $(".cedula1titulo").text(info.TITULO);
+                generateTable(info);
+                $nivel3.empty();
+                $('#nivel3').html('<option value="">Favor de seleccionar un subfondo</option>');
+            });
+            break
+        case 'H_MX09017AGNCL01FO008RHSE002AL':
+            $.getJSON("recursos/json/MX09017AGNCL01FO008RHSE002ALSS03ALI22262.json", function (data) {
+                $nivel2.empty();
+
+                vals = data.H_MX09017AGNCL01FO008RHSE002AL.hijos;
+                generateDropdown(vals)
+
+                $("#cedula1").removeClass("d-none");
+                $("#cedula1").addClass("d-block");
+                $("#collapseOne").addClass("show");
+                $("#cedula2").removeClass("d-show");
+                $("#cedula3").removeClass("d-show");
+
+                info = data.H_MX09017AGNCL01FO008RHSE002AL;
+                $(".cedula1titulo").text(info.TITULO);
+                generateTable(info);
+                
+                $nivel3.empty();
+                $('#nivel3').html('<option value="">Favor de seleccionar un subfondo</option>');
+            });
+            break
+        case '':
+            $nivel2.empty();
+            vals = ['Favor de seleccionar un fondo'];
+            $nivel2.append("<option>" + vals + "</option>");
+            $("#cedula1").removeClass("d-block");
+            $("#cedula1").addClass("d-none");
+            $("#cedula2").addClass("d-none");
+            $("#cedula3").addClass("d-none");
+
+            $nivel3.empty();
+            $('#nivel2').html('<option value="">Favor de seleccionar un fondo</option>');
+            $('#nivel3').html('<option value="">Favor de seleccionar un subfondo</option>');
+            break
     }
+
 });
 
 //cambio en segundo dropdaun
@@ -107,8 +143,40 @@ $("#nivel2").change(function () {
     var $dropdown = $(this);
     var key = $dropdown.val();
 
+    function generateDropdown(vals) {
+        $nivel3.append("<option selected disabled value=\"\">Selecciona un expediente</option>");
+        $.each(vals, function (index, value) {
+            $nivel3.append("<option value=\"" + value.yo + "\">" + value.TITULO + "</option>");
+        });
+    };
+
     if (key != "") {
-        $.getJSON('subfondos.json', function (data) {
+        $.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
+            $nivel3.empty();
+
+            vals = data.H_MX09017AGNCL01FO001AYSE001AP.hijos;
+            generateDropdown(vals)
+
+            $("#collapseOne").removeClass("show");
+            $("#collapseTwo").addClass("show");
+            $("#cedula2").removeClass("d-none");
+            $("#cedula2").addClass("d-block");
+
+            info = data.H_MX09017AGNCL01FO001AYSE001AP.hijos.key;
+            $(".cedula2titulo").text(info.TITULO);
+            generateTable2(info);
+        });
+    } else {
+        $('#nivel3').html('<option value="">Favor de seleccionar un subfondo</option>');
+    }
+});
+
+$("#nivel3").change(function () {
+    var $dropdown = $(this);
+    var key = $dropdown.val();
+
+    if (key != "") {
+        $.getJSON("recursos/json/niveltres.json", function (data) {
             $nivel3.empty();
             tercerDropdown += '<option value="">Selecciona un expediente</option>';
             $.each(data, function (key) {
@@ -123,35 +191,12 @@ $("#nivel2").change(function () {
             $("#cedula2").removeClass("d-none");
             $("#cedula2").addClass("d-block");
 
-            info = data.H_MX09017AGNCL01FO001AYSE001AP;
+            console.log(key);
+            info = key;
             $(".cedula2titulo").text(info.TITULO);
-            generateTable(info);
+            generateTable2(info);
         });
     } else {
         $('#nivel3').html('<option value="">Favor de seleccionar un subfondo</option>');
-    }
-});
-
-$("#nivel3").change(function () {
-    var $dropdown = $(this);
-    var key = $dropdown.val();
-
-    switch (key) {
-        case 'H-MX09017AGNCL01FO001AYSE001APUI001':
-            $.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
-
-                $("#collapseOne").removeClass("show");
-                $("#collapseTwo").removeClass("show");
-                $("#collapseThree").addClass("show");
-                $("#cedula3").removeClass("d-none");
-                $("#cedula3").addClass("d-block");
-
-                info = data.H_MX09017AGNCL01FO001AYSE001AP.hijos.H_MX09017AGNCL01FO001AYSE001APUI001;
-                $(".cedula2titulo").text(info.TITULO);
-                generateTable2(info);
-
-                console.log(vals);
-            });
-            break
     }
 });
