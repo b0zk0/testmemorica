@@ -154,7 +154,8 @@ $("#nivel2").change(function () {
         $.getJSON("recursos/json/MX09017AGNCL01FO001AYSE001AP8.json", function (data) {
             $nivel3.empty();
 
-            vals = data.H_MX09017AGNCL01FO001AYSE001AP.hijos;
+            // var vals = data.key.hijos;
+            var vals = data.H_MX09017AGNCL01FO001AYSE001AP.hijos.H_MX09017AGNCL01FO001AYSE001APUI001.hijos;
             generateDropdown(vals)
 
             $("#collapseOne").removeClass("show");
@@ -162,7 +163,11 @@ $("#nivel2").change(function () {
             $("#cedula2").removeClass("d-none");
             $("#cedula2").addClass("d-block");
 
-            info = data.H_MX09017AGNCL01FO001AYSE001AP.hijos.key;
+            $("#buscar-fondo").removeClass("d-none");
+            $("#buscar-fondo").addClass("d-show");
+
+            // info = data.key.hijos;
+            info = data.H_MX09017AGNCL01FO001AYSE001AP.hijos.H_MX09017AGNCL01FO001AYSE001APUI001;
             $(".cedula2titulo").text(info.TITULO);
             generateTable2(info);
         });
@@ -171,6 +176,7 @@ $("#nivel2").change(function () {
     }
 });
 
+//cambio en tercer derpdown
 $("#nivel3").change(function () {
     var $dropdown = $(this);
     var key = $dropdown.val();
