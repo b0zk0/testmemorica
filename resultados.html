@@ -11,9 +11,10 @@
         <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /> -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
             integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link href="recursos/css/menulateral.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="recursos/css/style.css">
+        <!-- <link href="recursos/css/menulateral.css" rel="stylesheet" type="text/css"> -->
+        
         <link href="css/font-awesome.min.css" rel="stylesheet">
+        
 
         
 
@@ -30,19 +31,22 @@
 
         
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
+        <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+        <link rel="stylesheet" href="recursos/css/style(style).css">
+      
        
 
 
     </head>
 
-    <body class="secundario">
+    <body>
         <!-- Header con barra y buscador -->
         <header>
-            <!-- Barra de navegación -->
-            <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        
-                <a class="navbar-brand d-lg-none" href="index.html">Memórica</a>
+            <!-- Barra de navegación -->   
+            <div class="barra-superior"></div>       
+            <nav class="navbar navbar-expand-lg navbar-light">
+                
+                <a class="navbar-brand d-lg-none" href="index.html" alt="logotipo Memórica"><img src="/recursos/img/Logos/Memorica.svg" height="30px"/></a>
         
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,23 +54,47 @@
                 </button>
         
                 <!-- menu que se colapsa   -->
-                <div class="collapse navbar-collapse justify-content-between" id="menu">
+                <div class="collapse navbar-collapse flex-column" id="menu">
         
-                    <div class="col-4">
-                        <ul class="navbar-nav"></ul>
+                    <div class="col-12 d-flex justify-content-center">
+                        <a class="navbar-brand d-none d-lg-block " href="index.html"><img src="/recursos/img/Logos/Memorica.svg" height="62px"/></a>
                     </div>
-        
-                    <div class="col-4 d-flex justify-content-center">
-                        <a class="navbar-brand d-none d-lg-block " href="index.html">Memórica</a>
+
+                    <div class="container py-3 ">
+                        <div class="row fila-centrada">
+                            <div class="col-3 col-sm-3"></div>
+                            <div class="col-6 col-sm-6 align-self-center">
+                                <form class="form" action="resultados.html">
+                                    <input id="usersSearch" class="form-control rounded-pill ui-autocomplete-input inputbuscador" type="text" placeholder="¿Qué quieres encontrar hoy?" aria-label="Buscador">
+                                    <!-- <input id='searchButton' type='button' value='busquele'> -->
+                                </form>
+                            </div>    
+                            <div class="col-3 col-sm-3"></div>
+                        </div>
                     </div>
+
+                    
         
-                    <div class="col-4 d-flex justify-content-end">
-                        <ul class="navbar-nav">
+                    <div class="container botones-pestañas">
+
+                        <ul class="navbar-nav d-flex justify-content-between pestañas">
                             <li class="nav-item">
-                                <a class="nav-link justify-content-end" href="#">iniciar sesion</a>
+                                    <a class="nav-item nav-link" href="#">Haz memoria</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fab fa-megaport fa-x3"></i></a>
+                                    <a class="nav-item nav-link" href="acervos.html">Acervos</a>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-item nav-link" href="temas.html">Temas</a>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-item nav-link" href="#">Exposiciones</a>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-item nav-link" href="#">Miscelánea</a>
+                            </li>
+                            <li class="nav-item">
+                                    <a class="nav-item nav-link" href="#">Breves</a>
                             </li>
                         </ul>
                     </div>
@@ -74,12 +102,12 @@
             </nav>
         
             <!--Buscador-->
-            <div class="container-fluid memoria-buscador altura-fija d-flex justify-content-center">
-                <div class="row fila-centrada">
+            <div class="container-fluid memoria-buscador d-flex justify-content-center p-3 d-block d-lg-none">
+                <div class="row fila-centrada ">
                     <div class="col-0 col-sm-3"></div>
                     <div class="col-12 col-sm-6 align-self-center">
                         <form class="form" action="resultados.html">
-                            <input id="usersSearch" class="form-control rounded-pill ui-autocomplete-input" type="text" placeholder="¿Qué quieres encontrar hoy?" aria-label="Search">
+                            <input id="usersSearch" class="form-control rounded-pill ui-autocomplete-input inputbuscador" type="text" placeholder="¿Qué quieres encontrar hoy?" aria-label="Search">
                             <!-- <input id='searchButton' type='button' value='busquele'> -->
                         </form>
                     </div>
@@ -89,12 +117,12 @@
         </header>
 
         <main>
-            <!-- Barra de breadcrumb y botones de visualizador etc -->
-            <div class="bg-dark">
-                <div class="container ">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 col-sm-12 col-5  text-white p-0 d-flex ustify-content-lg-start">
-                            <nav class=" p-0" aria-label="breadcrumb">
+            <!-- Barra de breadcrumb y botones de visualizador etc Opciones Resultados-->
+            
+                <div class="container">
+                    <div class="row opciones_resultados">
+                        <div class="col-lg-3 col-md-4 col-12 p-0 d-flex justify-content-lg-start align-items-end">
+                            <nav class=" p-0 mb-1" aria-label="breadcrumb">
                                 <ol class="breadcrumb bg-transparent m-0 px-3 py-2">
                                     <li class="breadcrumb-item texto-breadcrum"><i class="fas fa-home mr-1"></i></li>  
                                     <li class="breadcrumb-item texto-breadcrum"><a href="#">Home</a></li>
@@ -102,50 +130,55 @@
                                 </ol>
                             </nav>  
                         </div>
-                        <div class="col-lg-5 col-md-8 col-sm-12 col-7   text-white d-flex  justify-content-between px-3 py-2">
-                            <p><a href="#">1</a>-<a href="#">8</a> de <a href="#">75</a> resultados</p>
-                            <p>Mostrar</p> 
-                               
-                            <select class="form-control" id="exampleFormControlSelect1" style="width: 70px;">
-                                <option>20</option>
-                                <option>50</option>
-                                <option>100</option>
-                                
-                            </select>
-                                <p>por pagina</p>    
+                        <div class="col-lg-5 col-md-8 col-12 d-flex justify-content-between px-3 py-2">
+                            <div class="d-flex align-items-end">
+                                    <p class="mb-1"><a href="#">1</a>-<a href="#">8</a> de <a href="#">75</a> resultados</p>
+                            </div>
+                            
+                            
+                            <div class="d-flex justify-content-center align-items-end">
+                                <p class="mb-1">Mostrar</p>
+                                <select class="resultados_pagina form-control mx-3 m-0 p-1" id="exampleFormControlSelect1">
+                                    <option>20</option>
+                                    <option>50</option>
+                                    <option>100</option>
+                                </select>
+                                <p class="mb-1">por pagina</p>
+                            </div>    
                         </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-lg-end justify-content-center">
-                            <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                    <label class="btn btn-secondary align-self-center">
-                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> <p>Mosaico <i class="fas fa-dice-d20"></p></i>
-                                    </label>
-                                    <label class="btn btn-secondary align-self-center  active">
-                                    <input type="radio" name="options" id="option2" autocomplete="off" > <p>Tabla <i class="fas fa-table"></p></i>
-                                    </label>
-                                    <label class="btn btn-secondary align-self-center">
-                                    <input type="radio" name="options" id="option3" autocomplete="off"> <p>Lista <i class="fas fa-align-justify"></p></i>
-                                    </label>
-                            </div>       -->
-                            <div class="btn-group btn-group-toggle" role="group" aria-label="Basic example">
+                        <div class="col-lg-4 col-md-12 col-sm-12 d-flex justify-content-lg-end justify-content-center py-2">
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary align-self-center bg-transparent border-0 modos_visualizar">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked> <p class="m-0">Mosaico <i class="fas fa-dice-d20"></p></i>
+                                </label>
+                                <label class="btn btn-secondary align-self-center  active bg-transparent border-top-0 border-bottom-0 modos_visualizar">
+                                    <input type="radio" name="options" id="option2" autocomplete="off" > <p class="m-0">Tabla <i class="fas fa-table"></p></i>
+                                </label>
+                                <label class="btn btn-secondary align-self-center bg-transparent border-0 modos_visualizar">
+                                    <input type="radio" name="options" id="option3" autocomplete="off"> <p class="m-0">Lista <i class="fas fa-align-justify"></p></i>
+                                </label>
+                            </div>      
+                            <!-- <div class="btn-group btn-group-toggle" role="group" aria-label="Basic example">
                                 <a type="button" class="btn btn-primary active" href="resultados3.html" role="button">Mosaico <i class="fas fa-dice-d20"></i></a>
                                 <a type="button" class="btn btn-primary" href="resultados.html" role="button">Tabla <i class="fas fa-table"></i></a>
                                 <a type="button" class="btn btn-primary" href="resultados2.html" role="button">Lista <i class="fas fa-align-justify"></i></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
-            </div>
+                
+            
 
             <!--Range-->
 
-            <div class="py-2 px-3 container" >
+            <!-- <div class="py-2 px-3 container" >
                 <div class="row d-flex justify-content-between">
                     <input type="text" id="añoinicio" readonly style="border:0; font-weight:bold; width: 40px;" min="0000" max="20219">
                     <input type="text" id="añofin" readonly style="border:0; font-weight:bold; width: 40px;" min="0000" max="2019">
                 </div>
                 <div class="" id="slider-range"></div>
                 
-            </div>
+            </div> -->
 
             
 
@@ -157,71 +190,71 @@
                      <!--MENU Facetador-->
                     <div class="col-sm-0 col-md-0 col-lg-3 px-0">
                         <div class="nav-side-menu">
-                            <div class="brand">Filtros</div>
+                            <div class="brand px-4 ">
+                                    Filtrar Búsqueda       
+                            </div>
                             <i class="fas fa-sliders-h fa-2x toggle-btn" data-toggle="collapse"
                                 data-target="#menu-content"></i>
+                            
                                 <form id="myForm">
                                     <div class="menu-list">
-                                        <ul id="menu-content" class="menu-content collapse out">
-                                            <li data-toggle="collapse" data-target="#autor" class="collapsed">
-                                                <a href="#"><i class="fas fa-user-edit fa-lg"></i> Autor <span
-                                                    class="fas fa-angle-down"></span></a>
+                                        <ul id="menu-content" class="menu-content collapse out bg-transparent">
+                                            <li data-toggle="collapse" data-target="#autor" class="collapsed facetas px-3 d-flex justify-content-between">
+                                                <a href="#"> Autor </a><a href="#"> + </a>
+                                                
                                             </li>
                                             <ul class="sub-menu collapse" id="autor">
-                                                <label><input type="search" class="form-control form-control-sm" placeholder="Autor"
-                                                        aria-controls="dataTable"></label>
+                                                    <li><input type="search" class="form-control autor" placeholder="Escriba el nombre del Autor"
+                                                        aria-controls="dataTable"></li>
                                             </ul>
-                                            <li data-toggle="collapse" data-target="#tipo-de-objeto-digital" class="collapsed">
-                                                <a href="#"><i class="fas fa-object-ungroup fa-lg"></i> Tipo de objeto digital <span
-                                                    class="fas fa-angle-down"></span></a>
+                                            <li data-toggle="collapse" data-target="#tipo-de-objeto-digital" class="collapsed facetas px-3 d-flex justify-content-between">
+                                                <a href="#"> Tipo de objeto digital</a><a href="#"> + </a>
                                             </li>
                                             <ul class="sub-menu collapse" id="tipo-de-objeto-digital">
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Imagen
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input"> Imagen
                                                 </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Texto
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input"> Texto
                                                 </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Video
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input"> Video
                                                 </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input"> Audio
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input"> Audio
                                                 </li>
                                                 
                                             </ul>
-                                            <li data-toggle="collapse" data-target="#tipo-de-objeto" class="collapsed">
-                                                <a href="#"><i class="fas fa-cubes fa-lg"></i> Tipo de objeto <span
-                                                    class="fas fa-angle-down"></span></a>
+                                            <li data-toggle="collapse" data-target="#tipo-de-objeto" class="collapsed facetas px-3 d-flex justify-content-between">
+                                                <a href="#"> Tipo de objeto</a> <a href="#"> + </a>
                                             </li>
                                             <ul class="sub-menu collapse results" id="tipo-de-objeto">
                                                 
                                             </ul>
                                             <ul class="sub-menu collapse" id="tipo-de-objeto">
-                                                <li><button class="btn btn-light" id="loadmorebtn">
+                                                <li><button class="btn btn-light boton_limpiar_formulario" id="loadmorebtn">
                                                     <img src="ajax-loader.gif" class="ani_image" style="float:left">
                                                     &nbsp; Cargar más
                                                 </button></li>
                                             </ul>
             
             
-                                            <li data-toggle="collapse" data-target="#fecha" class="collapsed">
-                                                <a href="#"><i class="fas fa-calendar-alt fa-lg"></i>Fecha / Periodo / Época <span
-                                                    class="fas fa-angle-down"></span></a>
+                                            <li data-toggle="collapse" data-target="#fecha" class="collapsed facetas px-3 d-flex justify-content-between">
+                                                <a href="#">Fecha / Periodo / Época </a> <a href="#"> + </a>
                                             </li>
                                             <ul class="sub-menu collapse" id="fecha">
                                                 <li>
                                                         
-                                                            <span class="filterTitle">Rango años</span>
-                                                            <div class="dateADate">
-                                                                
+                                                            <span class="filterTitle">Rango en años</span> 
+
+                                                            <div> 
                                                             <span class="sr-only"><label for="Año inicio">Año inicio</label></span>
-                                                            <input type="number" data-ng-value="" name="anneeDebut" id="añoinicio" data-ng-required="false" data-ng-model="$ctrl.anneeStart" data-ng-change="$ctrl.setPeriodeAnnees()" autocomplete="off" placeholder="0000"  style="width: 50px;" min="0000" max="2019">
-                                                            a
+                                                            <input class="años" type="number" data-ng-value="" name="anneeDebut" id="añoinicio" data-ng-required="false" data-ng-model="$ctrl.anneeStart" data-ng-change="$ctrl.setPeriodeAnnees()" autocomplete="off" placeholder="0000"  min="0000" max="2019">
+                                                            -
                                                             <span class="sr-only"><label for="Año final">Año final</label></span>
-                                                            <input type="number" data-ng-value="" name="anneeDebut" id="añofin" data-ng-required="false" data-ng-model="$ctrl.anneeStart" data-ng-change="$ctrl.setPeriodeAnnees()" autocomplete="off" placeholder="2019"  style="width: 50px;" min="0000" max="2019">
+                                                            <input class="años" type="number" data-ng-value="" name="anneeDebut" id="añofin" data-ng-required="false" data-ng-model="$ctrl.anneeStart" data-ng-change="$ctrl.setPeriodeAnnees()" autocomplete="off" placeholder="2019"  min="0000" max="2019">
                                                             
                                                             </div>
                                                         
                                                 </li>        
                                                 <li>Siglo
-                                                    <select class="custom-select" id="inputGroupSelect01">
+                                                    <select class="custom-select radio_facetador" id="inputGroupSelect01">
                                                         <option selected>Cualquiera</option>
                                                         <option value="1">XIV</option>
                                                         <option value="2">XV</option>
@@ -229,7 +262,7 @@
                                                         <option value="4">XVII</option>
                                                     </select></li>
                                                 <li>Periodo
-                                                        <select class="custom-select" id="inputGroupSelect01">
+                                                        <select class="custom-select radio_facetador" id="inputGroupSelect01">
                                                             <option selected>Cualquiera</option>
                                                             <option value="1">Neoclásico</option>
                                                             <option value="2">Virreinato</option>
@@ -237,39 +270,37 @@
                                                 </select></li>    
                                                
                                             </ul>
-                                            <li data-toggle="collapse" data-target="#institucion" class="collapsed">
-                                                <a href="#"><i class="fas fa-university fa-lg"></i>Institución de procedencia <span
-                                                    class="fas fa-angle-down"></span></a>
+                                            <li data-toggle="collapse" data-target="#institucion" class="collapsed facetas px-3 d-flex justify-content-between">
+                                                <a href="#">Institución de procedencia</a> <a href="#"> + </a>
                                             </li>
                                             <ul class="sub-menu collapse" id="institucion">
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input">
                                                     Institución 1
                                                 </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input">
                                                     Institución 2
                                                 </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input">
                                                     Institución 3
                                                 </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input">
                                                     Institución 4
                                                 </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input">
                                                     Institución 5
                                                 </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input">
                                                     Institución 6
                                                 </li>
-                                                <li><input type="checkbox" aria-label="Checkbox for following text input">
+                                                <li class="checkbox_1"><input type="checkbox" aria-label="Checkbox for following text input">
                                                     Institución 7
                                                 </li>
                                             </ul>
-                                            <li data-toggle="collapse" data-target="#derechos" class="collapsed">
-                                                <a href="#"><i class="fas fa-university fa-lg"></i>Derechos de Uso<span
-                                                    class="fas fa-angle-down"></span></a>
+                                            <li data-toggle="collapse" data-target="#derechos" class="collapsed facetas px-3 d-flex justify-content-between">
+                                                <a href="#"></i>Derechos de Uso</a> <a href="#"> + </a>
                                             </li>
                                             <ul class="sub-menu collapse" id="derechos">
-                                                <li><select class="custom-select" id="inputGroupSelect01">
+                                                <li><select class="custom-select radio_facetador" id="inputGroupSelect01">
                                                     <option selected>Cualquiera</option>
                                                     <option value="1">Derechos Reservados</option>
                                                     <option value="2">Uso Educativo</option>
@@ -280,8 +311,8 @@
                                                 </select>
                                                 </li>
                                             </ul>
-                                            <li data-toggle="collapse" class="collapsed">
-                                                <input type="reset" value="Borrar información" onclick="formReset()" value="Reset">
+                                            <li data-toggle="collapse" class="collapsed facetas px-3 d-flex justify-content-between" style="background-color: white;">
+                                                <input class="boton_limpiar_formulario" type="reset" value="Limpiar formulario" onclick="formReset()" value="Reset">
                                             </li>
                                             
                                         </ul>
@@ -598,11 +629,11 @@
                             </div>          
                         </div> 
 
-                        <div class="row my-1 d-flex justify-content-center" style="width: 100%;">
+                        <div class="row my-1 d-flex justify-content-center pt-3 mt-3" style="width: 100%; border-top: 1px solid #a8a8a8;">
                             <nav aria-label="...">
                                 <ul class="pagination">
                                     <li class="page-item disabled">
-                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                        <a class="page-link" href="#" tabindex="-1">«</a>
                                     </li>
                                     <li class="page-item"><a class="page-link" href="#">1</a></li>
                                     <li class="page-item active">
@@ -610,7 +641,7 @@
                                     </li>
                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                                     <li class="page-item">
-                                        <a class="page-link" href="#">Next</a>
+                                        <a class="page-link" href="#">»</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -620,35 +651,39 @@
 				</div>
 			</div>
 		</main>
-
+        <!-- Footer -->
 		<!-- atún sellado de mi casa, y un limón -->
-        <footer class="footer mt-auto py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-12">
-                        <ul>
-                            <li><a href="#">Coordinación</a></li>
-                            <li><a href="#">Instituciones vinculadas</a></li>
-                            <li><a href="#">Marco jurídico</a></li>
-                            <li><a href="#">Aviso de privacidad</a></li>
-                        </ul>
+        <footer class="footer mt-3 py-0">
+            <div class="container p-0" style="border-top: 1px solid #092834;">
+                <div class="col-1" style="background-color: #FF026A; height:3px;"></div><div class="col-11"></div>
+                <div class="row py-4">
+                        <div class="col-12 d-flex justify-content-start flex-column">
+                                <ul class="memoria-redes">
+                                    <li><a href="#"> <i class="fab fa-facebook-f 3x"></i> </a></li>
+                                    <li style="color: #092834">|</li>
+                                    <li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                                </ul>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <ul>
+                                <li><a href="#">Términos y condiciones</a></li>
+                                <li><a href="#">Aviso de privacidad</a></li>
+                                <li><a href="#">Marco jurídico</a></li>
+                                <li><a href="#">Coordinación</a></li>
+                                <li><a href="#">Instituciones vinculadas</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <ul>
+                                <li><a href="#">Documentación técnica</a></li>
+                                <li><a href="#">Cómo usar el sitio</a></li>
+                                <li><a href="#">Mapa de sitio</a></li>
+                            </ul>
+                        </div>
+                    <div class="col-md-4 co-12 d-flex justify-content-center align-self-center pt-3">
+                            <img src="recursos/img/Logos/Gobierno_de_mexico-02.svg" height="70px"/>
                     </div>
-                    <div class="col-md-4 col-sm-12">
-                        <ul>
-                            <li><a href="#">Mapa de sitio</a></li>
-                            <li><a href="#">Documentación técnica</a></li>
-                            <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Cómo usar el sitio</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-1 col-sm-12 justify-content-end"></div>
-                    <div class="col-md-3 col-sm-12 d-flex justify-content-start flex-column">
-                        <ul class="memoria-redes">
-                            <li><a href="#"> <i class="fab fa-facebook-f"></i> </a></li>
-                            <li><a href="#"> <i class="fab fa-instagram"></i> </a></li>
-                            <li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
-                        </ul>
-                    </div>
+                   
                 </div>
             </div>
         </footer>
