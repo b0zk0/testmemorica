@@ -38,7 +38,7 @@
 html {
     font-family: 'MerriweatherSans-Regular';
     font-size: 16px;
-    width: 100%;
+	width: 100%;
 }
 
 body.principal {
@@ -538,6 +538,7 @@ p.card-text {
   color:  #092834;
   border: none;
 }
+
 .page-link:hover{
   color:  #347B98;
   background-color: rgb(255, 255, 255);
@@ -547,6 +548,24 @@ p.card-text {
   color: #347B98;
   background-color: #fff;
   border-color: #fff;
+}
+/*------------------------------- Acervos de la Agn -------------------------------*/
+select {
+	background-color: #000;
+	color: #fff;
+	-webkit-appearance: none;
+	-mox-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+}
+
+option {
+	background-color: #000;
+	color: #fff;
+	-webkit-appearance: none;
+	-mox-appearance: none;
+	-o-appearance: none;
+	appearance: none;
 }
 
 /*-------------------------------Footer-------------------------------*/
