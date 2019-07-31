@@ -543,6 +543,7 @@ p.card-text {
   color:  #347B98;
   background-color: rgb(255, 255, 255);
 }
+
 .page-item.active .page-link {
   z-index: 1;
   color: #347B98;
@@ -550,7 +551,26 @@ p.card-text {
   border-color: #fff;
 }
 /*------------------------------- Acervos de la Agn -------------------------------*/
-select {
+.table {
+  border-top: 0 solid #fff !important;
+}
+
+.memoria-dropdowns {
+  padding: auto, 0px;
+  border: solid;
+  border-color: #B2D732;
+}
+
+.card-header {
+  background-color: #f4f9e0;
+}
+
+.card-header h2 {
+  color: #092834;
+  font-family: 'MerriweatherSans-Regular';
+}
+
+/* select {
 	background-color: #000;
 	color: #fff;
 	-webkit-appearance: none;
@@ -566,7 +586,7 @@ option {
 	-mox-appearance: none;
 	-o-appearance: none;
 	appearance: none;
-}
+} */
 
 /*-------------------------------Footer-------------------------------*/
 
