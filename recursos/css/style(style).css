@@ -37,7 +37,7 @@
 
 html {
     font-family: 'MerriweatherSans-Regular';
-    font-size: 16px;
+  font-size: 16px;
 	width: 100%;
 }
 
@@ -416,7 +416,6 @@ p.card-text {
 }
 .custom-select{
   padding: 3.5px;
-  
 }
 
 .radio_facetador{
@@ -568,6 +567,24 @@ p.card-text {
 .card-header h2 {
   color: #092834;
   font-family: 'MerriweatherSans-Regular';
+}
+
+.dropdown-acervo {
+  /* reset styles */
+  -webkit-appearance: none;
+	-mox-appearance: none;
+	-o-appearance: none;
+  appearance: none;
+
+  /* custom styling */
+  font-family: 'MerriweatherSans-Bold';
+  color: #347B98;
+  font-size: 11px;
+  height: 23px;
+  padding-left: 5px;
+	border: none;
+	cursor: pointer;
+	outline: none !important;
 }
 
 /* select {

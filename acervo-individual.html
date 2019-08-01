@@ -136,7 +136,7 @@
 			<form class="memoria-dropdowns mb-5 p-3">
 				<div class="row d-flex flex-row align-items-center">
 					<div class="col-md-3 col-sm-12">
-						<select id="nivel1" class="form-control">
+						<select id="nivel1" class="form-control custom-select dropdown-acervo">
 							<option selected value="">Selecciona un fondo</option>
 							<!-- <option value="MX09017AGNCL01FO001AYSE001AP8">Abasto y Panaderías</option> -->
 							<!-- <option value="MX09017AGNCL01FO008RHSE002ALSS03ALI22262">Alcabalas</option> -->
@@ -145,12 +145,12 @@
 						</select>
 					</div>
 					<div class="col-md-3 col-sm-12">
-						<select id="nivel2" class="form-control">
+						<select id="nivel2" class="form-control custom-select dropdown-acervo">
 							<option selected value="">Favor de seleccionar un fondo</option>
 						</select>
 					</div>
 					<div class="col-md-3 col-sm-12">
-						<select id="nivel3" class="form-control">
+						<select id="nivel3" class="form-control custom-select dropdown-acervo">
 							<option selected value="">Favor de seleccionar un subfondo</option>
 						</select>
 					</div>
@@ -164,11 +164,12 @@
 			<!-- Cédula colapsable -->
 			<div class="accordion mb-4">
 				<div id="cedula1" class="card d-none border-0 rounded-0">
-					<div class="card-header border-bottom-0" id="headingOne" type="button" data-toggle="collapse" data-target="#collapseOne"
+					<div class="card-header border-bottom-0" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
 						aria-expanded="true" aria-controls="collapseOne">
 						<h2 class="mb-0 btn btn-link cedula1titulo">
 							
 						</h2>
+						<i class="fa fa-plus"></i>
 					</div>
 					<div id="collapseOne" class="collapse" aria-labelledby="headingOne">
 						<div class="card-body">
@@ -241,11 +242,12 @@
 				</div>
 
 				<div id="cedula2" class="card d-none border-0 rounded-0">
-					<div class="card-header border-bottom-0" id="headingTwo" type="button" data-toggle="collapse" data-target="#collapseTwo"
+					<div class="card-header border-bottom-0" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo"
 						aria-expanded="false" aria-controls="collapseTwo">
 						<h2 class="mb-0 btn btn-link cedula2titulo">
 							 
 						</h2>
+						<i class="fa fa-plus"></i>
 					</div>
 					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
 						<div class="card-body">
@@ -314,11 +316,12 @@
 				</div>
 
 				<div id="cedula3" class="card d-none">
-					<div class="card-header border-bottom-0" id="headingThree" type="button" data-toggle="collapse" data-target="#collapseThree"
+					<div class="card-header border-bottom-0" id="headingThree" data-toggle="collapse" data-target="#collapseThree"
 						aria-expanded="false" aria-controls="collapseThree">
 						<h2 class="mb-0 btn btn-link cedula3titulo">
 
 						</h2>
+						<i class="fa fa-plus"></i>
 					</div>
 					<div id="collapseThree" class="collapse" aria-labelledby="headingThree">
 						<div class="card-body">
