@@ -23,5 +23,17 @@ $(document).ready(function() {
             $('#searchButton').click();//Trigger search button click event
         }
     });
+
+    // agrega icono de menos para elementos colapsables que están abiertos por default
+    $(".collapse.show").each(function () {
+        $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+    });
+
+    // cambia entre íconos de más y menos con el show o hide del collapse
+    $(".collapse").on('show.bs.collapse', function () {
+        $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+    }).on('hide.bs.collapse', function () {
+        $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+    });
 });
 
