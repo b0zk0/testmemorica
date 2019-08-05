@@ -1,33 +1,37 @@
-
+@font-face {
+    font-family: "Oswald";
+    src: url(https://fonts.googleapis.com/css?family=Oswald:700&display=swap) format("truetype");
+    font-style: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
 /* estos  */
 @font-face {
-    font-family: 'Lato', sans-serif;
-    src: url(href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans&display=swap) format("truetype");
-    font-style: Regular;
+    font-family: "Roboto";
+    src: url(https://fonts.googleapis.com/css?family=Roboto&display=swap) format("truetype");
+    font-style: normal;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: 'MerriweatherSans-Regular';
-  src: url(href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans&display=swap) format("truetype");
-  font-style: regular;
+  src: url(/recursos/Type/MerriweatherSans-Regular.ttf) format("truetype");
+  font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: 'MerriweatherSans-Bold';
-  src: url(href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans&display=swap) format("truetype");
-  font-style: Extra-Bold;
+  src: url(/recursos/Type/MerriweatherSans-Bold.ttf) format("truetype");
+  font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: 'MerriweatherSans-light';
-  src: url(href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans&display=swap) format("truetype");
-  font-style: Light;
+  src: url(/recursos/Type/MerriweatherSans-Light.ttf) format("truetype");
+  font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
 }
-
 
 
 /*-------------------------------Estilos generales-------------------------------*/
