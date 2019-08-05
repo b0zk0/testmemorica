@@ -159,8 +159,8 @@
 			</form> -->
 
 			<!-- Dropdown con style -->
-			<form class="row d-flex align-items-center">
-				<div class="col-sm-8 memoria-dropdowns d-flex p-3">
+			<form class="row mb-5" style="margin: auto">
+				<div class="col-sm-9 memoria-dropdowns d-flex p-3">
 					<select id="nivel1" class="form-control custom-select dropdown-acervo">
 						<option selected value="">Selecciona un fondo</option>
 						<option value="H_MX09017AGNCL01FO001AYSE001AP">Abasto y Panaderías</option>
@@ -175,47 +175,20 @@
 						<option selected value="">Favor de seleccionar un subfondo</option>
 					</select>
 				</div>
-				<div id="submit" class="col-sm-4">
+				<div id="submit" class="col-sm-3">
 					<button id="buscar-fondo" type="submit" class="btn btn-primary">Ver objetos</button>
-				</div>
-			</form>
-
-			<form class="memoria-dropdowns mb-5 p-3">
-				<div class="row d-flex flex-row align-items-center">
-					<div class="col-md-3 col-sm-12">
-						<select id="nivel1" class="form-control custom-select dropdown-acervo">
-							<option selected value="">Selecciona un fondo</option>
-							<!-- <option value="MX09017AGNCL01FO001AYSE001AP8">Abasto y Panaderías</option> -->
-							<!-- <option value="MX09017AGNCL01FO008RHSE002ALSS03ALI22262">Alcabalas</option> -->
-							<option value="H_MX09017AGNCL01FO001AYSE001AP">Abasto y Panaderías</option>
-							<option value="H_MX09017AGNCL01FO008RHSE002AL">Alcabalas</option>
-						</select>
-					</div>
-					<div class="col-md-3 col-sm-12">
-						<select id="nivel2" class="form-control custom-select dropdown-acervo">
-							<option selected value="">Favor de seleccionar un fondo</option>
-						</select>
-					</div>
-					<div class="col-md-3 col-sm-12">
-						<select id="nivel3" class="form-control custom-select dropdown-acervo">
-							<option selected value="">Favor de seleccionar un subfondo</option>
-						</select>
-					</div>
-					<div id="submit" class="col-md-3 col-sm-12 d-flex justify-content-center">
-						<button id="buscar-fondo" type="submit" class="btn btn-primary d-none">Ver objetos</button>
-					</div>
 				</div>
 			</form>
 			
 			<!-- Cédula colapsable -->
-			<div class="accordion mb-4">
-				<div id="cedula1" class="card  border-0 rounded-0 mb-4">
+			<div class="accordion mb-4 rounded-0">
+				<div id="cedula1" class="card border-0 rounded-0 mb-4">
 					<div class="card-header border-bottom-0 d-flex align-items-center justify-content-between" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
 						aria-expanded="true" aria-controls="collapseOne">
 						<h2 class="mb-0 btn btn-link cedula1titulo">
 							Título del fondo
 						</h2>
-						<i class="fa fa-plus"></i>
+						<h4 class="panel-title"></h4>
 					</div>
 					<div id="collapseOne" class="collapse" aria-labelledby="headingOne">
 						<div class="card-body">
@@ -287,13 +260,13 @@
 					</div>
 				</div>
 
-				<div id="cedula2" class="card  border-0 rounded-0 mb-4">
+				<div id="cedula2" class="card border-0 rounded-0 mb-4">
 					<div class="card-header border-bottom-0 d-flex align-items-center justify-content-between" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo"
 						aria-expanded="false" aria-controls="collapseTwo">
 						<h2 class="mb-0 btn btn-link cedula2titulo">
 							Título del subfondo
 						</h2>
-						<i class="fa fa-plus"></i>
+						<h4 class="panel-title"></h4>
 					</div>
 					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
 						<div class="card-body">
@@ -361,13 +334,13 @@
 					</div>
 				</div>
 
-				<div id="cedula3" class="card  border-0 rounded-0 mb-4">
+				<div id="cedula3" class="card border-0 rounded-0 mb-4">
 					<div class="card-header border-bottom-0 d-flex align-items-center justify-content-between" id="headingThree" data-toggle="collapse" data-target="#collapseThree"
 						aria-expanded="false" aria-controls="collapseThree">
 						<h2 class="mb-0 btn btn-link cedula3titulo">
 							Título del expediente
 						</h2>
-						<i class="fa fa-plus"></i>
+						<h4 class="panel-title"></h4>
 					</div>
 					<div id="collapseThree" class="collapse" aria-labelledby="headingThree">
 						<div class="card-body">
@@ -484,13 +457,9 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="recursos/js/main.js"></script>
 		<script src="recursos/js/test.js"></script>
-
-		<script>
-			
-		</script>
 
     </body>
 </html>

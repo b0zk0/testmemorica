@@ -554,21 +554,26 @@ p.card-text {
   border-top: 0 solid #fff !important;
 }
 
-.memoria-dropdowns {
-  padding: auto, 0px;
-  border: solid #B2D732;
-}
-
 .card-header {
   background-color: #f4f9e0;
   cursor: pointer;
   height: 3rem;
+  transition: all .2s ease-in-out .05s;
+}
+
+.card-header:hover {
+  background-color: #B2D732;
 }
 
 .card-header h2 {
   color: #092834;
   font-family: 'MerriweatherSans-Regular';
   padding: 0;
+}
+
+.memoria-dropdowns {
+  padding: auto, 0px;
+  border: solid #B2D732;
 }
 
 .dropdown-acervo {
@@ -589,13 +594,44 @@ p.card-text {
 	outline: none !important;
 }
 
+#submit {
+  padding-right: 0;
+}
+
 #buscar-fondo {
-  border: solid #B2D732;
+  border: solid darkblue;
   border-radius: 0%;
-  color: #B2D732;
+  color: darkblue;
   background-color: #fff;
   height: 100%;
+  width: 100%;
 }
+
+#buscar-fondo:hover {
+  color: #fff;
+  background-color: darkblue;
+}
+
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css");
+
+.panel-title > a:before {
+  float: right !important;
+  font-family: FontAwesome;
+  content: "\f068";
+  padding-right: 5px;
+}
+
+.panel-title > a.collapsed:before {
+  float: right !important;
+  content: "\f067";
+}
+
+.panel-title > a:hover,
+.panel-title > a:active,
+.panel-title > a:focus {
+  text-decoration: none;
+}
+
 
 /* select {
 	background-color: #000;
