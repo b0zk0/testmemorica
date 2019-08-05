@@ -3,28 +3,28 @@
 @font-face {
     font-family: "Roboto";
     src: url(href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans&display=swap) format("truetype");
-    font-style: normal;
+    font-style: Regular;
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: 'MerriweatherSans-Regular';
   src: url(href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans&display=swap) format("truetype");
-  font-style: normal;
+  font-style: regular;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: 'MerriweatherSans-Bold';
   src: url(href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans&display=swap) format("truetype");
-  font-style: normal;
+  font-style: Extra-Bold;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
 @font-face {
   font-family: 'MerriweatherSans-light';
   src: url(href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans&display=swap) format("truetype");
-  font-style: normal;
+  font-style: Light;
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
