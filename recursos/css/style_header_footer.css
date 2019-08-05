@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: 'MerriweatherSans-Regular';
-  src: url(/recursos/Type/MerriweatherSans-Regular.ttf) format("truetype");
+  src: url('https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap') format("truetype");
   font-style: normal;
   -webkit-font-smoothing: subpixel-antialiased;
 }
