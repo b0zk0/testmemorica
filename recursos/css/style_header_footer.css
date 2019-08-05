@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: 'MerriweatherSans-Regular';
+  font-family: 'Merriweather Sans', sans-serif;
   src: url(href="https://fonts.googleapis.com/css?family=Lato|Merriweather+Sans&display=swap) format("truetype");
   font-style: regular;
   -webkit-font-smoothing: subpixel-antialiased;
