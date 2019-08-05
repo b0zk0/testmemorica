@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <title>Header y footer</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+
+
+
+
+
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script type="text/javascript">
+        function formReset() {
+            document.getElementById("myForm").reset();
+
+        }
+    </script>
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="recursos/css/style.css">
+
+
+
+
+</head>
+
+<body>
+    <!-- Header con barra y buscador -->
+    <header>
+        <!-- Barra de navegación -->
+        <div class="barra-superior"></div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <a class="navbar-brand d-lg-none" href="index.html" alt="logotipo Memórica"><img
+                    src="/recursos/img/Logos/logo_memorica.svg" height="20px" /></a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
+                aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- menu que se colapsa   -->
+            <div class="collapse navbar-collapse flex-column" id="menu">
+
+                <div class="col-12 d-flex justify-content-center p-0">
+                    <a class="navbar-brand d-none d-lg-block m-0 " href="index.html"><img
+                            src="/recursos/img/Logos/logo_memorica.svg" height="45px" /></a>
+                </div>
+
+                <div class="container py-3 d-none d-lg-block">
+                    <div class="row fila-centrada m-0 ">
+                        <div class="col-3 col-sm-4"></div>
+                        <div class="col-6 col-sm-4 align-self-center">
+                            <form class="form" action="resultados.html">
+                                <input id="usersSearch"
+                                    class="form-control rounded-pill ui-autocomplete-input inputbuscador" type="text"
+                                    placeholder="México, haz memoria" aria-label="Buscador">
+                              
+                            </form>
+                        </div>
+                        <div class="col-3 col-sm-3"></div>
+                    </div>
+                </div>
+
+
+
+                <div class="container botones-pestañas">
+
+                    <ul class="navbar-nav d-flex justify-content-between pestañas">
+                        <li class="nav-item">
+                            <a class="nav-item nav-link" href="#">Haz memoria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link" href="acervos.html">Acervos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link" href="temas.html">Temas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link" href="#">Exposiciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link" href="#">Miscelánea</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link" href="#">Breves</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Buscador-->
+        <div class="container-fluid memoria-buscador d-flex justify-content-center pt-3 d-block d-lg-none">
+            <div class="row fila-centrada ">
+                <div class="col-0 col-sm-3"></div>
+                <div class="col-12 col-sm-6 align-self-center">
+                    <form class="form" action="resultados.html">
+                        <input id="usersSearch" class="form-control rounded-pill ui-autocomplete-input inputbuscador"
+                            type="text" placeholder="México, haz memoria" aria-label="Search">
+                  
+                    </form>
+                </div>
+                <div class="col-0 col-sm-3"></div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+    <!-- Footer -->
+    
+    <footer class="footer mt-3 py-0">
+        <div class="container p-0" style="border-top: 1px solid #092834;">
+            <div class="col-1" style="background-color: #FF026A; height:3px;"></div>
+            <div class="col-11"></div>
+            <div class="row  pt-2 pb-5">
+                <div class="col-12 d-flex justify-content-start flex-column">
+                    <ul class="memoria-redes">
+                        <li><a class="favicom" href="#"> <i class="fab fa-facebook-f 5x "></i> </a></li>
+                        <li style="color: #092834">|</li>
+                        <li><a class="favicom"href="#"> <i class="fab fa-twitter"></i> </a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-12 contenedor-izquierdo pr-0">
+                    <ul>
+                        <li><a href="terminos_condiciones.html">Términos y condiciones</a></li>
+                        <li><a href="aviso_privacidad.html">Aviso de privacidad</a></li>
+                        <li><a href="marco_juridico.html">Marco jurídico</a></li>
+                        <li><a href="coordinacion.html">Coordinación</a></li>
+                        <li><a href="instituciones_vinculadas.html">Instituciones vinculadas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 col-12">
+                    <ul>
+                        <li><a href="documentacion_tecnicas.html">Documentación técnica</a></li>
+                        <li><a href="como_usar_sitio.html">Cómo usar el sitio</a></li>
+                        <li><a href="mapa_sitio.html">Mapa de sitio</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 co-12 d-flex justify-content-center  pt-3">
+                    <img  src="recursos/img/Logos/Gobierno_de_mexico-02.svg" height="70px" />
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    
+
+    <!-- Script TIMELINE -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 2019,
+                values: [0, 2019],
+                slide: function (event, ui) {
+                    $("#añoinicio").val(ui.values[0]);
+                    $("#añofin").val(+ ui.values[1]);
+                }
+            });
+            $("#añoinicio").val($("#slider-range").slider("values", 0));
+            $("#añofin").val($("#slider-range").slider("values", 1));
+        });
+    </script>
+
+
+    <!-- Script MAS RESULTADOS -->
+    <script>
+        var mipagina = 1;
+        micontenido(mipagina);
+        $('#loadmorebtn').click(function (e) {
+            mipagina++;
+            micontenido(mipagina);
+            return false;
+        })
+        function micontenido(mipagina) {
+            $('.ani_image').show()
+            $.post('data.php', { page: mipagina }, function (data) {
+                if (data.trim().length == 0) {
+                    $('#loadmorebtn').text("No hay mas resultados").prop("disabled", true)
+                }
+                $('.results').append(data)
+                $("html, body").animate({ scrollTop: $("#loadmorebtn").offset().top / 1.7 }, 800)
+                $('.ani_image').hide()
+            })
+            return false;
+        }
+    </script>
+
+
+</body>
+
+</html>
