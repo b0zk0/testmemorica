@@ -10,7 +10,9 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
             integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="recursos/css/style(style).css">
+		<link rel="stylesheet" href="recursos/css/style(style).css">
+		<link rel="stylesheet" href="recursos/Type/fontello/css/fontello-embedded.css"> <!-- fuente de íconos -->
+		
     </head>
 
     <body>
@@ -176,13 +178,74 @@
 					</select>
 				</div>
 				<div id="submit" class="col-sm-3">
-					<button id="buscar-fondo" type="submit" class="btn btn-primary">Ver objetos</button>
+					<button id="buscar-fondo" type="submit" class="btn btn-primary d-flex align-items-center justify-content-center">
+						<i class="demo-icon">&#xe800;</i>
+						Ver objetos
+					</button>
+					
 				</div>
 			</form>
 			
+			<!-- Cédula examplo -->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="headingOne">
+									<h4 class="panel-title">
+										<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+											aria-controls="collapseOne">
+											Collapsible Group Item #1
+										</a>
+									</h4>
+			
+								</div>
+								<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+									aria-labelledby="headingOne">
+									<div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+										terry richardson ad squid.le VHS.</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="headingTwo">
+									<h4 class="panel-title">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+											aria-expanded="false" aria-controls="collapseTwo">
+											Collapsible Group Item #2
+										</a>
+									</h4>
+			
+								</div>
+								<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									<div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+										terry richardson ad squid.</div>
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading" role="tab" id="headingThree">
+									<h4 class="panel-title">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+											aria-expanded="false" aria-controls="collapseThree">
+											Collapsible Group Item #3
+										</a>
+									</h4>
+			
+								</div>
+								<div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+									aria-labelledby="headingThree">
+									<div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+										terry richardson ad squid. </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
 			<!-- Cédula colapsable -->
 			<div class="accordion mb-4 rounded-0">
-				<div id="cedula1" class="card border-0 rounded-0 mb-4">
+				<div id="cedula1" class="card d-none border-0 rounded-0 mb-4">
 					<div class="card-header border-bottom-0 d-flex align-items-center justify-content-between" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
 						aria-expanded="true" aria-controls="collapseOne">
 						<h2 class="mb-0 btn btn-link cedula1titulo">
@@ -260,7 +323,7 @@
 					</div>
 				</div>
 
-				<div id="cedula2" class="card border-0 rounded-0 mb-4">
+				<div id="cedula2" class="card d-none border-0 rounded-0 mb-4">
 					<div class="card-header border-bottom-0 d-flex align-items-center justify-content-between" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo"
 						aria-expanded="false" aria-controls="collapseTwo">
 						<h2 class="mb-0 btn btn-link cedula2titulo">
@@ -334,7 +397,7 @@
 					</div>
 				</div>
 
-				<div id="cedula3" class="card border-0 rounded-0 mb-4">
+				<div id="cedula3" class="card  border-0 rounded-0 mb-4"> <!--d-none-->
 					<div class="card-header border-bottom-0 d-flex align-items-center justify-content-between" id="headingThree" data-toggle="collapse" data-target="#collapseThree"
 						aria-expanded="false" aria-controls="collapseThree">
 						<h2 class="mb-0 btn btn-link cedula3titulo">
