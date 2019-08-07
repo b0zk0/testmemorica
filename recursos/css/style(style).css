@@ -621,43 +621,29 @@ p.card-text {
   background-color: darkblue;
 }
 
-/* select {
-	background-color: #000;
-	color: #fff;
-	-webkit-appearance: none;
-	-mox-appearance: none;
-	-o-appearance: none;
-	appearance: none;
-}
+/* íconos dínamicos para la cédula */
 
-option {
-	background-color: #000;
-	color: #fff;
-	-webkit-appearance: none;
-	-mox-appearance: none;
-	-o-appearance: none;
-	appearance: none;
-} */
-
-
-
-.panel-title > a:before {
+.card-header > a:before {
   float: right !important;
   font-family: "Font Awesome 5 Free";
   content: "\f068";
   padding-right: 5px;
 }
 
-.panel-title > a.collapsed:before {
+.card-header > a.collapsed:before {
   float: right !important;
   font-family: "Font Awesome 5 Free";
   content: "\f067";
   padding-right: 5px;
 }
 
-.panel-title > a:hover,
-.panel-title > a:active,
-.panel-title > a:focus {
+.card-header > a:hover,
+.card-header > a:active,
+.card-header > a:focus {
+  text-decoration: none;
+}
+
+.card-header > a {
   text-decoration: none;
 }
 
@@ -678,7 +664,7 @@ option {
   font-style: normal;
   font-weight: normal;
   speak: none;
-
+  color: #FFf;
   display: inline-block;
   text-decoration: inherit;
   width: 1em;

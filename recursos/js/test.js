@@ -88,7 +88,7 @@ $("#nivel1").change(function () {
                 generateDropdown(vals)
 
                 $("#cedula1").removeClass("d-none");
-                $("#cedula1").addClass("d-block");
+                $("#cedula1").addClass("d-show");
                 $("#collapseOne").addClass("show");
                 $("#cedula2").removeClass("d-show");
                 $("#cedula3").removeClass("d-show");
@@ -108,10 +108,12 @@ $("#nivel1").change(function () {
                 generateDropdown(vals)
 
                 $("#cedula1").removeClass("d-none");
-                $("#cedula1").addClass("d-block");
+                $("#cedula1").addClass("d-show");
                 $("#collapseOne").addClass("show");
                 $("#cedula2").removeClass("d-show");
                 $("#cedula3").removeClass("d-show");
+
+                
 
                 info = data.H_MX09017AGNCL01FO008RHSE002AL;
                 $(".cedula1titulo").text(info.TITULO);
@@ -125,10 +127,12 @@ $("#nivel1").change(function () {
             $nivel2.empty();
             vals = ['Favor de seleccionar un fondo'];
             $nivel2.append("<option>" + vals + "</option>");
-            $("#cedula1").removeClass("d-block");
+            $("#cedula1").removeClass("d-show");
             $("#cedula1").addClass("d-none");
             $("#cedula2").addClass("d-none");
+            $("#cedula2").removeClass("d-show");
             $("#cedula3").addClass("d-none");
+            $("#cedula3").removeClass("d-show");
 
             $nivel3.empty();
             $('#nivel2').html('<option value="">Favor de seleccionar un fondo</option>');
@@ -161,10 +165,12 @@ $("#nivel2").change(function () {
             $("#collapseOne").removeClass("show");
             $("#collapseTwo").addClass("show");
             $("#cedula2").removeClass("d-none");
-            $("#cedula2").addClass("d-block");
+            $("#cedula2").addClass("d-show");
 
             $("#buscar-fondo").removeClass("d-none");
             $("#buscar-fondo").addClass("d-show");
+
+            $("#plus-icon-1").addClass("collapsed")
 
             // info = data.key.hijos;
             info = data.H_MX09017AGNCL01FO001AYSE001AP.hijos.H_MX09017AGNCL01FO001AYSE001APUI001;
@@ -181,9 +187,8 @@ $("#nivel3").change(function () {
     var $dropdown = $(this);
     var key = $dropdown.val();
 
-    if (key != "") {
+    if (key != "MX09017AGN-0000026638190") {
         $.getJSON("recursos/json/niveltres.json", function (data) {
-            $nivel3.empty();
             tercerDropdown += '<option value="">Selecciona un expediente</option>';
             $.each(data, function (key) {
                 if ($dropdown == key.yo) {
@@ -195,7 +200,9 @@ $("#nivel3").change(function () {
             $("#collapseOne").removeClass("show");
             $("#collapseTwo").addClass("show");
             $("#cedula2").removeClass("d-none");
-            $("#cedula2").addClass("d-block");
+            $("#cedula2").addClass("d-show");
+
+            $("#plus-icon-2").addClass("collapsed")
 
             console.log(key);
             info = key;
