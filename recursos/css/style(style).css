@@ -197,11 +197,7 @@ div.memoria-pestañas {
     justify-content: space-around;
 }
 
-.breadcrumb-item{
-  font-family: 'MerriweatherSans-Regular';
-  color: #092834;
-  font-size: 18px;
-}
+
 
 .resultados_pagina{
   font-family: 'MerriweatherSans-Bold';
@@ -558,141 +554,6 @@ p.card-text {
   background-color: #fff;
   border-color: #fff;
 }
-/*------------------------------- Acervos de la Agn -------------------------------*/
-.table {
-  border-top: 0 solid #fff !important;
-}
-
-.card-header {
-  background-color: #f4f9e0;
-  cursor: pointer;
-  height: 3rem;
-  transition: all .2s ease-in-out .05s;
-}
-
-.card-header:hover {
-  background-color: #B2D732;
-}
-
-.card-header h2 {
-  color: #092834;
-  font-family: 'MerriweatherSans-Regular';
-  padding: 0;
-}
-
-.memoria-dropdowns {
-  padding: auto, 0px;
-  border: solid #B2D732;
-}
-
-.dropdown-acervo {
-  /* reset styles */
-  -webkit-appearance: none;
-	-mox-appearance: none;
-	-o-appearance: none;
-  appearance: none;
-
-  /* custom styling */
-  font-family: 'MerriweatherSans-Bold';
-  color: #347B98;
-  font-size: 11px;
-  height: 23px;
-  padding-left: 5px;
-	border: none;
-	cursor: pointer;
-	outline: none !important;
-}
-
-#submit {
-  padding-right: 0;
-}
-
-#buscar-fondo {
-  border: solid darkblue;
-  border-radius: 0%;
-  color: darkblue;
-  background-color: #fff;
-  height: 100%;
-  width: 100%;
-}
-
-#buscar-fondo:hover {
-  color: #fff;
-  background-color: darkblue;
-}
-
-/* íconos dínamicos para la cédula */
-
-.card-header > a:before {
-  float: right !important;
-  font-family: "Font Awesome 5 Free";
-  content: "\f068";
-  padding-right: 5px;
-}
-
-.card-header > a.collapsed:before {
-  float: right !important;
-  font-family: "Font Awesome 5 Free";
-  content: "\f067";
-  padding-right: 5px;
-}
-
-.card-header > a:hover,
-.card-header > a:active,
-.card-header > a:focus {
-  text-decoration: none;
-}
-
-.card-header > a {
-  text-decoration: none;
-}
-
-/*-------------------------------Íconos-------------------------------*/
-@font-face {
-  font-family: 'fontello';
-  src: url('./Type/fontello/font/fontello.eot?46998757');
-  src: url('./Type/fontello/font/fontello.eot?46998757#iefix') format('embedded-opentype'),
-    url('./Type/fontello/font/fontello.woff?46998757') format('woff'),
-    url('./Type/fontello/font/fontello.ttf?46998757') format('truetype'),
-    url('./Type/fontello/font/fontello.svg?46998757#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.demo-icon {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  color: #FFf;
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
-
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
-
-  /* You can be more comfortable with increased icons size */
-  font-size: 190%;
-
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-}
 
 /*-------------------------------Footer-------------------------------*/
 
@@ -820,3 +681,149 @@ body {
   }  
 }
 
+/*------------------------------- Acervos de la Agn -------------------------------*/
+.breadcrumb-item a {
+  font-family: 'MerriweatherSans-Regular';
+  color: #092834;
+  font-size: 17px;
+}
+
+.memoria-titulo h1 {
+  font-family: 'MerriweatherSans-Bold';
+  font-size: 19px;
+}
+
+.table {
+  border-top: 0 solid #fff !important;
+}
+
+.card-header {
+  background-color: #f4f9e0;
+  cursor: pointer;
+  height: 3rem;
+  transition: all .2s ease-in-out .05s;
+}
+
+.card-header:hover {
+  background-color: #B2D732;
+}
+
+.card-header h2 {
+  color: #092834;
+  font-family: 'MerriweatherSans-Regular';
+  padding: 0;
+}
+
+.memoria-dropdowns {
+  padding: auto, 0px;
+  border: solid #B2D732;
+}
+
+.dropdown-acervo {
+  /* reset styles */
+  -webkit-appearance: none;
+	-mox-appearance: none;
+	-o-appearance: none;
+  appearance: none;
+
+  /* custom styling */
+  font-family: 'MerriweatherSans-Bold';
+  color: #092834;
+  font-size: 11px;
+  height: 23px;
+  padding-left: 5px;
+	border: none;
+	cursor: pointer;
+	outline: none !important;
+}
+
+#submit {
+  padding-right: 0;
+}
+
+#buscar-fondo {
+  border: solid #092834;
+  border-radius: 0%;
+  color: #092834;
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+#buscar-fondo:hover {
+  color: #fff;
+  background-color: #092834;
+}
+
+/* íconos dínamicos para la cédula */
+
+.card-header > a:before {
+  float: right !important;
+  font-family: "Font Awesome 5 Free";
+  content: "\f068";
+  padding-right: 5px;
+}
+
+.card-header > a.collapsed:before {
+  float: right !important;
+  font-family: "Font Awesome 5 Free";
+  content: "\f067";
+  padding-right: 5px;
+}
+
+.card-header > a:hover,
+.card-header > a:active,
+.card-header > a:focus {
+  text-decoration: none;
+}
+
+.card-header > a {
+  text-decoration: none;
+}
+
+/*-------------------------------Íconos-------------------------------*/
+@font-face {
+  font-family: 'fontello';
+  src: url('./Type/fontello/font/fontello.eot?46998757');
+  src: url('./Type/fontello/font/fontello.eot?46998757#iefix') format('embedded-opentype'),
+    url('./Type/fontello/font/fontello.woff?46998757') format('woff'),
+    url('./Type/fontello/font/fontello.ttf?46998757') format('truetype'),
+    url('./Type/fontello/font/fontello.svg?46998757#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.demo-icon {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  color: #FFf;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* You can be more comfortable with increased icons size */
+  font-size: 250%;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
