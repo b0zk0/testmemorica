@@ -10,8 +10,15 @@
 }
 /* estos  */
 @font-face {
-    font-family: "Roboto";
-    src: url(https://fonts.googleapis.com/css?family=Roboto&display=swap) format("truetype");
+    font-family: 'Lato-Regular';
+    src: url(/recursos/Type/Lato-Regular.ttf) format("truetype");
+    font-style: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url(/recursos/Type/Lato-Bold.ttf) format("truetype");
     font-style: normal;
     -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -41,7 +48,7 @@
 /*------------------------------Estilos generales------------------------------*/
 
 html {
-  font-family: 'MerriweatherSans-Regular';
+  font-family: 'Lato-Regular';
   font-size: 16px;
 	width: 100%;
 }
@@ -66,7 +73,7 @@ nav {
 }
 
 p {
-  font-family: 'MerriweatherSans-Regular';
+  font-family: 'Lato-Regular';
   color: #092834;
   font-size: 14px;
 }
@@ -126,8 +133,6 @@ div.memoria-buscador {
   text-align: center;
   text-decoration-color: #ffffff;
   height: 28px;
-  
-  
 }
 
 .inputbuscador::placeholder {
@@ -682,6 +687,13 @@ body {
 }
 
 /*------------------------------- Acervos de la Agn -------------------------------*/
+p#descripcion-acervo {
+  font-family: 'Lato-Regular';
+  margin: 0px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
 .breadcrumb-item a {
   font-family: 'MerriweatherSans-Regular';
   color: #092834;
@@ -691,6 +703,11 @@ body {
 .memoria-titulo h1 {
   font-family: 'MerriweatherSans-Bold';
   font-size: 19px;
+}
+
+.card-title {
+  font-family: 'MerriweatherSans-Bold';
+  font-size: 18px;
 }
 
 .table {
@@ -710,7 +727,8 @@ body {
 
 .card-header h2 {
   color: #092834;
-  font-family: 'MerriweatherSans-Regular';
+  font-family: 'MerriweatherSans-Bold';
+  font-size: 18px;
   padding: 0;
 }
 
@@ -729,7 +747,7 @@ body {
   /* custom styling */
   font-family: 'MerriweatherSans-Bold';
   color: #092834;
-  font-size: 11px;
+  font-size: 14px;
   height: 23px;
   padding-left: 5px;
 	border: none;
@@ -742,6 +760,8 @@ body {
 }
 
 #buscar-fondo {
+  font-family: 'MerriweatherSans-Bold';
+  font-size: 14px;
   border: solid #092834;
   border-radius: 0%;
   color: #092834;

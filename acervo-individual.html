@@ -1,475 +1,457 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>MEMORICA - Acervo</title>
-        <link rel="stylesheet" href="recursos/css/reset.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-		<link rel="stylesheet" href="recursos/css/style(style).css">
 
-		<!-- fuente de íconos -->
-		<link rel="stylesheet" href="recursos/Type/fontello/css/fontello-embedded.css">	
-    </head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MEMORICA - Acervo</title>
+	<link rel="stylesheet" href="recursos/css/reset.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link rel="stylesheet" href="recursos/css/style(style).css">
 
-    <body>
-		<!-- Header con barra y buscador -->
-		<header>
-			<!-- Barra de navegación -->
-			<div class="barra-superior"></div>
-			<nav class="navbar navbar-expand-lg navbar-light">
-		
-				<a class="navbar-brand d-lg-none" href="index.html" alt="logotipo Memórica"><img
-						src="/recursos/img/Logos/Memorica.svg" height="30px" /></a>
-		
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
-					aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
+	<!-- fuente de íconos -->
+	<link rel="stylesheet" href="recursos/Type/fontello/css/fontello-embedded.css">
+</head>
+
+<body>
+	<!-- Header con barra y buscador -->
+	<header>
+		<!-- Barra de navegación -->
+		<div class="barra-superior"></div>
+		<nav class="navbar navbar-expand-lg navbar-light">
+
+			<a class="navbar-brand d-lg-none" href="index.html" alt="logotipo Memórica"><img
+					src="/recursos/img/Logos/Memorica.svg" height="30px" /></a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
+				aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- menu que se colapsa   -->
+			<div class="collapse navbar-collapse flex-column" id="menu">
+
+				<div class="col-12 d-flex justify-content-center">
+					<a class="navbar-brand d-none d-lg-block " href="index.html"><img
+							src="/recursos/img/Logos/Memorica.svg" height="62px" /></a>
+				</div>
+
+				<div class="container py-3 ">
+					<div class="row fila-centrada">
+						<div class="col-3 col-sm-3"></div>
+						<div class="col-6 col-sm-6 align-self-center">
+							<form class="form" action="resultados.html">
+								<input id="usersSearch"
+									class="form-control rounded-pill ui-autocomplete-input inputbuscador" type="text"
+									placeholder="¿Qué quieres encontrar hoy?" aria-label="Buscador">
+								<!-- <input id='searchButton' type='button' value='busquele'> -->
+							</form>
+						</div>
+						<div class="col-3 col-sm-3"></div>
+					</div>
+				</div>
+
+				<div class="container botones-pestañas">
+					<ul class="navbar-nav d-flex justify-content-between pestañas">
+						<li class="nav-item">
+							<a class="nav-item nav-link" href="#">Haz memoria</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-item nav-link" href="acervos.html">Acervos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-item nav-link" href="temas.html">Temas</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-item nav-link" href="#">Exposiciones</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-item nav-link" href="#">Miscelánea</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-item nav-link" href="#">Breves</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!--Buscador-->
+		<div class="container-fluid memoria-buscador d-flex justify-content-center p-3 d-block d-lg-none">
+			<div class="row fila-centrada">
+				<div class="col-0 col-sm-3"></div>
+				<div class="col-12 col-sm-6 align-self-center">
+					<form class="form" action="resultados.html">
+						<input id="usersSearch" class="form-control rounded-pill ui-autocomplete-input inputbuscador"
+							type="text" placeholder="¿Qué quieres encontrar hoy?" aria-label="Search">
+						<!-- <input id='searchButton' type='button' value='busquele'> -->
+					</form>
+				</div>
+				<div class="col-0 col-sm-3"></div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Cuerpo de página -->
+	<main class="container">
+		<!-- Breadcrumb -->
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-12 p-0 d-flex justify-content-lg-start align-items-end">
+				<nav class=" p-0 mb-1" aria-label="breadcrumb">
+					<ol class="breadcrumb bg-transparent m-0 px-3 py-2">
+						<li class="breadcrumb-item texto-breadcrum"><a href="index.html"><i
+									class="fas fa-home mr-3"></i>Regresar al inicio</a></li>
+						<li class="breadcrumb-item texto-breadcrum"><a href="index.html">Acervos</a></li>
+						<li class="breadcrumb-item active texto-breadcrum" aria-current="page"><a href="">AGN</a></li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+
+		<div class="memoria-titulo" style="border-bottom: 1pt solid #092834;">
+			<h1>AGN</h1>
+			<div class="col-1" style="background-color: #FF026A; height:3px;"></div>
+		</div>
+
+		<!-- Nombre y descripción del acervo -->
+		<div class="acervo-descripcion card my-3 p-4 border-0">
+			<div class="row no-gutters">
+				<div class="col-md-5">
+					<img class="card-img rounded-0" style="height: 100%;" src="recursos/img/placeholder-600x400.png"
+						alt="">
+				</div>
+				<div class="col-md-7">
+					<div class="card-body">
+						<h2 class="card-title mb-2">Archivo General de la Nación</h2>
+						<div class="col-1" style="background-color: #B2D732; height:5px;"></div>
+						<p id="descripcion-acervo" class="card-text mt-5">Rerum enim itaque id. Perferendis et itaque
+							molestias. Eum quidem eos
+							aut laudantium officia dolorum. Porro nihil maxime et reprehenderit nesciunt deserunt neque.
+							Provident ipsam rem consequatur qui culpa rerum accusamus. Quo veritatis culpa animi quae
+							natus laborum molestiae.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Dropdowns de árbol -->
+
+		<form class="row mb-5" style="margin: auto">
+			<div class="col-sm-9 memoria-dropdowns d-flex p-3">
+				<select id="nivel1" class="form-control custom-select dropdown-acervo">
+					<option selected value="">Selecciona un fondo</option>
+					<option value="H_MX09017AGNCL01FO001AYSE001AP">Abasto y Panaderías</option>
+					<option value="H_MX09017AGNCL01FO008RHSE002AL">Alcabalas</option>
+				</select>
+
+				<select id="nivel2" class="form-control custom-select dropdown-acervo">
+					<option selected value="">Favor de seleccionar un fondo</option>
+				</select>
+
+				<select id="nivel3" class="form-control custom-select dropdown-acervo">
+					<option selected value="">Favor de seleccionar un subfondo</option>
+				</select>
+			</div>
+			<div id="submit" class="col-sm-3">
+				<button id="buscar-fondo" type="submit"
+					class="btn btn-primary d-flex align-items-center justify-content-center">
+					<!-- <i class="demo-icon">&#xe800;</i> -->
+					<i class="fas fa-search pr-2"></i>
+					Ver objetos
 				</button>
-		
-				<!-- menu que se colapsa   -->
-				<div class="collapse navbar-collapse flex-column" id="menu">
-		
-					<div class="col-12 d-flex justify-content-center">
-						<a class="navbar-brand d-none d-lg-block " href="index.html"><img src="/recursos/img/Logos/Memorica.svg"
-								height="62px" /></a>
-					</div>
-		
-					<div class="container py-3 ">
-						<div class="row fila-centrada">
-							<div class="col-3 col-sm-3"></div>
-							<div class="col-6 col-sm-6 align-self-center">
-								<form class="form" action="resultados.html">
-									<input id="usersSearch"
-										class="form-control rounded-pill ui-autocomplete-input inputbuscador" type="text"
-										placeholder="¿Qué quieres encontrar hoy?" aria-label="Buscador">
-									<!-- <input id='searchButton' type='button' value='busquele'> -->
-								</form>
-							</div>
-							<div class="col-3 col-sm-3"></div>
-						</div>
-					</div>
-		
-					<div class="container botones-pestañas">
-						<ul class="navbar-nav d-flex justify-content-between pestañas">
-							<li class="nav-item">
-								<a class="nav-item nav-link" href="#">Haz memoria</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-item nav-link" href="acervos.html">Acervos</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-item nav-link" href="temas.html">Temas</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-item nav-link" href="#">Exposiciones</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-item nav-link" href="#">Miscelánea</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-item nav-link" href="#">Breves</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		
-			<!--Buscador-->
-			<div class="container-fluid memoria-buscador d-flex justify-content-center p-3 d-block d-lg-none">
-				<div class="row fila-centrada">
-					<div class="col-0 col-sm-3"></div>
-					<div class="col-12 col-sm-6 align-self-center">
-						<form class="form" action="resultados.html">
-							<input id="usersSearch" class="form-control rounded-pill ui-autocomplete-input inputbuscador"
-								type="text" placeholder="¿Qué quieres encontrar hoy?" aria-label="Search">
-							<!-- <input id='searchButton' type='button' value='busquele'> -->
-						</form>
-					</div>
-					<div class="col-0 col-sm-3"></div>
-				</div>
 			</div>
-		</header>
+		</form>
 
-        <!-- Cuerpo de página -->
-        <main class="container">
-			<!-- Breadcrumb -->
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-12 p-0 d-flex justify-content-lg-start align-items-end">
-					<nav class=" p-0 mb-1" aria-label="breadcrumb">
-						<ol class="breadcrumb bg-transparent m-0 px-3 py-2">
-							<li class="breadcrumb-item texto-breadcrum"><i class="fas fa-home mr-3"></i>Regresar al inicio</li>
-							<li class="breadcrumb-item texto-breadcrum"><a href="#">Acervos</a></li>
-							<li class="breadcrumb-item active texto-breadcrum" aria-current="page">AGN</li>
-						</ol>
-					</nav>
+		<!-- Cédula colapsable -->
+		<div class="accordion mb-4 rounded-0">
+			<div id="cedula1" class="card d-none border-0 rounded-0 mb-4">
+				<div class="card-header fa border-bottom-0 d-flex align-items-center justify-content-between"
+					id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+					aria-controls="collapseOne">
+					<h2 class="mb-0 btn btn-link cedula1titulo">
+						Título del fondo
+					</h2>
+					<a id="plus-icon-1" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+						aria-expanded="true" aria-controls="collapseOne"></a>
 				</div>
-			</div>
-
-			<div class="memoria-titulo" style="border-bottom: 1pt solid #092834;">
-				<h1>AGN</h1>
-				<div class="col-1" style="background-color: #FF026A; height:3px;"></div>
-			</div>
-
-            <!-- Nombre y descripción del acervo -->
-            <div class="acervo-descripcion card my-3 p-4 border-0">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img class="card-img rounded-0" style="height: 100%;" src="recursos/img/placeholder-600x400.png" alt="">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-							<h5 class="card-title mb-2">Archivo General de la Nación</h5>
-							<div class="col-1" style="background-color: #B2D732; height:5px;"></div>
-                            <p class="card-text mt-5">Rerum enim itaque id. Perferendis et itaque molestias. Eum quidem eos
-                                aut laudantium officia dolorum. Porro nihil maxime et reprehenderit nesciunt deserunt neque.
-                                Provident ipsam rem consequatur qui culpa rerum accusamus. Quo veritatis culpa animi quae
-                                natus laborum molestiae.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-			<!-- Dropdowns de árbol -->
-			
-			<!-- <form class="memoria-dropdowns mb-5 p-3">
-				<div class="row d-flex flex-row align-items-center">
-					<div class="col-md-3 col-sm-12">
-						<select id="nivel1" class="form-control custom-select dropdown-acervo">
-							<option selected value="">Selecciona un fondo</option>
-							<option value="H_MX09017AGNCL01FO001AYSE001AP">Abasto y Panaderías</option>
-							<option value="H_MX09017AGNCL01FO008RHSE002AL">Alcabalas</option>
-						</select>
-					</div>
-					<div class="col-md-3 col-sm-12">
-						<select id="nivel2" class="form-control custom-select dropdown-acervo">
-							<option selected value="">Favor de seleccionar un fondo</option>
-						</select>
-					</div>
-					<div class="col-md-3 col-sm-12">
-						<select id="nivel3" class="form-control custom-select dropdown-acervo">
-							<option selected value="">Favor de seleccionar un subfondo</option>
-						</select>
-					</div>
-					<div id="submit" class="col-md-3 col-sm-12 d-flex justify-content-center">
-						<button id="buscar-fondo" type="submit" class="btn btn-primary d-none">Ver objetos</button>
-					</div>
-				</div>
-			</form> -->
-
-			<!-- Dropdown con style -->
-			<form class="row mb-5" style="margin: auto">
-				<div class="col-sm-9 memoria-dropdowns d-flex p-3">
-					<select id="nivel1" class="form-control custom-select dropdown-acervo">
-						<option selected value="">Selecciona un fondo</option>
-						<option value="H_MX09017AGNCL01FO001AYSE001AP">Abasto y Panaderías</option>
-						<option value="H_MX09017AGNCL01FO008RHSE002AL">Alcabalas</option>
-					</select>
-
-					<select id="nivel2" class="form-control custom-select dropdown-acervo">
-						<option selected value="">Favor de seleccionar un fondo</option>
-					</select>
-
-					<select id="nivel3" class="form-control custom-select dropdown-acervo">
-						<option selected value="">Favor de seleccionar un subfondo</option>
-					</select>
-				</div>
-				<div id="submit" class="col-sm-3">
-					<button id="buscar-fondo" type="submit" class="btn btn-primary d-flex align-items-center justify-content-center">
-						<!-- <i class="demo-icon">&#xe800;</i> -->
-						<i class="fas fa-search pr-3"></i>
-						Ver objetos
-					</button>
-					
-				</div>
-			</form>
-			
-			<!-- Cédula colapsable -->
-			<div class="accordion mb-4 rounded-0">
-				<div id="cedula1" class="card d-none border-0 rounded-0 mb-4">
-					<div class="card-header fa border-bottom-0 d-flex align-items-center justify-content-between" id="headingOne" data-toggle="collapse" data-target="#collapseOne"
-						aria-expanded="true" aria-controls="collapseOne">
-						<h2 class="mb-0 btn btn-link cedula1titulo">
-							Título del fondo
-						</h2>
-						<a id="plus-icon-1" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
-							aria-controls="collapseOne"></a>
-					</div>
-					<div id="collapseOne" class="collapse" aria-labelledby="headingOne">
-						<div class="card-body">
-							<table class="table">
-								<tbody>
-									<tr>
-										<th class="border-right" scope="row">Número identificador</th>
-										<td class="COD_REF"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Título</th>
-										<td class="TITULO"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Autor/Creador</th>
-										<td class="NOMBRE_PRODUCTOR"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Tipo de BHC</th>
-										<td class="NIVEL_DESC"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">ID Fondo/Colección</th>
-										<td class="padre"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Fecha de creación</th>
-										<td class="FECHA_EXT_INI"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Descripción</th>
-										<td class="HIST_INSTUTUC"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Institución que resguarda el BHC</th>
-										<td class="LOCALIZ_ORIG"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Dimensiones/Duración</th>
-										<td class="VOL_UNID"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Fecha de inicio</th>
-										<td class="FECHA_EXT_INI"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Fecha de finalización</th>
-										<td class="FECHA_EXT_FIN"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Nota</th>
-										<td class="NOTAS"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Etiqueta de la declaracion de uso</th>
-										<td class="REGLAS_NORMAS"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Definición de la declaración de uso</th>
-										<td class=""></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Nota</th>
-										<td class="NOTA_ARCHIVERO"></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div id="cedula2" class="card d-none border-0 rounded-0 mb-4">
-					<div class="card-header fa border-bottom-0 d-flex align-items-center justify-content-between" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo"
-						aria-expanded="false" aria-controls="collapseTwo">
-						<h2 class="mb-0 btn btn-link cedula2titulo">
-							Título del subfondo
-						</h2>
-						<a id="plus-icon-2" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-							aria-controls="collapseTwo"></a>
-					</div>
-					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
-						<div class="card-body">
-							<table class="table">
-								<tbody>
-									<tr>
-										<th class="border-right" scope="row">Número identificador</th>
-										<td class="COD_REF2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Título</th>
-										<td class="TITULO2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Autor/Creador</th>
-										<td class="NOMBRE_PRODUCTOR2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Tipo de BHC</th>
-										<td class="NIVEL_DESC2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">ID Fondo/Colección</th>
-										<td class="padre2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Fecha de creación</th>
-										<td class="FECHA_EXT_INI2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Descripción</th>
-										<td class="HIST_INSTUTUC2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Institución que resguarda el BHC</th>
-										<td class="LOCALIZ_ORIG2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Dimensiones/Duración</th>
-										<td class="VOL_UNID2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Fecha de inicio</th>
-										<td class="FECHA_EXT_INI2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Fecha de finalización</th>
-										<td class="FECHA_EXT_FIN2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Nota</th>
-										<td class="NOTAS2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Etiqueta de la declaracion de uso</th>
-										<td class="REGLAS_NORMAS2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Nota</th>
-										<td class="NOTA_ARCHIVERO2"></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-
-				<div id="cedula3" class="card d-none border-0 rounded-0 mb-4"> 
-					<div class="card-header fa border-bottom-0 d-flex align-items-center justify-content-between" id="headingThree" data-toggle="collapse" data-target="#collapseThree"
-						aria-expanded="false" aria-controls="collapseThree">
-						<h2 class="mb-0 btn btn-link cedula3titulo">
-							Título del expediente
-						</h2>
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
-							aria-controls="collapseThree"></a>
-					</div>
-					<div id="collapseThree" class="collapse" aria-labelledby="headingThree">
-						<div class="card-body">
-							<table class="table">
-								<tbody>
-									<tr>
-										<th class="border-right" scope="row">Número identificador</th>
-										<td class="COD_REF3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Título</th>
-										<td class="TITULO3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Autor/Creador</th>
-										<td class="NOMBRE_PRODUCTOR3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Tipo de BHC</th>
-										<td class="NIVEL_DESC3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">ID Fondo/Colección</th>
-										<td class="padre3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Fecha de creación</th>
-										<td class="FECHA_EXT_INI3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Descripción</th>
-										<td class="HIST_INSTUTUC3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Institución que resguarda el BHC</th>
-										<td class="LOCALIZ_ORIG3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Dimensiones/Duración</th>
-										<td class="VOL_UNID3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Fecha de inicio</th>
-										<td class="FECHA_EXT_INI3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Fecha de finalización</th>
-										<td class="FECHA_EXT_FIN3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Nota</th>
-										<td class="NOTAS2"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Etiqueta de la declaracion de uso</th>
-										<td class="REGLAS_NORMAS3"></td>
-									</tr>
-									<tr>
-										<th class="border-right" scope="row">Nota</th>
-										<td class="NOTA_ARCHIVERO3"></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
+				<div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+					<div class="card-body">
+						<table class="table">
+							<tbody>
+								<tr>
+									<th class="border-right" scope="row">Número identificador</th>
+									<td class="COD_REF"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Título</th>
+									<td class="TITULO"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Autor/Creador</th>
+									<td class="NOMBRE_PRODUCTOR"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Tipo de BHC</th>
+									<td class="NIVEL_DESC"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">ID Fondo/Colección</th>
+									<td class="padre"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Fecha de creación</th>
+									<td class="FECHA_EXT_INI"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Descripción</th>
+									<td class="HIST_INSTUTUC"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Institución que resguarda el BHC</th>
+									<td class="LOCALIZ_ORIG"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Dimensiones/Duración</th>
+									<td class="VOL_UNID"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Fecha de inicio</th>
+									<td class="FECHA_EXT_INI"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Fecha de finalización</th>
+									<td class="FECHA_EXT_FIN"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Nota</th>
+									<td class="NOTAS"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Etiqueta de la declaracion de uso</th>
+									<td class="REGLAS_NORMAS"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Definición de la declaración de uso</th>
+									<td class=""></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Nota</th>
+									<td class="NOTA_ARCHIVERO"></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
-        </main>
 
-		<!-- Footer -->
-		<!-- atún sellado de mi casa, y un limón -->
-		<footer class="footer mt-3 py-0">
-			<div class="container p-0" style="border-top: 1px solid #092834;">
-				<div class="col-1" style="background-color: #FF026A; height:3px;"></div>
-				<div class="col-11"></div>
-				<div class="row py-4">
-					<div class="col-12 d-flex justify-content-start flex-column">
-						<ul class="memoria-redes">
-							<li><a href="#"> <i class="fab fa-facebook-f 3x"></i> </a></li>
-							<li style="color: #092834">|</li>
-							<li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
-						</ul>
-					</div>
-					<div class="col-md-4 col-12">
-						<ul>
-							<li><a href="#">Términos y condiciones</a></li>
-							<li><a href="#">Aviso de privacidad</a></li>
-							<li><a href="#">Marco jurídico</a></li>
-							<li><a href="#">Coordinación</a></li>
-							<li><a href="#">Instituciones vinculadas</a></li>
-						</ul>
-					</div>
-					<div class="col-md-4 col-12">
-						<ul>
-							<li><a href="#">Documentación técnica</a></li>
-							<li><a href="#">Cómo usar el sitio</a></li>
-							<li><a href="#">Mapa de sitio</a></li>
-						</ul>
-					</div>
-					<div class="col-md-4 co-12 d-flex justify-content-center align-self-center pt-3">
-						<img src="recursos/img/Logos/Gobierno_de_mexico-02.svg" height="70px" />
+			<div id="cedula2" class="card d-none border-0 rounded-0 mb-4">
+				<div class="card-header fa border-bottom-0 d-flex align-items-center justify-content-between"
+					id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+					aria-controls="collapseTwo">
+					<h2 class="mb-0 btn btn-link cedula2titulo">
+						Título del subfondo
+					</h2>
+					<a id="plus-icon-2" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+						aria-expanded="false" aria-controls="collapseTwo"></a>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+					<div class="card-body">
+						<table class="table">
+							<tbody>
+								<tr>
+									<th class="border-right" scope="row">Número identificador</th>
+									<td class="COD_REF2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Título</th>
+									<td class="TITULO2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Autor/Creador</th>
+									<td class="NOMBRE_PRODUCTOR2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Tipo de BHC</th>
+									<td class="NIVEL_DESC2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">ID Fondo/Colección</th>
+									<td class="padre2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Fecha de creación</th>
+									<td class="FECHA_EXT_INI2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Descripción</th>
+									<td class="HIST_INSTUTUC2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Institución que resguarda el BHC</th>
+									<td class="LOCALIZ_ORIG2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Dimensiones/Duración</th>
+									<td class="VOL_UNID2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Fecha de inicio</th>
+									<td class="FECHA_EXT_INI2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Fecha de finalización</th>
+									<td class="FECHA_EXT_FIN2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Nota</th>
+									<td class="NOTAS2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Etiqueta de la declaracion de uso</th>
+									<td class="REGLAS_NORMAS2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Nota</th>
+									<td class="NOTA_ARCHIVERO2"></td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>
-		</footer>
 
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="recursos/js/main.js"></script>
-		<script src="recursos/js/test.js"></script>
+			<div id="cedula3" class="card d-none border-0 rounded-0 mb-4">
+				<div class="card-header fa border-bottom-0 d-flex align-items-center justify-content-between"
+					id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+					aria-controls="collapseThree">
+					<h2 class="mb-0 btn btn-link cedula3titulo">
+						Título del expediente
+					</h2>
+					<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+						aria-expanded="false" aria-controls="collapseThree"></a>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+					<div class="card-body">
+						<table class="table">
+							<tbody>
+								<tr>
+									<th class="border-right" scope="row">Número identificador</th>
+									<td class="COD_REF3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Título</th>
+									<td class="TITULO3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Autor/Creador</th>
+									<td class="NOMBRE_PRODUCTOR3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Tipo de BHC</th>
+									<td class="NIVEL_DESC3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">ID Fondo/Colección</th>
+									<td class="padre3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Fecha de creación</th>
+									<td class="FECHA_EXT_INI3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Descripción</th>
+									<td class="HIST_INSTUTUC3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Institución que resguarda el BHC</th>
+									<td class="LOCALIZ_ORIG3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Dimensiones/Duración</th>
+									<td class="VOL_UNID3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Fecha de inicio</th>
+									<td class="FECHA_EXT_INI3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Fecha de finalización</th>
+									<td class="FECHA_EXT_FIN3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Nota</th>
+									<td class="NOTAS2"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Etiqueta de la declaracion de uso</th>
+									<td class="REGLAS_NORMAS3"></td>
+								</tr>
+								<tr>
+									<th class="border-right" scope="row">Nota</th>
+									<td class="NOTA_ARCHIVERO3"></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 
-    </body>
+	<!-- Footer -->
+	<!-- atún sellado de mi casa, y un limón -->
+	<footer class="footer mt-3 py-0">
+		<div class="container p-0" style="border-top: 1px solid #092834;">
+			<div class="col-1" style="background-color: #FF026A; height:3px;"></div>
+			<div class="col-11"></div>
+			<div class="row py-4">
+				<div class="col-12 d-flex justify-content-start flex-column">
+					<ul class="memoria-redes">
+						<li><a href="#"> <i class="fab fa-facebook-f 3x"></i> </a></li>
+						<li style="color: #092834">|</li>
+						<li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-12">
+					<ul>
+						<li><a href="#">Términos y condiciones</a></li>
+						<li><a href="#">Aviso de privacidad</a></li>
+						<li><a href="#">Marco jurídico</a></li>
+						<li><a href="#">Coordinación</a></li>
+						<li><a href="#">Instituciones vinculadas</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-12">
+					<ul>
+						<li><a href="#">Documentación técnica</a></li>
+						<li><a href="#">Cómo usar el sitio</a></li>
+						<li><a href="#">Mapa de sitio</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 co-12 d-flex justify-content-center align-self-center pt-3">
+					<img src="recursos/img/Logos/Gobierno_de_mexico-02.svg" height="70px" />
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="recursos/js/main.js"></script>
+	<script src="recursos/js/test.js"></script>
+
+</body>
+
 </html>
