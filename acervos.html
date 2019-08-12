@@ -9,42 +9,65 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
             integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="recursos/css/style.css">
+        <link rel="stylesheet" href="recursos/css/style(style).css">
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     </head>
 
-    <body class="secundario">
+    <body>
         <!-- Header con barra y buscador -->
         <header>
             <!-- Barra de navegación -->
-            <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+            <div class="barra-superior"></div>
+            <nav class="navbar navbar-expand-lg navbar-light">
 
-                <a class="navbar-brand d-lg-none" href="index.html">Memórica</a>
-
+                <a class="navbar-brand d-lg-none" href="index.html" alt="logotipo Memórica"><img
+                        src="recursos/img/Logos/logo_memorica.svg" height="20px" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <!-- menu que se colapsa   -->
-                <div class="collapse navbar-collapse justify-content-between" id="menu">
-
-                    <div class="col-4">
-                        <ul class="navbar-nav"></ul>
+                <div class="collapse navbar-collapse flex-column" id="menu">
+                    <div class="col-12 d-flex justify-content-center p-0">
+                        <a class="navbar-brand d-none d-lg-block m-0 " href="index.html"><img
+                                src="recursos/img/Logos/logo_memorica.svg" height="45px" /></a>
                     </div>
 
-                    <div class="col-4 d-flex justify-content-center">
-                        <a class="navbar-brand d-none d-lg-block" href="index.html">Memórica</a>
+                    <div class="container py-3 d-none d-lg-block">
+                        <div class="row fila-centrada m-0 ">
+                            <div class="col-3 col-sm-4"></div>
+                            <div class="col-6 col-sm-4 align-self-center">
+                                <form class="form" action="resultados.html">
+                                    <input id="usersSearch"
+                                        class="form-control rounded-pill ui-autocomplete-input inputbuscador"
+                                        type="text" placeholder="México, haz memoria" aria-label="Buscador">
+                                </form>
+                            </div>
+                            <div class="col-3 col-sm-3"></div>
+                        </div>
                     </div>
 
-                    <div class="col-4 d-flex justify-content-end">
-                        <ul class="navbar-nav">
+                    <div class="container botones-pestañas">
+                        <ul class="navbar-nav d-flex justify-content-between pestañas">
                             <li class="nav-item">
-                                <a class="nav-link justify-content-end" href="#">iniciar sesion</a>
+                                <a class="nav-item nav-link" href="#">Haz memoria</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fab fa-megaport fa-x3"></i></a>
+                                <a class="nav-item nav-link" href="acervos.html">Acervos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="temas.html">Temas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#">Exposiciones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#">Miscelánea</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#">Breves</a>
                             </li>
                         </ul>
                     </div>
@@ -52,14 +75,15 @@
             </nav>
 
             <!--Buscador-->
-            <div class="container-fluid memoria-buscador altura-fija d-flex justify-content-center">
-                <div class="row fila-centrada">
+            <div class="container-fluid memoria-buscador d-flex justify-content-center pt-3 d-block d-lg-none">
+                <div class="row fila-centrada ">
                     <div class="col-0 col-sm-3"></div>
                     <div class="col-12 col-sm-6 align-self-center">
                         <form class="form" action="resultados.html">
-                            <input id="usersSearch" class="form-control rounded-pill ui-autocomplete-input" type="text"
-                                placeholder="¿Qué quieres encontrar hoy?" aria-label="Search">
-                            <!-- <input id='searchButton' type='button' value='busquele'> -->
+                            <input id="usersSearch"
+                                class="form-control rounded-pill ui-autocomplete-input inputbuscador" type="text"
+                                placeholder="México, haz memoria" aria-label="Search">
+
                         </form>
                     </div>
                     <div class="col-0 col-sm-3"></div>
@@ -67,56 +91,29 @@
             </div>
         </header>
 
-        <!-- Pestañas -->
-        <div class="memoria-pestañas">
-            <div class="container py-2 d-none d-lg-block">
-                <nav class="justify-content-center nav nav-pills nav-justified">
-                    <a class="nav-item nav-link" href="#">Haz memoria</a>
-                    <a class="nav-item nav-link active" href="acervos.html">Acervos</a>
-                    <a class="nav-item nav-link" href="temas.html">Temas</a>
-                    <a class="nav-item nav-link" href="#">Exposiciones</a>
-                    <a class="nav-item nav-link" href="#">Miscelánea</a>
-                    <a class="nav-item nav-link" href="#">Breves</a>
-                </nav>
-            </div>
-
-            <div class="container py-2 d-sm-block d-lg-none">
-                <div class="justify-content-center navbar navbar-expand-lg navbar-light bg-light">
-                    <a data-toggle="collapse" href="#memoria-pestañas-dropdown">Secciones</a>
-                </div>
-                <div class="collapse mb-3" id="memoria-pestañas-dropdown">
-                    <div class="card card-body">
-                        <nav class="flex-column justify-content-center nav nav-pills nav-justified">
-                            <a class="nav-item nav-link" href="#">Haz memoria</a>
-                            <a class="nav-item nav-link" href="acervos.html">Acervos</a>
-                            <a class="nav-item nav-link" href="temas.html">Temas</a>
-                            <a class="nav-item nav-link" href="#">Exposiciones</a>
-                            <a class="nav-item nav-link" href="#">Miscelánea</a>
-                            <a class="nav-item nav-link" href="#">Breves</a>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Cuerpo de página -->
         <main class="container">
             <!-- Breadcrumb -->
-            <nav id="siteBreadcrumb" aria-label="breadcrumb">
-                <ol class="breadcrumb mt-3">
-                    <li class="breadcrumb-item"><a href="index.html">Regresa al inicio</a></li>
-                    <li class="breadcrumb-item active">Acervos</li>
-                </ol>
-            </nav>
-
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Acervos</h5>
-                    <p class="card-text">Rerum enim itaque id. Perferendis et itaque molestias. Eum quidem eos aut laudantium officia dolorum. Porro nihil maxime et reprehenderit nesciunt deserunt neque. Provident ipsam rem consequatur qui culpa rerum accusamus. Quo veritatis culpa animi quae natus laborum molestiae.</p>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12 p-0 d-flex justify-content-lg-start align-items-end">
+                    <nav class=" p-0 mb-1" aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-transparent m-0 px-3 py-2">
+                            <li class="breadcrumb-item texto-breadcrum"><a href="index.html"><i
+                                        class="fas fa-home mr-3"></i>Regresar al inicio</a></li>
+                            <li class="breadcrumb-item texto-breadcrum"><a href="#">bread</a></li>
+                            <li class="breadcrumb-item active texto-breadcrum" aria-current="page"><a href="">crumb</a>
+                            </li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
+
+            <div class="memoria-titulo" style="border-bottom: 1px solid #092834;">
+                <h1>Achervos</h1>
+                <div class="col-1" style="background-color: #FF026A; height:3px;"></div>
+            </div>
             
-            <!-- ¿Filtro por orden alfabético? -->
+            <!-- ¿Filtro por orden alfabético?
             <nav class="d-none d-lg-block" aria-label="Page navigation">
                 <ul class="pagination justify-content-center">
                     <li class="page-item"><a class="page-link" href="#">A</a></li>
@@ -133,7 +130,7 @@
                     <li class="page-item"><a class="page-link" href="#">L</a></li>
                     <li class="page-item"><a class="page-link" href="#">M</a></li>
                     <li class="page-item"><a class="page-link" href="#">N</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">O</a></li>
                     <li class="page-item"><a class="page-link" href="#">P</a></li>
                     <li class="page-item"><a class="page-link" href="#">Q</a></li>
                     <li class="page-item"><a class="page-link" href="#">R</a></li>
@@ -146,31 +143,22 @@
                     <li class="page-item"><a class="page-link" href="#">Y</a></li>
                     <li class="page-item"><a class="page-link" href="#">Z</a></li>
                 </ul>
-            </nav>
+            </nav> -->
 
             <!-- Acervos -->
-            <div>
-                <!-- Descripciones de acervos -->
-                <div>
-                    <div class="collapse mb-3" id="card-acervo-1">
-                        <div class="card card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                        </div>
-                    </div>
-                    <div class="collapse mb-3" id="card-acervo-2">
-                        <div class="card card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                        </div>
-                    </div>
-                    <div class="collapse mb-3" id="card-acervo-3">
-                        <div class="card card-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                        </div>
-                    </div>
-                </div>
-
+            <div class="my-3 p-3">
                 <!-- Lista de acervos -->
                 <div class="row">
+                    <div class="card mb-4 border-0">
+                        <div class="card-body">
+                            <p id="memoria-texto-descripcion" class="card-text">Rerum enim itaque id. Perferendis et
+                                itaque molestias. Eum quidem eos aut laudantium officia dolorum. Porro nihil maxime
+                                et reprehenderit nesciunt deserunt neque. Provident ipsam rem consequatur qui culpa
+                                rerum accusamus. Quo veritatis culpa animi quae natus laborum molestiae.</p>
+                        </div>
+                    </div>
+
+                    <!-- ¿Filtro por orden alfabético?
                     <div class="col-1 col-lg-none">
                         <nav class="col-sm-1 d-sm-inline d-lg-none" aria-label="Page navigation">
                             <ul class="nav flex-column">
@@ -202,147 +190,154 @@
                                 <li class="nav-item"><a class="page-link" href="#">Z</a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
 
-                    <div class="col-1 col-lg-none">
-                        <!-- holi -->
+                    <div class="d-none">
+                        holi
                     </div>
 
                     <div class="col-10 col-lg-12">
                         <div class="row">
                             <div class="col-6 col-md-4 mb-3">
                                 <div class="card">
-                                    <a href="acervo-individual.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
+                                    <a href="acervo-individual.html"><img class="card-img-top"
+                                            src="recursos/img/placeholder-600x400.png" alt=""></a>
                                     <!-- <a data-toggle="collapse" href="#card-acervo-1" data-parent="#memoria-acervos-descripcion"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a> -->
                                     <div class="card-body">
-                                        <a href="acervo-individual.html"><h5 class="card-title">Archivo General de la Nación</h5></a>
+                                        <a href="acervo-individual.html">
+                                            <h5 class="card-title">Archivo General de la Nación</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 mb-3">
                                 <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
+                                    <a href="acervo.html"><img class="card-img-top"
+                                            src="recursos/img/placeholder-600x400.png" alt=""></a>
                                     <!-- <a data-toggle="collapse" href="#card-acervo-2" data-parent="#memoria-acervos-descripcion"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a> -->
                                     <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
+                                        <a href="acervo.html">
+                                            <h5 class="card-title">Nombre del acervo</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 mb-3">
                                 <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
+                                    <a href="acervo.html"><img class="card-img-top"
+                                            src="recursos/img/placeholder-600x400.png" alt=""></a>
                                     <!-- <a data-toggle="collapse" href="#card-acervo-3" data-parent="#memoria-acervos-descripcion"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a> -->
                                     <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
+                                        <a href="acervo.html">
+                                            <h5 class="card-title">Nombre del acervo</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 mb-3">
                                 <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
+                                    <a href="acervo.html"><img class="card-img-top"
+                                            src="recursos/img/placeholder-600x400.png" alt=""></a>
                                     <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
+                                        <a href="acervo.html">
+                                            <h5 class="card-title">Nombre del acervo</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 mb-3">
                                 <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
+                                    <a href="acervo.html"><img class="card-img-top"
+                                            src="recursos/img/placeholder-600x400.png" alt=""></a>
                                     <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
+                                        <a href="acervo.html">
+                                            <h5 class="card-title">Nombre del acervo</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 mb-3">
                                 <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
+                                    <a href="acervo.html"><img class="card-img-top"
+                                            src="recursos/img/placeholder-600x400.png" alt=""></a>
                                     <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
+                                        <a href="acervo.html">
+                                            <h5 class="card-title">Nombre del acervo</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 mb-3">
                                 <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
+                                    <a href="acervo.html"><img class="card-img-top"
+                                            src="recursos/img/placeholder-600x400.png" alt=""></a>
                                     <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
+                                        <a href="acervo.html">
+                                            <h5 class="card-title">Nombre del acervo</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 mb-3">
                                 <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
+                                    <a href="acervo.html"><img class="card-img-top"
+                                            src="recursos/img/placeholder-600x400.png" alt=""></a>
                                     <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
+                                        <a href="acervo.html">
+                                            <h5 class="card-title">Nombre del acervo</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6 col-md-4 mb-3">
                                 <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
+                                    <a href="acervo.html"><img class="card-img-top"
+                                            src="recursos/img/placeholder-600x400.png" alt=""></a>
                                     <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 mb-3">
-                                <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
-                                    <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 mb-3">
-                                <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
-                                    <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 mb-3">
-                                <div class="card">
-                                    <a href="acervo.html"><img class="card-img-top" src="recursos/img/placeholder-600x400.png" alt=""></a>
-                                    <div class="card-body">
-                                        <a href="acervo.html"><h5 class="card-title">Nombre del acervo</h5></a>
+                                        <a href="acervo.html">
+                                            <h5 class="card-title">Nombre del acervo</h5>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </main>
 
         <!-- atún sellado de mi casa, y un limón -->
-        <footer class="footer mt-auto py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-12">
-                        <ul>
-                            <li><a href="#">Coordinación</a></li>
-                            <li><a href="#">Instituciones vinculadas</a></li>
-                            <li><a href="#">Marco jurídico</a></li>
-                            <li><a href="#">Aviso de privacidad</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 col-sm-12">
-                        <ul>
-                            <li><a href="#">Mapa de sitio</a></li>
-                            <li><a href="#">Documentación técnica</a></li>
-                            <li><a href="#">Contacto</a></li>
-                            <li><a href="#">Cómo usar el sitio</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-1 col-sm-12 justify-content-end"></div>
-                    <div class="col-md-3 col-sm-12 d-flex justify-content-start flex-column">
+        <footer class="footer mt-3 py-0">
+            <div class="container p-0" style="border-top: 1px solid #092834;">
+                <div class="col-1" style="background-color: #FF026A; height:3px;"></div>
+                <div class="col-11"></div>
+                <div class="row  pt-2 pb-5">
+                    <div class="col-12 d-flex justify-content-start flex-column">
                         <ul class="memoria-redes">
-                            <li><a href="#"> <i class="fab fa-facebook-f"></i> </a></li>
-                            <li><a href="#"> <i class="fab fa-instagram"></i> </a></li>
-                            <li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                            <li><a class="favicom" href="#"> <i class="fab fa-facebook-f 5x "></i> </a></li>
+                            <li style="color: #092834">|</li>
+                            <li><a class="favicom" href="#"> <i class="fab fa-twitter"></i> </a></li>
                         </ul>
+                    </div>
+                    <div class="col-md-3 col-12 contenedor-izquierdo pr-0">
+                        <ul>
+                            <li><a href="terminos_condiciones.html">Términos y condiciones</a></li>
+                            <li><a href="aviso_privacidad.html">Aviso de privacidad</a></li>
+                            <li><a href="marco_juridico.html">Marco jurídico</a></li>
+                            <li><a href="coordinacion.html">Coordinación</a></li>
+                            <li><a href="instituciones_vinculadas.html">Instituciones vinculadas</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5 col-12">
+                        <ul>
+                            <li><a href="documentacion_tecnicas.html">Documentación técnica</a></li>
+                            <li><a href="como_usar_sitio.html">Cómo usar el sitio</a></li>
+                            <li><a href="mapa_sitio.html">Mapa de sitio</a></li>
+                            <li><a href="Contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 co-12 d-flex justify-content-center  pt-3">
+                        <img src="recursos/img/Logos/Gobierno_de_mexico-02.svg" height="70px" />
                     </div>
                 </div>
             </div>
