@@ -9,477 +9,497 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
             integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-        <link rel="stylesheet" href="recursos/css/style.css">
+        <link rel="stylesheet" href="recursos/css/style(style).css">
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     </head>
 
-    <body class="secundario">
+    <body>
         <!-- Header con barra y buscador -->
         <header>
             <!-- Barra de navegación -->
-            <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-        
-                <a class="navbar-brand d-lg-none" href="index.html">Memórica</a>
-        
+            <div class="barra-superior"></div>
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <a class="navbar-brand d-lg-none" href="index.html" alt="logotipo Memórica"><img
+                        src="recursos/img/Logos/logo_memorica.svg" height="20px" /></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-        
+
                 <!-- menu que se colapsa   -->
-                <div class="collapse navbar-collapse justify-content-between" id="menu">
-        
-                    <div class="col-4">
-                        <ul class="navbar-nav"></ul>
+                <div class="collapse navbar-collapse flex-column" id="menu">
+                    <div class="col-12 d-flex justify-content-center p-0">
+                        <a class="navbar-brand d-none d-lg-block m-0 " href="index.html"><img
+                                src="recursos/img/Logos/logo_memorica.svg" height="45px" /></a>
                     </div>
-        
-                    <div class="col-4 d-flex justify-content-center">
-                        <a class="navbar-brand d-none d-lg-block" href="index.html">Memórica</a>
+
+                    <div class="container py-3 d-none d-lg-block">
+                        <div class="row fila-centrada m-0 ">
+                            <div class="col-3 col-sm-4"></div>
+                            <div class="col-6 col-sm-4 align-self-center">
+                                <form class="form" action="resultados.html">
+                                    <input id="usersSearch"
+                                        class="form-control rounded-pill ui-autocomplete-input inputbuscador"
+                                        type="text" placeholder="México, haz memoria" aria-label="Buscador">
+                                </form>
+                            </div>
+                            <div class="col-3 col-sm-3"></div>
+                        </div>
                     </div>
-        
-                    <div class="col-4 d-flex justify-content-end">
-                        <ul class="navbar-nav">
+
+                    <div class="container botones-pestañas">
+                        <ul class="navbar-nav d-flex justify-content-between pestañas">
                             <li class="nav-item">
-                                <a class="nav-link justify-content-end" href="#">iniciar sesion</a>
+                                <a class="nav-item nav-link" href="#">Haz memoria</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fab fa-megaport fa-x3"></i></a>
+                                <a class="nav-item nav-link" href="acervos.html">Acervos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="temas.html">Temas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#">Exposiciones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#">Miscelánea</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-item nav-link" href="#">Breves</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        
+
             <!--Buscador-->
-            <div class="container-fluid memoria-buscador altura-fija d-flex justify-content-center">
-                <div class="row fila-centrada">
+            <div class="container-fluid memoria-buscador d-flex justify-content-center pt-3 d-block d-lg-none">
+                <div class="row fila-centrada ">
                     <div class="col-0 col-sm-3"></div>
                     <div class="col-12 col-sm-6 align-self-center">
                         <form class="form" action="resultados.html">
-                            <input id="usersSearch" class="form-control rounded-pill ui-autocomplete-input" type="text"
-                                placeholder="¿Qué quieres encontrar hoy?" aria-label="Search">
-                            <!-- <input id='searchButton' type='button' value='busquele'> -->
+                            <input id="usersSearch"
+                                class="form-control rounded-pill ui-autocomplete-input inputbuscador" type="text"
+                                placeholder="México, haz memoria" aria-label="Search">
+
                         </form>
                     </div>
                     <div class="col-0 col-sm-3"></div>
                 </div>
             </div>
         </header>
-        
-        <!-- Pestañas -->
-        <div class="memoria-pestañas">
-            <div class="container py-2 d-none d-lg-block">
-                <nav class="justify-content-center nav nav-pills nav-justified">
-                    <a class="nav-item nav-link" href="#">Haz memoria</a>
-                    <a class="nav-item nav-link" href="acervos.html">Acervos</a>
-                    <a class="nav-item nav-link active" href="temas.ht">Temas</a>
-                    <a class="nav-item nav-link" href="#">Exposiciones</a>
-                    <a class="nav-item nav-link" href="#">Miscelánea</a>
-                    <a class="nav-item nav-link" href="#">Breves</a>
-                </nav>
-            </div>
-        
-            <div class="container py-2 d-sm-block d-lg-none">
-                <div class="justify-content-center navbar navbar-expand-lg navbar-light bg-light">
-                    <a data-toggle="collapse" href="#memoria-pestañas-dropdown">Secciones</a>
-                </div>
-                <div class="collapse mb-3" id="memoria-pestañas-dropdown">
-                    <div class="card card-body">
-                        <nav class="flex-column justify-content-center nav nav-pills nav-justified">
-                            <a class="nav-item nav-link" href="#">Haz memoria</a>
-                            <a class="nav-item nav-link" href="acervos.html">Acervos</a>
-                            <a class="nav-item nav-link" href="temas.html">Temas</a>
-                            <a class="nav-item nav-link" href="#">Exposiciones</a>
-                            <a class="nav-item nav-link" href="#">Miscelánea</a>
-                            <a class="nav-item nav-link" href="#">Breves</a>
+
+        <!-- Cuerpo de página -->
+        <main class="container-fluid px-0">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <div class="row mb-3">
+                    <div class="col-lg-6 col-md-6 col-12 p-0 d-flex justify-content-lg-start align-items-end">
+                        <nav class=" p-0 mb-1" aria-label="breadcrumb">
+                            <ol class="breadcrumb bg-transparent m-0 px-3 py-2">
+                                <li class="breadcrumb-item texto-breadcrum"><a href="index.html"><i
+                                            class="fas fa-home mr-3"></i>Regresar al inicio</a></li>
+                                <li class="breadcrumb-item texto-breadcrum"><a href="index.html">bread</a></li>
+                                <li class="breadcrumb-item active texto-breadcrum" aria-current="page"><a
+                                        href="">crumb</a>
+                                </li>
+                            </ol>
                         </nav>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Cuerpo de página -->
-        <main class="container">
-            <!-- Breadcrumb -->
-            <nav id="siteBreadcrumb" aria-label="breadcrumb">
-                <ol class="breadcrumb mt-3">
-                    <li class="breadcrumb-item"><a href="index.html">Regresa al inicio</a></li>
-                    <li class="breadcrumb-item"><a href="temas.html">Temas</a></li>
-                    <li class="breadcrumb-item"><a href="grupo.html">Colección amplia</a></li>
-                    <li class="breadcrumb-item active">Colección sencilla</li>
-                </ol>
-            </nav>
+                <div class="memoria-titulo" style="border-bottom: 1pt solid #092834;">
+                    <h1>Colección de colecciones</h1>
+                    <div class="col-1" style="background-color: #FF026A; height:3px;"></div>
+                </div>
 
-            <!-- Nombre y descripción de la colección sencilla -->
-            <div class="card mb-3">
-                <div class="row no-gutters">
-                    <div class="col-md-5">
-                        <img class="card-img-top" style="height: 100%;" src="recursos/img/placeholder-600x400.png" alt="">
-                    </div>
-                    <div class="col-md-7">
-                        <div class="card-body">
-                            <h5 class="card-title mb-5">Colección sencilla</h5>
-                            <p class="card-text mt-5">Et illum magnam rerum. Hic ea aut pariatur vel ut voluptates error. Quisquam
-                                nostrum est tempore tempore nemo ut. Soluta
-                                et consequatur voluptatem impedit voluptatum voluptatum. Et assumenda quae optio quia nihil voluptas
-                                labore id. Officia
-                                velit enim eveniet.
-            
-                                Beatae laborum excepturi sit sit et illum. Assumenda voluptatem error fuga et et. Pariatur
-                                consectetur tenetur quo rerum
-                                omnis vitae aut.</p>
+                <!-- Nombre y descripción del acervo -->
+                <div class="descripcion card my-3 py-4 border-0">
+                    <div class="row no-gutters">
+                        <div class="col-md-5">
+                            <img class="card-img rounded-0" style="height: 100%;"
+                                src="recursos/img/placeholder-600x400.png" alt="">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h2 class="card-title mb-2">Emilio Zapato</h2>
+                                <div class="col-1" style="background-color: #B2D732; height:5px;"></div>
+                                <p id="memoria-texto-descripcion" class="card-text mt-5">Rerum enim itaque id.
+                                    Perferendis et itaque molestias. Eum quidem eos aut laudantium
+                                    officia dolorum. Porro nihil maxime et reprehenderit nesciunt
+                                    deserunt neque. Provident ipsam rem consequatur qui culpa rerum
+                                    accusamus. Quo veritatis culpa animi quae natus laborum molestiae.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Objetos de la colección sencilla -->
-            <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0" style="width: 100%;">
-                <div class="row m-sm-1 mx-3">
-            
-                    <!--Resultados-->
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/Saxofon.jpg"
-                                    style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
+            <div class="container-fluid mb-5 px-0" style="background-color: #E6E6E6">
+                <div class="container">
+                    <!-- Objetos de la colección sencilla -->
+                    <div class="my-0 pt-5" style="width: 100%;">
+                        <div class="row m-sm-1 mx-3">
+                            <!--Resultados-->
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/Saxofon.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
-            
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/balafon.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/Oboe.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/Bongos.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/congas.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/Marimba.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/percusiones.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/Piano.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/tololoche.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/Trompeta.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/Violin.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-sm-3 col-6 px-1 py-1">
+                                <div class="card">
+                                    <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
+                                        style="min-height: 139px; min-width: 100%;">
+                                        <img class="card-img img-responsiva" alt="" src="recursos/img/bajo.jpg"
+                                            style="max-height: 139px;">
+                                        <div class="card-img-overlay p-0 d-flex justify-content-between">
+                                            <a class="card-img-overlay" href="cedula.html"></a>
+                                            <span class="badge badge bg-dark p-2 align-self-start">
+                                                <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
+                                            </span>
+                                            <span class="badge badge p-1 align-self-end" style="z-index: 1;">
+                                                <a href="#">
+                                                    <i class="fas fa-plus-circle fa-2x text-primary"
+                                                        aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <a href="cedula.html">
+                                        <div class="card-body p-2" style="min-height: 100px;">
+                                            <h5 class="card-title">Sin titulo</h5>
+                                            <p class="card-text">Some example text.</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/balafon.jpg"
-                                    style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/Oboe.jpg" style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/Bongos.jpg"
-                                    style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/congas.jpg"
-                                    style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/Marimba.jpg"
-                                    style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/percusiones.jpg"
-                                    style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/Piano.jpg" style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/tololoche.jpg"
-                                    style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/Trompeta.jpg"
-                                    style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/Violin.jpg"
-                                    style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-            
-                    <div class="col-lg-3  col-sm-3 col-6 px-1 py-1">
-                        <div class="card">
-                            <div class="col-md-2 col-3 bg-dark d-flex align-self-center p-0 contenedor imagen-tabla-movil imagen-tabla-tablet"
-                                style="min-height: 139px; min-width: 100%;">
-                                <img class="card-img img-responsiva" alt="" src="recursos/img/bajo.jpg" style="max-height: 139px;">
-                                <div class="card-img-overlay p-0 d-flex justify-content-between">
-                                    <a class="card-img-overlay" href="cedula.html"></a>
-                                    <span class="badge badge bg-dark p-2 align-self-start">
-                                        <i class="fas fa-cube fa-2x text-light" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="badge badge p-1 align-self-end" style="z-index: 1;">
-                                        <a href="#">
-                                            <i class="fas fa-plus-circle fa-2x text-primary" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </div>
-                            </div>
-                            <a href="cedula.html">
-                                <div class="card-body p-2" style="min-height: 100px;">
-                                    <h5 class="card-title">Sin titulo</h5>
-                                    <p class="card-text">Some example text.</p>
-                                </div>
-                            </a>
+
+                        <div class="row my-1 d-flex justify-content-center" style="width: 100%;">
+                            <nav aria-label="...">
+                                <ul class="pagination">
+                                    <li class="page-item disabled">
+                                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item active">
+                                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="#">Next</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </div>
-            
-                <div class="row my-1 d-flex justify-content-center" style="width: 100%;">
-                    <nav aria-label="...">
-                        <ul class="pagination">
-                            <li class="page-item disabled">
-                                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active">
-                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#">Next</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            
             </div>
         </main>
 

@@ -686,7 +686,6 @@ body {
 /*------------------------------- Acervos de la Agn -------------------------------*/
 p#memoria-texto-descripcion { /*texto que describe un acervo o un tema*/
   font-family: 'Lato-Regular';
-  margin: 0px;
   font-size: 18px;
   line-height: 1.2;
 }
